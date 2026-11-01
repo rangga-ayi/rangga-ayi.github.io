@@ -3,54 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rangga — Junior IT Generalist &amp; Continuous Learner</title>
-  <meta name="description" content="Portfolio Rangga — Junior IT Generalist & Continuous Learner. Menghubungkan hardware IoT fisik, homelab server Proxmox, web database, dan AI-assisted workflow secara transparan.">
-  <meta property="og:title" content="Rangga — Junior IT Generalist &amp; Continuous Learner">
-  <meta property="og:description" content="Eksplorasi hardware IoT fisik, lab jaringan Proxmox 2-node, web payment Midtrans, dan pemanfaatan AI tools modern.">
+  <title>Rangga Ayi Pratama — Pranata Komputer, IT Support &amp; Web Developer</title>
+  <meta name="description" content="Portfolio Rangga Ayi Pratama, lulusan D3 Teknik Komputer Polsri IPK 3.64. Pengalaman perakitan &amp; troubleshooting PC, instalasi jaringan kabel &amp; CCTV, pengembangan web &amp; basis data (PHP &amp; MySQL), serta administrasi dokumen B2B dan SAP.">
+  <meta property="og:title" content="Rangga Ayi Pratama — Pranata Komputer, IT Support &amp; Web Developer">
+  <meta property="og:description" content="D3 Teknik Komputer Polsri IPK 3.64. Magang PLN Icon Plus &amp; Zhanet Komputer. Pengalaman Web PHP/MySQL, Jaringan LAN, Perakitan PC, Hak Cipta Kemenkumham RI, serta sertifikasi Cisco &amp; Dicoding.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rangga.dev">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  <meta property="og:url" content="https://portofolio.proyekhub.my.id/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006C4C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
 
-  <!-- Fonts -->
+  <!-- Immediate Theme Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans (Primary M3 Typography), Inter (Fallback), JetBrains Mono (Specs) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS (Versioned to bust Cloudflare edge cache) -->
+  <link rel="stylesheet" href="style.css?v=2.0">
 
-  <!-- Lucide Icons -->
+  <!-- Lucide Icons (Minimal utility usage only) -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
   <!-- Skip Nav -->
-  <a href="#main" class="btn btn-primary skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ══════════════════════════════════════════
-       NAVBAR
+       M3 TOP APP BAR / NAVBAR
   ══════════════════════════════════════════ -->
-  <header class="container navbar-wrapper">
-    <nav id="navbar" class="navbar" style="position: relative;">
+  <header class="navbar-wrapper">
+    <nav id="navbar" class="navbar">
       <a href="/" class="logo">
-        <div class="logo-icon">
-          <i data-lucide="zap" style="width: 18px; height: 18px;"></i>
-        </div>
-        Rangga
+        <span class="logo-text">MyPorto</span>
       </a>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about"      class="nav-link">Tentang</a></li>
-        <li><a href="#skills"     class="nav-link">Skills</a></li>
-        <li><a href="#projects"   class="nav-link">Proyek &amp; Lab</a></li>
-        <li><a href="#experience" class="nav-link">Perjalanan</a></li>
-        <li><a href="#contact"    class="nav-link">Kontak</a></li>
+        <li><a href="#about"       class="nav-link">Tentang</a></li>
+        <li><a href="#skills"      class="nav-link">Keahlian</a></li>
+        <li><a href="#projects"    class="nav-link">Proyek &amp; Lab</a></li>
+        <li><a href="#experience"  class="nav-link">Pengalaman</a></li>
+        <li><a href="#credentials" class="nav-link">Sertifikasi</a></li>
+        <li><a href="#contact"     class="nav-link">Kontak</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary btn-pill" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti mode tema (Terang / Gelap)" title="Ganti mode tema">
+          <i data-lucide="moon" id="theme-icon" style="width: 20px; height: 20px;"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-contact">
           Hubungi Saya
         </a>
+
+        <!-- Mobile Navigation Menu Toggle -->
         <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links" id="nav-toggle">
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
@@ -61,600 +78,647 @@
   </header>
 
   <!-- ══════════════════════════════════════════
-       HERO — Dark Navy Band
+       HERO (M3 Mobile-First Section)
   ══════════════════════════════════════════ -->
-  <div class="hero-wrapper">
-    <main id="main">
-      <section id="hero" class="container hero-section">
+  <main id="main">
+    <section id="hero" class="hero-wrapper">
+      <div class="container hero-section">
 
         <!-- Left: Text Content -->
         <div class="hero-content">
           <div class="hero-avail-badge">
             <span class="dot-pulse"></span>
-            Junior Ready · Continuous Learner · Hands-on Mindset
+            D3 Teknik Komputer Polsri · Open to Work
           </div>
 
-          <h1 class="hero-title">Rangga</h1>
-          <p class="hero-role">Junior IT Generalist &amp; Tech Explorer</p>
+          <h1 class="hero-title">Rangga Ayi Pratama</h1>
+          <p class="hero-role">Pranata Komputer, IT Support &amp; Web Developer</p>
 
           <p class="hero-subtitle">
-            Memiliki pemahaman alur sistem secara menyeluruh: dari perakitan <strong style="color: #E2E8F0; font-weight: 600;">hardware &amp; sensor IoT fisik</strong>, konfigurasi <strong style="color: #E2E8F0; font-weight: 600;">lab jaringan &amp; server Proxmox</strong>, hingga pengembangan <strong style="color: #E2E8F0; font-weight: 600;">web transaksi</strong> dengan dukungan asisten AI modern.
+            Lulusan D3 Teknik Komputer Polsri (IPK 3.64) dengan keahlian perakitan &amp; troubleshooting PC, instalasi jaringan &amp; CCTV, pengembangan web &amp; basis data (PHP &amp; MySQL), serta administrasi dokumen B2B dan SAP.
           </p>
 
           <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary" style="padding: 0.8rem 1.75rem;">
-              <span>Lihat Lab &amp; Proyek Nyata</span>
+            <a href="#experience" class="btn btn-primary">
+              <span>Lihat Pengalaman &amp; Proyek</span>
               <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
             </a>
-            <a href="#contact" class="btn btn-dark-outline" style="padding: 0.8rem 1.75rem;">
+            <a href="#contact" class="btn btn-tonal">
               <span>Hubungi Saya</span>
             </a>
           </div>
 
-          <!-- Stats -->
+          <!-- Stats (Clean M3 Key Metric Display) -->
           <div class="hero-stats">
             <div class="stat-item">
-              <h3>4</h3>
-              <p>Domain Eksplorasi</p>
+              <span class="stat-value">3.64</span>
+              <span class="stat-label">IPK D3 Polsri</span>
             </div>
             <div class="stat-item">
-              <h3>Real Lab</h3>
-              <p>Hardware &amp; Multi-Node</p>
+              <span class="stat-value">Top 5</span>
+              <span class="stat-label">LKS Jaringan Sumsel</span>
             </div>
             <div class="stat-item">
-              <h3>100%</h3>
-              <p>Transparan &amp; Adaptif</p>
+              <span class="stat-value">Hak Cipta</span>
+              <span class="stat-label">Kemenkumham RI</span>
             </div>
           </div>
         </div>
 
-        <!-- Right: Profile Card -->
+        <!-- Right: Competency Overview Card -->
         <div class="hero-visual-wrapper">
-          <div class="hero-card">
-            <div class="course-preview-header">
-              <div class="preview-icon-box">
-                <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+          <div class="m3-card hero-card">
+            <div class="card-header-clean">
+              <h2 class="card-header-title">Ringkasan Kompetensi</h2>
+              <p class="card-header-subtitle">Hardware · Jaringan · Web &amp; Database · Administrasi</p>
+            </div>
+
+            <!-- Field Competency Rows (Clean, Uncluttered, Icon-Free) -->
+            <div class="lab-matrix">
+              <div class="lab-row">
+                <div class="lab-row-top">
+                  <span class="lab-row-title">Perakitan &amp; Troubleshooting PC</span>
+                  <span class="lab-tag">Zhanet Komputer</span>
+                </div>
+                <p class="lab-row-desc">Troubleshooting komponen, perakitan custom PC, dan instalasi sistem operasi.</p>
               </div>
-              <div>
-                <h3 style="font-size: 1.05rem; font-weight: 700; color: #F1F5F9; letter-spacing: -0.02em;">System &amp; Lab Proficiency</h3>
-                <p style="color: #64748B; font-size: 0.82rem; font-weight: 500; margin-top: 0.15rem;">Hardware · Network · Web · AI Tools</p>
+
+              <div class="lab-row">
+                <div class="lab-row-top">
+                  <span class="lab-row-title">Jaringan &amp; CCTV Lapangan</span>
+                  <span class="lab-tag">PLN Icon Plus</span>
+                </div>
+                <p class="lab-row-desc">Penarikan kabel UTP dan instalasi CCTV kawasan Jembatan Ampera dengan standar K3.</p>
+              </div>
+
+              <div class="lab-row">
+                <div class="lab-row-top">
+                  <span class="lab-row-title">Web &amp; Basis Data (PHP &amp; MySQL)</span>
+                  <span class="lab-tag">Alzi Petshop CRUD</span>
+                </div>
+                <p class="lab-row-desc">Aplikasi e-commerce &amp; inventaris stok, integrasi payment gateway Midtrans, dan database relasional.</p>
+              </div>
+
+              <div class="lab-row">
+                <div class="lab-row-top">
+                  <span class="lab-row-title">Administrasi B2B &amp; SAP</span>
+                  <span class="lab-tag">PLN Icon Plus</span>
+                </div>
+                <p class="lab-row-desc">Verifikasi dokumen BAPS, BoQ, DokTek, dan rekonsiliasi data penagihan.</p>
+              </div>
+
+              <div class="lab-row">
+                <div class="lab-row-top">
+                  <span class="lab-row-title">Firmware IoT &amp; Server Lab</span>
+                  <span class="lab-tag">Hak Cipta RI</span>
+                </div>
+                <p class="lab-row-desc">ESP32 FreeRTOS, homelab Proxmox VE, serta sertifikasi Cisco dan Dicoding.</p>
               </div>
             </div>
 
-            <!-- Skill proficiency bars -->
-            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem;">
-              <div>
-                <div class="progress-header">
-                  <span>IoT &amp; Hardware Fisik (ESP32 / Sensors)</span>
-                  <span class="accent">Rangkaian Nyata &amp; Solder</span>
-                </div>
-                <div class="progress-track">
-                  <div class="progress-fill" style="width: 85%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="progress-header">
-                  <span>Jaringan &amp; Server (Proxmox / pfSense / Wazuh)</span>
-                  <span class="accent">Homelab 2-Node</span>
-                </div>
-                <div class="progress-track">
-                  <div class="progress-fill" style="width: 78%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="progress-header">
-                  <span>Web &amp; Database (PHP / MySQL / Midtrans)</span>
-                  <span class="accent">Alur Transaksi Real</span>
-                </div>
-                <div class="progress-track">
-                  <div class="progress-fill" style="width: 80%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="progress-header">
-                  <span>AI Workflow (Claude Code / Antigravity / Vibe Coding)</span>
-                  <span class="accent">Rapid Prototyping</span>
-                </div>
-                <div class="progress-track">
-                  <div class="progress-fill" style="width: 88%;"></div>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="btn btn-primary" style="width: 100%; padding: 0.8rem; font-size: 0.95rem;">
-              <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-              Mari Berdiskusi
+            <a href="#projects" class="btn btn-outlined" style="width: 100%; justify-content: center;">
+              <span>Lihat Detail Portofolio &amp; Lab</span>
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
             </a>
           </div>
-
-          <!-- Floating Badges -->
-          <div class="floating-badge badge-target" role="img" aria-label="Keahlian: IoT &amp; Hardware Fisik">
-            <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
-          </div>
-          <div class="floating-badge badge-star" role="img" aria-label="Keahlian: Proxmox &amp; Network Lab">
-            <i data-lucide="server" style="width: 20px; height: 20px;"></i>
-          </div>
-          <div class="floating-badge badge-layers" role="img" aria-label="Keahlian: AI &amp; Vibe Coding Workflow">
-            <i data-lucide="bot" style="width: 20px; height: 20px;"></i>
-          </div>
         </div>
 
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
 
-  <!-- Section divider: dark → light -->
-  <div class="section-divider"></div>
+    <!-- ══════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════ -->
+    <section id="about" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Tentang</span>
+        <h2 class="section-title">Teknis Lapangan &amp; Administrasi B2B</h2>
+        <p class="section-subtitle">Menghubungkan keahlian teknis operasional hardware dan jaringan dengan ketelitian administrasi data transaksi.</p>
+      </div>
 
-  <!-- ══════════════════════════════════════════
-       ABOUT
-  ══════════════════════════════════════════ -->
-  <section id="about" class="container content-section">
-    <div class="section-header">
-      <span class="section-pill-tag">Tentang Saya</span>
-      <h2 class="section-title">Pemahaman Sistem &amp; Eksperimen Nyata</h2>
-      <p class="section-subtitle">Fokus pada alur kerja menyeluruh, kejujuran proses belajar, dan penyelesaian masalah praktis.</p>
-    </div>
-
-    <div class="neo-card" style="max-width: 920px; margin: 0 auto;">
-      <div class="about-grid">
-        <!-- Photo Col -->
-        <div class="about-photo-col">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-            alt="Foto Rangga"
-            class="about-photo"
-          >
-          <div>
-            <div class="about-status">
-              <span class="dot-pulse"></span>
-              Open to Opportunities
-            </div>
-            <div class="about-meta">
-              <span>
-                <i data-lucide="map-pin" style="width: 13px; height: 13px;"></i>
-                Indonesia (On-site / Remote)
-              </span>
-              <span>
-                <i data-lucide="briefcase" style="width: 13px; height: 13px;"></i>
-                Junior / Internship / Lab Roles
-              </span>
+      <div class="m3-card about-card">
+        <div class="about-grid">
+          <!-- Photo Col -->
+          <div class="about-photo-col">
+            <img
+              src="./assets/profile/Rangga.avif"
+              alt="Foto Profil Rangga Ayi Pratama"
+              class="about-photo"
+              loading="lazy"
+            >
+            <div class="about-photo-info">
+              <div class="about-status">
+                <span class="dot-pulse"></span>
+                Open to Work
+              </div>
+              <div class="about-meta">
+                <span>D3 Teknik Komputer Polsri</span>
+                <span>Palembang &amp; Muara Enim</span>
+                <span>On-site · Hybrid · Remote</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Content Col -->
-        <div class="about-content">
-          <h3>Halo, Saya Rangga!</h3>
-          <p class="about-role-label">Junior IT Generalist &amp; Continuous Learner</p>
-          <p>
-            Saya adalah pembelajar teknologi yang memiliki ketertarikan mendalam pada <strong>fondasi sistem komputasi</strong> dan bagaimana seluruh komponen saling terhubung: mulai dari perakitan perangkat keras mikrokontroler (<strong>ESP32, ESP8266 Wemos, Arduino</strong>) dengan berbagai sensor nyata, perancangan lab jaringan virtual (<strong>Proxmox VE multi-node, pfSense, Wazuh SIEM</strong>), hingga pembuatan web e-commerce dengan sistem pembayaran <strong>Midtrans</strong>.
-          </p>
-          <p style="margin-top: 0.75rem;">
-            Saya percaya pada <strong>transparansi dan integritas proses</strong>. Dalam membangun perangkat lunak, saya memanfaatkan metode modern seperti <em>vibe coding</em> dan asisten AI (<strong>Claude Code, Antigravity, DeepSeek, Ollama</strong>) untuk merealisasikan arsitektur dan alur sistem secara cepat, sembari terus memperdalam pemahaman teknis di balik setiap baris kode.
-          </p>
-          <p style="margin-top: 0.75rem;">
-            Di waktu luang, saya senang <strong>bermain gitar</strong> yang melatih konsentrasi, kepekaan ritme, serta kreativitas dalam memecahkan masalah.
-          </p>
-          <div class="about-badges" style="margin-top: 1.25rem;">
-            <span class="badge" style="background: var(--chip-green); color: var(--emerald-dark); border-color: var(--emerald);">
-              <i data-lucide="cpu" style="width: 13px; height: 13px;"></i> Real IoT Hardware
-            </span>
-            <span class="badge" style="background: var(--chip-indigo); color: var(--indigo-dark); border-color: var(--indigo);">
-              <i data-lucide="server" style="width: 13px; height: 13px;"></i> Proxmox 2-Node Lab
-            </span>
-            <span class="badge badge-primary">
-              <i data-lucide="code-2" style="width: 13px; height: 13px;"></i> Web &amp; Midtrans API
-            </span>
-            <span class="badge" style="background: var(--chip-violet); color: #6D28D9; border-color: #8B5CF6;">
-              <i data-lucide="bot" style="width: 13px; height: 13px;"></i> AI Vibe Coding &amp; Tools
-            </span>
-            <span class="badge" style="background: #FEF3C7; color: #92400E; border-color: #F59E0B;">
-              <i data-lucide="music" style="width: 13px; height: 13px;"></i> Guitar Player
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SKILLS
-  ══════════════════════════════════════════ -->
-  <section id="skills" class="container content-section" style="padding-top: 1rem;">
-    <div class="section-header">
-      <span class="section-pill-tag">Kompendium Keahlian</span>
-      <h2 class="section-title">Peta Keahlian &amp; Perangkat</h2>
-      <p class="section-subtitle">Perangkat keras, simulator, konfigurasi server, serta teknologi pengembangan yang telah dipelajari dan diuji coba</p>
-    </div>
-
-    <div class="grid grid-cols-2">
-      <!-- Card 1: IoT & Hardware Prototyping -->
-      <div class="neo-card skill-card">
-        <div class="icon-chip green">
-          <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
-        </div>
-        <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">IoT &amp; Hardware Prototyping (Fisik &amp; Sim)</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
-          Perakitan mikrokontroler fisik, interfacing sensor I2C/SPI, penyolderan PCB/kabel, pengukuran multitester, dan simulasi sirkuit.
-        </p>
-        <div class="skill-chip-list">
-          <span class="skill-chip">ESP32 &amp; ESP32-CAM</span>
-          <span class="skill-chip">ESP8266 (Wemos D1 Mini)</span>
-          <span class="skill-chip">Arduino Uno / Nano</span>
-          <span class="skill-chip">ATmega 8535</span>
-          <span class="skill-chip">VL53L0X Laser ToF</span>
-          <span class="skill-chip">BMP280 &amp; AHT20</span>
-          <span class="skill-chip">RC522 RFID</span>
-          <span class="skill-chip">DHT22 &amp; PIR Sensor</span>
-          <span class="skill-chip">Solenoid &amp; Relay</span>
-          <span class="skill-chip">Menyolder &amp; Multitester</span>
-          <span class="skill-chip">Wokwi &amp; Fritzing</span>
-          <span class="skill-chip">Node-RED Dashboard</span>
-        </div>
-      </div>
-
-      <!-- Card 2: Jaringan & Homelab Server -->
-      <div class="neo-card skill-card">
-        <div class="icon-chip purple">
-          <i data-lucide="server" style="width: 22px; height: 22px;"></i>
-        </div>
-        <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Jaringan, Homelab Server &amp; Keamanan</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
-          Konfigurasi virtualisasi multi-node di Proxmox, server Linux Debian, firewall pfSense, analisis log Wazuh SIEM, serta topologi Cisco.
-        </p>
-        <div class="skill-chip-list">
-          <span class="skill-chip">Proxmox VE (2-Laptop Node)</span>
-          <span class="skill-chip">Debian Linux Server</span>
-          <span class="skill-chip">Web, DNS (Bind9), FTP/Samba</span>
-          <span class="skill-chip">pfSense Firewall &amp; Router</span>
-          <span class="skill-chip">Wazuh SIEM &amp; Suricata</span>
-          <span class="skill-chip">Kali Linux (Testing)</span>
-          <span class="skill-chip">Nmap / Zenmap / hping3</span>
-          <span class="skill-chip">Cisco Packet Tracer</span>
-          <span class="skill-chip">VLAN &amp; Routing</span>
-          <span class="skill-chip">Subnetting VLSM</span>
-          <span class="skill-chip">Krimping Kabel LAN UTP</span>
-        </div>
-      </div>
-
-      <!-- Card 3: Web Development & Database -->
-      <div class="neo-card skill-card">
-        <div class="icon-chip blue">
-          <i data-lucide="globe" style="width: 22px; height: 22px;"></i>
-        </div>
-        <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Web Development &amp; Integrasi Transaksi</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
-          Pengembangan aplikasi web berbasis data, logika transaksi e-commerce, integrasi payment gateway Midtrans, serta fondasi bahasa pemrograman.
-        </p>
-        <div class="skill-chip-list">
-          <span class="skill-chip">HTML5 &amp; CSS3</span>
-          <span class="skill-chip">JavaScript Dasar</span>
-          <span class="skill-chip">PHP</span>
-          <span class="skill-chip">MySQL Database</span>
-          <span class="skill-chip">Midtrans Snap Payment API</span>
-          <span class="skill-chip">Python Dasar</span>
-          <span class="skill-chip">Android Studio (Java Dasar)</span>
-          <span class="skill-chip">Visual Studio (VB Dasar)</span>
-        </div>
-      </div>
-
-      <!-- Card 4: Modern AI Tooling & Workflow -->
-      <div class="neo-card skill-card">
-        <div class="icon-chip pink">
-          <i data-lucide="bot" style="width: 22px; height: 22px;"></i>
-        </div>
-        <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">AI-Assisted Workflow &amp; Vibe Coding</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
-          Pemanfaatan model AI sebagai akselerator implementasi ide menjadi kode kerja, troubleshooting error teknis, dan rapid prototyping.
-        </p>
-        <div class="skill-chip-list">
-          <span class="skill-chip">Antigravity IDE</span>
-          <span class="skill-chip">Claude Code</span>
-          <span class="skill-chip">DeepSeek LLM</span>
-          <span class="skill-chip">Ollama (Local Models)</span>
-          <span class="skill-chip">AI Prompt Orchestration</span>
-          <span class="skill-chip">Vibe Coding Methodology</span>
-          <span class="skill-chip">Git &amp; GitHub</span>
-          <span class="skill-chip">VS Code</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       PROJECTS & LABS
-  ══════════════════════════════════════════ -->
-  <section id="projects" class="container content-section" style="padding-top: 1rem;">
-    <div class="section-header">
-      <span class="section-pill-tag">Showcase &amp; Case Studies</span>
-      <h2 class="section-title">Lab Eksperimen &amp; Proyek Nyata</h2>
-      <p class="section-subtitle">Dokumentasi jujur dari prototipe hardware fisik, lab keamanan jaringan multi-node, hingga aplikasi web</p>
-    </div>
-
-    <div class="grid grid-cols-2">
-      <!-- Project 1: Smart Locker (REAL Hardware - Tugas Akhir) -->
-      <article class="neo-card project-card">
-        <div class="project-banner clickable" data-lightbox="https://raw.githubusercontent.com/rangga-ayi/smart_locker/refs/heads/main/schematics/skematik_rangkaian.avif" data-caption="Skematik Rangkaian Detail Smart Locker 3-Pintu ESP32 FreeRTOS">
-          <img src="https://raw.githubusercontent.com/rangga-ayi/smart_locker/refs/heads/main/schematics/skematik_rangkaian.avif" alt="Skematik Rangkaian Smart Locker 3 Pintu ESP32 FreeRTOS" loading="lazy">
-          <span class="banner-zoom-badge">
-            <i data-lucide="zoom-in" style="width: 13px; height: 13px;"></i> Perbesar Skema
-          </span>
-        </div>
-        <div style="display: flex; gap: 0.4rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
-          <span class="tag" style="background: #DCFCE7; color: #166534; border-color: #86EFAC; font-weight: 700;">TUGAS AKHIR 2026</span>
-          <span class="tag" style="background: #F3E8FF; color: #6B21A8; border-color: #D8B4FE; font-weight: 700;">HKI KEMENKUMHAM RI</span>
-          <span class="tag" style="background: #E0F2FE; color: #0369A1; border-color: #7DD3FC; font-weight: 600;">FreeRTOS Dual-Core</span>
-        </div>
-        <h3 style="font-size: 1.15rem; letter-spacing: -0.02em;">Smart Locker 3-Kompartemen: FreeRTOS, e-KTP &amp; OTP Telegram</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.5rem 0 0.75rem; line-height: 1.65;">
-          Prototipe loker mandiri (<em>standalone</em>) 3 pintu berbasis <strong>ESP32 FreeRTOS Dual-Core</strong> (Core 0: Jaringan WiFi &amp; Bot Telegram; Core 1: Hardware I/O real-time). Mengintegrasikan autentikasi ganda <strong>e-KTP (RFID RC522)</strong> dan <strong>OTP Telegram 4-digit (auto-burn)</strong>, dokumentasi foto kurir <strong>ESP32-CAM (UART)</strong>, deteksi paket laser <strong>3x VL53L0X ToF (I2C 50 kHz)</strong> via <strong>PCF8574</strong>, sensor pintu <strong>MC-38</strong>, relay solenoid 12V, mode admin lokal keypad 4x4 + LCD 16x2, serta penyimpanan offline <strong>NVS ESP32</strong>.
-        </p>
-        <div class="project-tags">
-          <span class="tag">ESP32 &amp; ESP32-CAM</span>
-          <span class="tag">FreeRTOS Dual-Core</span>
-          <span class="tag">e-KTP RFID RC522</span>
-          <span class="tag">Telegram Bot OTP</span>
-          <span class="tag">3x VL53L0X Laser ToF</span>
-          <span class="tag">I2C &amp; PCF8574</span>
-          <span class="tag">NVS Offline Storage</span>
-          <span class="tag">Solenoid 12V &amp; MC-38</span>
-        </div>
-        <div style="margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://github.com/rangga-ayi/smart_locker/blob/main/docs/SMART%20LOCKER%20PAKET.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Dokumentasi &amp; HKI <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-          </a>
-          <a href="https://github.com/rangga-ayi/smart_locker" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            GitHub Repo <i data-lucide="git-branch" style="width: 14px; height: 14px;"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- Project 2: Homelab Security 2-Laptop Proxmox -->
-      <article class="neo-card project-card">
-        <div class="project-banner" style="background: linear-gradient(135deg, #EEF2FF, #E0E7FF);">
-          <i data-lucide="shield-alert" style="width: 60px; height: 60px; color: #4338CA; opacity: 0.8;"></i>
-        </div>
-        <div style="display: flex; gap: 0.4rem; margin-bottom: 0.5rem;">
-          <span class="tag" style="background: #E0E7FF; color: #3730A3; border-color: #A5B4FC; font-weight: 700;">HOMELAB EXPERIMENT</span>
-        </div>
-        <h3 style="font-size: 1.15rem; letter-spacing: -0.02em;">Lab Keamanan Jaringan: 2-Node Proxmox (Red vs Blue Team)</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.5rem 0 0.75rem; line-height: 1.65;">
-          Eksperimen infrastruktur jaringan lokal menggunakan 2 laptop fisik ber-hypervisor <strong>Proxmox VE</strong>. <em>Area A (Defender)</em> menjalankan VM Web Server, DNS Server, <strong>Wazuh SIEM Server</strong>, serta router/firewall <strong>pfSense</strong>. <em>Area B (Attacker)</em> menjalankan router pfSense dan <strong>Kali Linux</strong> dengan tools <code>hping3</code>, <code>hydra</code>, dan <code>nmap</code>. Dilengkapi analisis troubleshooting firewall host dan deteksi event log SIEM.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Proxmox VE</span>
-          <span class="tag">pfSense Firewall</span>
-          <span class="tag">Wazuh SIEM</span>
-          <span class="tag">Kali Linux</span>
-          <span class="tag">hping3 &amp; Nmap</span>
-        </div>
-        <div style="margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Topologi &amp; Lab Notes <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-          </a>
-          <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Konfigurasi VM <i data-lucide="git-branch" style="width: 14px; height: 14px;"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- Project 3: Weather Station (REAL Hardware) -->
-      <article class="neo-card project-card">
-        <div class="project-banner" style="background: linear-gradient(135deg, #ECFEFF, #CFFAFE);">
-          <i data-lucide="cloud-rain" style="width: 60px; height: 60px; color: #0891B2; opacity: 0.8;"></i>
-        </div>
-        <div style="display: flex; gap: 0.4rem; margin-bottom: 0.5rem;">
-          <span class="tag" style="background: #CCFBF1; color: #115E59; border-color: #5EEAD4; font-weight: 700;">PROYEK REAL FISIK</span>
-        </div>
-        <h3 style="font-size: 1.15rem; letter-spacing: -0.02em;">Stasiun Monitoring Cuaca &amp; Tekanan Atmosfer (Wemos D1)</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.5rem 0 0.75rem; line-height: 1.65;">
-          Perakitan stasiun cuaca fisik berbasis mikrokontroler <strong>ESP8266 (Wemos D1 Mini)</strong> menggunakan sensor barometrik <strong>BMP280</strong> (tekanan udara &amp; estimasi ketinggian) dan sensor suhu/kelembaban presisi tinggi <strong>AHT20</strong> melalui komunikasi bus I2C. Dilengkapi eksperimen pendamping visualisasi LED RGB &amp; DHT22 pada ESP32.
-        </p>
-        <div class="project-tags">
-          <span class="tag">ESP8266 Wemos</span>
-          <span class="tag">BMP280 Barometer</span>
-          <span class="tag">AHT20 Sensor</span>
-          <span class="tag">I2C Protocol</span>
-          <span class="tag">Soldering &amp; Hardware</span>
-        </div>
-        <div style="margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Detail Rangkaian <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-          </a>
-          <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Source Code <i data-lucide="git-branch" style="width: 14px; height: 14px;"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- Project 4: Web E-Commerce + Midtrans Gateway -->
-      <article class="neo-card project-card">
-        <div class="project-banner" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE);">
-          <i data-lucide="shopping-bag" style="width: 60px; height: 60px; color: #1D4ED8; opacity: 0.8;"></i>
-        </div>
-        <div style="display: flex; gap: 0.4rem; margin-bottom: 0.5rem;">
-          <span class="tag" style="background: #DBEAFE; color: #1E40AF; border-color: #93C5FD; font-weight: 700;">WEB &amp; PAYMENT API</span>
-        </div>
-        <h3 style="font-size: 1.15rem; letter-spacing: -0.02em;">Web E-Commerce Toko Online + Midtrans Gateway</h3>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.5rem 0 0.75rem; line-height: 1.65;">
-          Aplikasi toko online berbasis <strong>PHP &amp; MySQL</strong> dengan fitur katalog produk, keranjang belanja, checkout, dan integrasi payment gateway <strong>Midtrans Snap Sandbox API</strong> untuk menangani pembayaran instan secara otomatis melalui simulasi Virtual Account dan QRIS.
-        </p>
-        <div class="project-tags">
-          <span class="tag">PHP</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Midtrans Snap API</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Vibe Coding</span>
-        </div>
-        <div style="margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            Demo Web <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-          </a>
-          <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
-            GitHub Repo <i data-lucide="git-branch" style="width: 14px; height: 14px;"></i>
-          </a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       JOURNEY / PENDIDIKAN & PRAKTIKUM
-  ══════════════════════════════════════════ -->
-  <section id="experience" class="container content-section" style="padding-top: 1rem;">
-    <div class="section-header">
-      <span class="section-pill-tag">Perjalanan Belajar</span>
-      <h2 class="section-title">Riwayat Praktikum &amp; Eksplorasi</h2>
-      <p class="section-subtitle">Tahapan pembelajaran terstruktur dari fondasi akademik hingga eksperimen mandiri terkini</p>
-    </div>
-
-    <div class="timeline">
-      <!-- Milestone 1 -->
-      <div class="timeline-item">
-        <div class="timeline-dot" style="background-color: var(--primary); box-shadow: 0 0 0 2px var(--primary);"></div>
-        <div class="neo-card">
-          <div class="experience-header">
-            <h3 style="font-size: 1.1rem; letter-spacing: -0.02em;">Eksplorasi AI Vibe Coding &amp; Homelab Security</h3>
-            <span class="tenure-badge">2024 – Sekarang</span>
-          </div>
-          <p class="experience-company">
-            <i data-lucide="sparkles" style="width: 13px; height: 13px; vertical-align: middle; margin-right: 0.25rem;"></i>
-            Self-Learning &amp; Modern Tools Integration
-          </p>
-          <ul class="experience-bullets">
-            <li>Menerapkan alur kerja <strong>vibe coding</strong> dengan mengorkestrasikan AI tools (Antigravity, Claude Code, DeepSeek, dan Ollama lokal) untuk rapid prototyping aplikasi</li>
-            <li>Melakukan eksperimen serangan &amp; pertahanan jaringan 2 laptop Proxmox (Area Defender: pfSense &amp; Wazuh SIEM vs Area Attacker: Kali Linux)</li>
-            <li>Menganalisis hasil uji lab keamanan dan mengidentifikasi kendala pada deteksi event log serta firewall host OS</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Milestone 2 -->
-      <div class="timeline-item">
-        <div class="timeline-dot" style="background-color: var(--indigo); box-shadow: 0 0 0 2px var(--indigo);"></div>
-        <div class="neo-card">
-          <div class="experience-header">
-            <h3 style="font-size: 1.1rem; letter-spacing: -0.02em;">Praktikum Lab Jaringan, Server Debian &amp; Perakitan IoT Fisik</h3>
-            <span class="tenure-badge" style="background: var(--indigo-light); color: var(--indigo-dark); border-color: var(--indigo);">2023 – 2024</span>
-          </div>
-          <p class="experience-company" style="color: var(--indigo);">
-            <i data-lucide="server" style="width: 13px; height: 13px; vertical-align: middle; margin-right: 0.25rem;"></i>
-            Laboratorium Komputer &amp; Elektronika
-          </p>
-          <ul class="experience-bullets">
-            <li>Merakit dan mengembangkan firmware <strong>Smart Locker 3-Kompartemen</strong> (ESP32 FreeRTOS Dual-Core, ESP32-CAM UART, RFID RC522 e-KTP, sensor jarak laser VL53L0X via PCF8574, switch MC-38, Solenoid 12V, OTP Telegram) serta stasiun cuaca presisi (Wemos D1, BMP280, AHT20) melalui penyolderan dan pengujian multitester</li>
-            <li>Konfigurasi layanan server Debian: Web Server, DNS Server (Bind9), dan File Server (FTP, Samba)</li>
-            <li>Merancang simulasi topologi Cisco Packet Tracer (VLAN sederhana, routing, DHCP Server, subnetting VLSM) serta pengkabelan LAN fisik (crimping UTP)</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Milestone 3 -->
-      <div class="timeline-item">
-        <div class="timeline-dot" style="background-color: var(--emerald); box-shadow: 0 0 0 2px var(--emerald);"></div>
-        <div class="neo-card">
-          <div class="experience-header">
-            <h3 style="font-size: 1.1rem; letter-spacing: -0.02em;">Fondasi Pemrograman &amp; Web E-Commerce Perkuliahan</h3>
-            <span class="tenure-badge" style="background: var(--emerald-light); color: var(--emerald-dark); border-color: var(--emerald);">2022 – 2023</span>
-          </div>
-          <p class="experience-company" style="color: var(--emerald-dark);">
-            <i data-lucide="book-open" style="width: 13px; height: 13px; vertical-align: middle; margin-right: 0.25rem;"></i>
-            Akademik / Perkuliahan IT
-          </p>
-          <ul class="experience-bullets">
-            <li>Mempelajari logika dasar pemrograman dengan <strong>Python</strong></li>
-            <li>Membangun aplikasi web toko online dengan <strong>PHP &amp; MySQL</strong> terintegrasi payment gateway <strong>Midtrans Snap Sandbox</strong></li>
-            <li>Pengenalan dasar pengembangan aplikasi mobile di <strong>Android Studio (Java)</strong> dan aplikasi desktop di <strong>Visual Studio (Visual Basic)</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       CONTACT
-  ══════════════════════════════════════════ -->
-  <section id="contact" class="container content-section" style="padding-top: 1rem;">
-    <div class="section-header">
-      <span class="section-pill-tag">Kontak</span>
-      <h2 class="section-title">Mari Berkolaborasi &amp; Terhubung</h2>
-      <p class="section-subtitle">Terbuka untuk peluang entry-level / junior, magang teknis, maupun diskusi proyek teknologi!</p>
-    </div>
-
-    <div class="grid grid-cols-2" style="align-items: start; max-width: 900px; margin: 0 auto;">
-      <!-- Form -->
-      <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST" class="neo-card" style="display: flex; flex-direction: column; gap: 1.1rem;">
-        <div class="form-group">
-          <label for="name" class="form-label">Nama Lengkap</label>
-          <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required aria-required="true" aria-describedby="form-message">
-        </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Email Anda</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="nama@email.com" required aria-required="true" aria-describedby="form-message">
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Pesan / Tawaran</label>
-          <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Ceritakan kebutuhan proyek, peluang kerja, atau pesan Anda..." required aria-required="true" aria-describedby="form-message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="submit-btn" style="padding: 0.85rem; font-size: 0.95rem;">
-          <span>Kirim Pesan</span>
-          <i data-lucide="send" style="width: 16px; height: 16px;"></i>
-        </button>
-        <div class="form-message" id="form-message" role="status" aria-live="polite" style="display: none;"></div>
-      </form>
-
-      <!-- Right column -->
-      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <!-- Availability Banner -->
-        <div class="availability-card">
-          <div class="availability-icon">
-            <i data-lucide="check-circle-2" style="width: 20px; height: 20px;"></i>
-          </div>
-          <div>
-            <p style="font-weight: 700; color: var(--emerald-dark); font-size: 0.95rem; letter-spacing: -0.01em;">
-              Siap Bergabung &amp; Berkontribusi
+          <!-- Content Col -->
+          <div class="about-content">
+            <h3 class="about-greeting">Halo, saya Rangga</h3>
+            <p class="about-role-label">D3 Teknik Komputer — Hardware, Jaringan &amp; Web Developer</p>
+            <p>
+              Lulusan D3 Teknik Komputer Politeknik Negeri Sriwijaya (IPK 3.64) dengan dasar Teknik Komputer dan Jaringan sejak SMK Bukit Asam. Memiliki keahlian terintegrasi di bidang teknis hardware &amp; jaringan (perakitan PC, troubleshooting komponen, instalasi kabel UTP &amp; CCTV), pengembangan web &amp; basis data (PHP, MySQL, Midtrans API), serta ketelitian administrasi operasional (verifikasi berkas transaksi B2B dan rekonsiliasi data SAP).
             </p>
-            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">
-              Junior Roles · Lab &amp; Hardware Roles · Internship
+            <p>
+              Saat magang di PLN Icon Plus, saya memeriksa dan merekap dokumen transaksi B2B (BAPS, BoQ, dan DokTek) menggunakan SAP dan Microsoft Office rata-rata 10+ berkas per hari. Di lapangan, saya ikut dalam penarikan kabel UTP dan instalasi CCTV di kawasan Jembatan Ampera serta Terminal Karya Jaya bersama Diskominfo Palembang dengan kepatuhan standar K3.
             </p>
-          </div>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="neo-card">
-          <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.02em;">Info Kontak Langsung</h3>
-          <div class="contact-info-item">
-            <div class="contact-icon-wrap">
-              <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-            </div>
-            <div>
-              <p style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Email</p>
-              <a href="mailto:pratama.ranggaayi@gmail.com" style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">pratama.ranggaayi@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon-wrap" style="background: var(--indigo-light); color: var(--indigo-dark);">
-              <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i>
-            </div>
-            <div>
-              <p style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">LinkedIn</p>
-              <a href="#" style="font-weight: 600; font-size: 0.9rem; color: var(--indigo);">linkedin.com/in/rangga</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon-wrap" style="background: #F1F5F9; color: var(--text-dark);">
-              <i data-lucide="github" style="width: 16px; height: 16px;"></i>
-            </div>
-            <div>
-              <p style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">GitHub</p>
-              <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer" style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">github.com/rangga-ayi</a>
+            <p>
+              Di Zhanet Komputer, saya menangani perakitan custom PC dan troubleshooting komponen komputer pelanggan. Selain itu, saya mengembangkan aplikasi web e-commerce berbasis PHP &amp; MySQL, meraih Juara 1 LKS Tingkat Kabupaten Muara Enim dan Peringkat 5 Provinsi Sumatera Selatan (IT Network System Administration), tersertifikasi Cisco dan Dicoding, serta memegang Hak Cipta Kemenkumham RI untuk prototipe Smart Locker berbasis ESP32 FreeRTOS.
+            </p>
+            <div class="about-badges">
+              <span class="chip">IPK 3.64 Polsri</span>
+              <span class="chip">LKS Top 5 Provinsi</span>
+              <span class="chip">PHP &amp; MySQL CRUD</span>
+              <span class="chip">SAP &amp; B2B Admin</span>
+              <span class="chip">HKI Kemenkumham</span>
+              <span class="chip">Cisco Certified</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SKILLS
+    ══════════════════════════════════════════ -->
+    <section id="skills" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Keahlian</span>
+        <h2 class="section-title">Keahlian Teknis &amp; Perangkat</h2>
+        <p class="section-subtitle">Kemampuan operasional hardware, instalasi jaringan fisik, mikrokontroler IoT, dan sistem administrasi.</p>
+      </div>
+
+      <div class="grid grid-cols-2">
+        <!-- Card 1: Computer Hardware & Troubleshooting -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">Perakitan PC &amp; Troubleshooting Hardware</h3>
+          <p class="skill-desc">
+            Perakitan unit PC desktop sesuai kebutuhan, diagnosis kerusakan komponen (motherboard, RAM, PSU, storage), instalasi sistem operasi Windows dan driver, serta uji stabilitas perangkat.
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">Perakitan PC Kustom</span>
+            <span class="skill-chip">Diagnostik Motherboard &amp; RAM</span>
+            <span class="skill-chip">Pengujian PSU &amp; Storage</span>
+            <span class="skill-chip">Instalasi Windows OS &amp; Driver</span>
+            <span class="skill-chip">Troubleshooting Hardware</span>
+            <span class="skill-chip">Penyolderan &amp; Multitester</span>
+            <span class="skill-chip">Standar K3 Elektronika</span>
+            <span class="skill-chip">Thermal &amp; Stability Testing</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Computer Networking & Infrastruktur Lapangan -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">Jaringan Komputer &amp; Instalasi Lapangan</h3>
+          <p class="skill-desc">
+            Instalasi fisik kabel UTP dan CCTV lapangan dengan standar K3, konfigurasi perangkat jaringan Cisco dan MikroTik, pengalamatan IP, serta pengujian kontinuitas kabel jaringan LAN.
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">Penarikan &amp; Crimping UTP</span>
+            <span class="skill-chip">Pengujian LAN Tester &amp; Fluke</span>
+            <span class="skill-chip">Instalasi &amp; Setting CCTV</span>
+            <span class="skill-chip">Standar K3 Lapangan</span>
+            <span class="skill-chip">Dasar Jaringan Cisco (CCNA)</span>
+            <span class="skill-chip">MikroTik RouterOS Dasar</span>
+            <span class="skill-chip">Pengalamatan IPv4 &amp; Subnetting VLSM</span>
+            <span class="skill-chip">VLAN &amp; Routing Packet Tracer</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Web Programming & Database (PHP & MySQL) -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">Pemrograman Web &amp; Basis Data (PHP &amp; MySQL)</h3>
+          <p class="skill-desc">
+            Pengembangan sistem web dinamis, perancangan basis data relasional MySQL, operasi CRUD lengkap, implementasi prepared statement untuk keamanan query, serta integrasi API gateway.
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">PHP Native (OOP &amp; Prosedural)</span>
+            <span class="skill-chip">Basis Data MySQL / MariaDB</span>
+            <span class="skill-chip">Query SQL &amp; Prepared Statements</span>
+            <span class="skill-chip">CRUD Management &amp; Sesi User</span>
+            <span class="skill-chip">Integrasi Midtrans Snap API</span>
+            <span class="skill-chip">HTML5, CSS3 &amp; Bootstrap</span>
+            <span class="skill-chip">Upload Berkas &amp; Validasi Ekstensi</span>
+            <span class="skill-chip">Hosting CPanel &amp; phpMyAdmin</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Operating Systems, Server Lab & Helpdesk -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">Sistem Operasi, Server Lab &amp; Helpdesk</h3>
+          <p class="skill-desc">
+            Pengelolaan sistem operasi Linux dan Windows Server, virtualisasi homelab Proxmox VE, konfigurasi firewall pfSense, instalasi software kantor, dan pendampingan teknis pengguna (helpdesk).
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">Debian Linux &amp; Windows Server</span>
+            <span class="skill-chip">Proxmox VE (2-Laptop Node Lab)</span>
+            <span class="skill-chip">pfSense Firewall &amp; Router</span>
+            <span class="skill-chip">Instalasi Aplikasi Perkantoran</span>
+            <span class="skill-chip">Dukungan Helpdesk &amp; User Support</span>
+            <span class="skill-chip">Git &amp; GitHub Version Control</span>
+            <span class="skill-chip">Remote Desktop &amp; SSH Terminal</span>
+          </div>
+        </div>
+
+        <!-- Card 5: IoT & Embedded Systems (Hak Cipta) -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">IoT &amp; Embedded Systems (Hak Cipta Terdaftar)</h3>
+          <p class="skill-desc">
+            Pengembangan firmware mikrokontroler real-time menggunakan FreeRTOS pada ESP32, integrasi sensor jarak laser ToF, autentikasi RFID e-KTP, dan integrasi Telegram Bot API.
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">ESP32 FreeRTOS Dual-Core</span>
+            <span class="skill-chip">ESP32-CAM (UART Snapshot)</span>
+            <span class="skill-chip">Wemos D1 Mini (ESP8266)</span>
+            <span class="skill-chip">VL53L0X Laser ToF Sensor</span>
+            <span class="skill-chip">RFID RC522 (e-KTP Auth)</span>
+            <span class="skill-chip">Telegram Bot OTP Auto-burn</span>
+            <span class="skill-chip">Firebase Realtime Database</span>
+            <span class="skill-chip">NVS Offline Data Storage</span>
+            <span class="skill-chip">Hak Cipta EC002026135705</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Administrasi B2B, SAP & Perkantoran -->
+        <div class="m3-card skill-card">
+          <h3 class="skill-title">Administrasi Dokumen B2B &amp; SAP</h3>
+          <p class="skill-desc">
+            Verifikasi kelengkapan dokumen penagihan B2B (BAPS, BoQ, DokTek) di SAP, rekonsiliasi data proyek operasional, penyusunan buku panduan teknis/SOP, serta pengolahan spreadsheet.
+          </p>
+          <div class="skill-chip-list">
+            <span class="skill-chip">SAP (B2B Document Management)</span>
+            <span class="skill-chip">Verifikasi BAPS, BoQ &amp; DokTek</span>
+            <span class="skill-chip">Penyusunan Dokumentasi &amp; SOP</span>
+            <span class="skill-chip">Microsoft Excel, Word &amp; PowerPoint</span>
+            <span class="skill-chip">Pengelolaan Backlog Proyek</span>
+            <span class="skill-chip">Rekonsiliasi Data Transaksi</span>
+            <span class="skill-chip">Kerapian Arsip Digital</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PROJECTS & LABS (Static Semantic M3 Markup — Zero Runtime Delay)
+    ══════════════════════════════════════════ -->
+    <section id="projects" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Proyek &amp; Lab</span>
+        <h2 class="section-title">Proyek Pilihan &amp; Eksperimen Lab</h2>
+        <p class="section-subtitle">Dokumentasi prototipe hardware IoT ber-HKI, lab simulasi jaringan &amp; server, serta aplikasi pendukung.</p>
+      </div>
+
+      <div class="grid grid-cols-2" id="portfolio-projects-grid">
+        
+        <!-- Project 1: Smart Locker -->
+        <article class="m3-card project-card">
+          <div class="project-banner clickable" data-lightbox="https://raw.githubusercontent.com/rangga-ayi/Smart-Locker/main/schematics/skematik_rangkaian.avif" data-caption="Skematik Rangkaian Detail Smart Locker 3-Pintu ESP32 FreeRTOS">
+            <img src="https://raw.githubusercontent.com/rangga-ayi/Smart-Locker/main/schematics/skematik_rangkaian.avif" alt="Skematik Rangkaian Smart Locker 3 Pintu ESP32 FreeRTOS" loading="lazy">
+            <span class="banner-zoom-badge">
+              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Skema
+            </span>
+          </div>
+          <div class="project-badges">
+            <span class="chip">Tugas Akhir 2026</span>
+            <a href="https://pdki-indonesia.dgip.go.id:/link/45433030323032363133353730357c636f70797269676874" target="_blank" rel="noopener noreferrer" class="chip chip-interactive" title="Verifikasi HKI Kemenkumham RI">
+              HKI Kemenkumham RI <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i>
+            </a>
+            <span class="chip">FreeRTOS Dual-Core</span>
+          </div>
+          <h3 class="project-title">Smart Locker 3-Kompartemen: FreeRTOS, e-KTP &amp; OTP Telegram</h3>
+          <p class="project-role">Tugas Akhir · D3 Teknik Komputer Polsri</p>
+          <ul class="project-bullets">
+            <li>Merancang firmware ESP32 FreeRTOS Dual-Core untuk memisahkan proses jaringan dan kontrol perangkat keras secara paralel.</li>
+            <li>Mengintegrasikan autentikasi ganda menggunakan e-KTP (RFID RC522) dan kode OTP Telegram 4 digit sekali pakai.</li>
+            <li>Membangun modul ESP32-CAM via UART untuk merekam foto kurir saat menaruh paket ke dalam loker.</li>
+            <li>Memasang sensor laser VL53L0X ToF dan switch magnetik MC-38 pada 3 pintu untuk validasi isi loker dan status pintu.</li>
+            <li>Menerapkan penyimpanan lokal NVS ESP32 agar konfigurasi dan status loker tersimpan saat daya terputus.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="chip chip-tonal">ESP32 &amp; FreeRTOS</span>
+            <span class="chip chip-tonal">C++ (Arduino)</span>
+            <span class="chip chip-tonal">Telegram Bot API</span>
+            <span class="chip chip-tonal">RFID &amp; ToF Laser</span>
+            <span class="chip chip-tonal">Hardware Prototyping</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://drive.google.com/file/d/1wiqBW8Keu2OAa9X8Yy3FQXtn-wMUODry/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Dokumentasi (PDF)</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+            </a>
+            <a href="https://github.com/rangga-ayi/Smart-Locker" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
+              <span>GitHub Repo</span> <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+            <a href="https://pdki-indonesia.dgip.go.id:/link/45433030323032363133353730357c636f70797269676874" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
+              <span>Verifikasi HKI</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Alzi Petshop E-Commerce -->
+        <article class="m3-card project-card">
+          <div class="project-banner clickable" data-lightbox="./assets/projects/alzi-petshop.png" data-caption="Katalog &amp; Manajemen Transaksi E-Commerce Alzi Petshop (PHP, MySQL &amp; Midtrans API)">
+            <img src="./assets/projects/alzi-petshop.png" alt="Antarmuka Web E-Commerce Alzi Petshop" loading="lazy">
+            <span class="banner-zoom-badge">
+              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Tampilan
+            </span>
+          </div>
+          <div class="project-badges">
+            <span class="chip">Proyek Perkuliahan</span>
+            <span class="chip">PHP &amp; MySQL</span>
+            <span class="chip">Midtrans Payment</span>
+          </div>
+          <h3 class="project-title">Alzi Petshop: E-Commerce &amp; Manajemen Stok Produk</h3>
+          <p class="project-role">Proyek Kolaborasi Perkuliahan · Tim 2 Orang</p>
+          <ul class="project-bullets">
+            <li>Membangun website katalog toko dan manajemen inventaris produk pet shop menggunakan PHP Native dan basis data MySQL.</li>
+            <li>Mengintegrasikan payment gateway Midtrans Snap API untuk pemrosesan transaksi pembayaran digital.</li>
+            <li>Mengembangkan panel kelola admin untuk operasi CRUD (Create, Read, Update, Delete) produk, upload gambar, dan pelacakan pesanan.</li>
+            <li>Menerapkan autentikasi multi-level user (pelanggan dan admin) serta pengelolaan sesi keranjang belanja (cart).</li>
+            <li>Mengamankan kueri basis data dengan prepared statements dan validasi tipe berkas unggahan gambar produk.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="chip chip-tonal">PHP Native</span>
+            <span class="chip chip-tonal">MySQL Database</span>
+            <span class="chip chip-tonal">Midtrans Snap API</span>
+            <span class="chip chip-tonal">Bootstrap &amp; CSS</span>
+            <span class="chip chip-tonal">CRUD Inventory</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/rangga-ayi/alzi-petshop-ecommerce" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>GitHub Repo</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: AeroNest -->
+        <article class="m3-card project-card">
+          <div class="project-banner clickable" data-lightbox="https://raw.githubusercontent.com/rangga-ayi/AeroNest/main/Assets/desktop_home.avif" data-caption="Dashboard Web 3D Digital Twin AeroNest (React 18, Three.js &amp; Firebase RTDB)">
+            <img src="https://raw.githubusercontent.com/rangga-ayi/AeroNest/main/Assets/desktop_home.avif" alt="Dashboard Web 3D Digital Twin AeroNest IoT Microclimate Monitoring" loading="lazy">
+            <span class="banner-zoom-badge">
+              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Tampilan
+            </span>
+          </div>
+          <div class="project-badges">
+            <span class="chip">3D Digital Twin</span>
+            <span class="chip">React 18 &amp; Three.js</span>
+            <span class="chip">Ollama Local LLM</span>
+          </div>
+          <h3 class="project-title">AeroNest: IoT Room Microclimate Monitoring &amp; 3D Digital Twin</h3>
+          <p class="project-role">Proyek Mandiri · IoT Hardware &amp; 3D Web Dashboard</p>
+          <ul class="project-bullets">
+            <li>Merancang node sensor IoT berdaya rendah menggunakan ESP8266 dengan Deep Sleep 5 menit dan baterai Li-ion.</li>
+            <li>Mengintegrasikan sensor AHT20 dan BMP280 via protokol I2C untuk membaca suhu, kelembapan, dan tekanan udara.</li>
+            <li>Mengirim data telemetri nirkabel ke Firebase Realtime Database untuk sinkronisasi langsung ke antarmuka pengguna.</li>
+            <li>Membangun dashboard web responsif memakai React 18, Vite, dan visualisasi interaktif 3D Digital Twin dengan Three.js.</li>
+            <li>Menghubungkan analisis berkala kondisi iklim ruangan berbasis model bahasa lokal via Ollama secara offline.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="chip chip-tonal">ESP8266 &amp; I2C</span>
+            <span class="chip chip-tonal">React 18 &amp; Vite</span>
+            <span class="chip chip-tonal">Three.js (3D)</span>
+            <span class="chip chip-tonal">Firebase RTDB</span>
+            <span class="chip chip-tonal">Ollama Local LLM</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://aeronest.proyekhub.my.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Buka Aplikasi</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+            </a>
+            <a href="https://github.com/rangga-ayi/AeroNest" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
+              <span>GitHub Repo</span> <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: MusicNest -->
+        <article class="m3-card project-card">
+          <div class="project-banner project-banner-tonal">
+            <span class="project-banner-category">Web Application &amp; Multimedia</span>
+            <h4 class="project-banner-title">MusicNest</h4>
+          </div>
+          <div class="project-badges">
+            <span class="chip">Self-Hosted LAN</span>
+            <span class="chip">Next.js 16 &amp; React 19</span>
+            <span class="chip">MySQL 8+ FTS</span>
+          </div>
+          <h3 class="project-title">MusicNest: Pemutar Musik &amp; Katalog Server LAN</h3>
+          <p class="project-role">Proyek Mandiri · Full-Stack Web &amp; Multimedia</p>
+          <ul class="project-bullets">
+            <li>Membangun pemutar musik web di jaringan lokal menggunakan Next.js 16, TypeScript, dan Tailwind CSS.</li>
+            <li>Merancang modul pemindai folder musik otomatis dengan penyimpanan metadata lagu pada basis data MySQL 8+.</li>
+            <li>Menerapkan pencarian full-text real-time untuk katalog musik serta sinkronisasi lirik lagu.</li>
+            <li>Menyediakan streaming audio berbasis HTTP Range dengan transkode berkas musik secara lokal.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="chip chip-tonal">Next.js 16</span>
+            <span class="chip chip-tonal">TypeScript</span>
+            <span class="chip chip-tonal">MySQL FTS</span>
+            <span class="chip chip-tonal">Audio Streaming</span>
+            <span class="chip chip-tonal">Self-Hosted LAN</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://musicnest.proyekhub.my.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Buka Aplikasi</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         EXPERIENCE
+    ══════════════════════════════════════════ -->
+    <section id="experience" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Pengalaman</span>
+        <h2 class="section-title">Pengalaman Kerja &amp; Magang</h2>
+        <p class="section-subtitle">Rekam jejak magang industri, pekerjaan teknis lapangan, dan kompetisi kejuruan.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1: PLN Icon Plus -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="m3-card timeline-card">
+            <div class="experience-header">
+              <h3 class="experience-role">Administrative Assistant &amp; Field Technician — Magang</h3>
+              <span class="tenure-badge">Jul 2025 – Okt 2025 · 4 Bulan</span>
+            </div>
+            <p class="experience-company">PLN Icon Plus — Palembang, Sumatera Selatan</p>
+            <ul class="experience-bullets">
+              <li>Memeriksa dan merekap berkas penagihan BAPS, BoQ, dan DokTek untuk transaksi B2B rata-rata 10+ dokumen per hari menggunakan SAP, Microsoft Excel, dan Word.</li>
+              <li>Menertibkan dan memverifikasi kelengkapan dokumen backlog pada periode puncak proyek untuk kelancaran termin penagihan mitra kerja.</li>
+              <li>Membantu penarikan kabel UTP, terminasi RJ45, pengujian koneksi, dan instalasi jaringan CCTV di kawasan Jembatan Ampera serta Terminal Karya Jaya bersama Diskominfo Palembang.</li>
+            </ul>
+            <div class="experience-tags">
+              <span class="chip">SAP B2B</span>
+              <span class="chip">BAPS &amp; BoQ</span>
+              <span class="chip">Penarikan Kabel UTP</span>
+              <span class="chip">Instalasi CCTV Lapangan</span>
+              <span class="chip">Standar K3</span>
+              <span class="chip">Microsoft Excel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Zhanet Komputer -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="m3-card timeline-card">
+            <div class="experience-header">
+              <h3 class="experience-role">Assistant Technician — Magang</h3>
+              <span class="tenure-badge">Jan 2022 – Apr 2022 · 4 Bulan</span>
+            </div>
+            <p class="experience-company">Zhanet Komputer — Muara Enim, Sumatera Selatan</p>
+            <ul class="experience-bullets">
+              <li>Mendiagnosis dan memperbaiki kerusakan hardware (RAM, storage, PSU, motherboard) serta masalah sistem operasi pada PC pelanggan.</li>
+              <li>Merakit unit PC desktop kustom dari komponen terpisah sesuai kebutuhan spesifikasi dan anggaran pelanggan.</li>
+              <li>Melakukan instalasi OS Windows, konfigurasi driver perangkat, serta stress test stabilitas sebelum unit diserahkan.</li>
+            </ul>
+            <div class="experience-tags">
+              <span class="chip">Perakitan PC Kustom</span>
+              <span class="chip">Hardware Troubleshooting</span>
+              <span class="chip">Windows Deployment</span>
+              <span class="chip">Konfigurasi Driver</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CREDENTIALS
+    ══════════════════════════════════════════ -->
+    <section id="credentials" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Sertifikasi</span>
+        <h2 class="section-title">Sertifikasi &amp; Hak Cipta</h2>
+        <p class="section-subtitle">Sertifikasi kompetensi jaringan, machine learning, dan hak cipta terdaftar resmi di Kemenkumham RI.</p>
+      </div>
+
+      <div class="grid grid-cols-4">
+        <!-- Cert 1: Cisco -->
+        <div class="m3-card credential-card">
+          <span class="chip chip-sky">Cisco Networking Academy</span>
+          <h3 class="credential-title">Cisco Certified Networking Basics</h3>
+          <p class="credential-desc">
+            Konsep pengalamatan IPv4 &amp; IPv6, verifikasi konektivitas, troubleshooting jaringan lokal, serta konfigurasi router nirkabel.
+          </p>
+          <div class="credential-footer">Diterbitkan: Sep 2026</div>
+        </div>
+
+        <!-- Cert 2: Dicoding ML -->
+        <div class="m3-card credential-card">
+          <span class="chip chip-violet">Dicoding Indonesia</span>
+          <h3 class="credential-title">Belajar Machine Learning untuk Pemula</h3>
+          <p class="credential-desc">
+            Penerapan Python untuk supervised &amp; unsupervised learning, feature engineering, evaluasi model, dan hyperparameter tuning.
+          </p>
+          <div class="credential-footer">
+            ID: 1OP876E48ZQK · Berlaku s/d Sep 2029
+          </div>
+        </div>
+
+        <!-- Cert 3: LKS ITNSA Juara 1 Kab & Top 5 Prov -->
+        <div class="m3-card credential-card">
+          <span class="chip chip-amber">MKKS SMK &amp; Disdik Sumsel</span>
+          <h3 class="credential-title">Juara 1 LKS ITNSA Kab. Muara Enim</h3>
+          <p class="credential-desc">
+            Administrasi server Linux, konfigurasi routing MikroTik, deployment web server, dan simulasi penanganan insiden jaringan.
+          </p>
+          <div class="credential-footer">
+            No: 420/016/MKKS-SMK/ME/2022 · Jul 2022
+          </div>
+        </div>
+
+        <!-- Cert 4: HKI Kemenkumham -->
+        <div class="m3-card credential-card">
+          <span class="chip chip-green">Kemenkumham RI</span>
+          <h3 class="credential-title">Hak Cipta: Smart Locker FreeRTOS</h3>
+          <p class="credential-desc">
+            Surat Pencatatan Ciptaan Program Komputer: Sistem Smart Locker 3-Pintu Berbasis ESP32 FreeRTOS Dual-Core dengan autentikasi RFID e-KTP dan OTP Telegram.
+          </p>
+          <div class="credential-footer">
+            No: EC002026135705 · Terbit: 6 Agt 2026
+          </div>
+          <a href="https://pdki-indonesia.dgip.go.id/search?keyword=EC002026135705&amp;type=copyright" target="_blank" rel="noopener noreferrer" class="credential-link">
+            <span>Verifikasi di PDKI Kemenkumham</span>
+            <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════ -->
+    <section id="contact" class="container content-section">
+      <div class="section-header">
+        <span class="section-pill-tag">Kontak</span>
+        <h2 class="section-title">Kontak &amp; Ketersediaan</h2>
+        <p class="section-subtitle">Terbuka untuk posisi Teknisi Hardware, Network Administrator, IT Support, maupun Administrasi Operasional B2B.</p>
+      </div>
+
+      <div class="grid grid-cols-2 contact-layout">
+        <!-- Form -->
+        <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST" class="m3-card contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required aria-required="true" aria-describedby="form-message">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Anda</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="nama@email.com" required aria-required="true" aria-describedby="form-message">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Pesan</label>
+            <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tuliskan pesan, tawaran kerja, atau detail kebutuhan Anda di sini..." required aria-required="true" aria-describedby="form-message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-btn">
+            <span>Kirim Pesan</span>
+            <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+          </button>
+          <div class="form-message" id="form-message" role="status" aria-live="polite" style="display: none;"></div>
+        </form>
+
+        <!-- Right column -->
+        <div class="contact-side-col">
+          <!-- Availability Banner -->
+          <div class="availability-card">
+            <span class="availability-badge">Tersedia</span>
+            <div>
+              <p class="availability-title">Siap Bekerja &amp; Bergabung Segera</p>
+              <p class="availability-subtitle">Full-time · Kontrak · On-site (Palembang / Muara Enim / sekitarnya) atau Remote</p>
+            </div>
+          </div>
+
+          <!-- Direct Contact -->
+          <div class="m3-card contact-details-card">
+            <h3 class="contact-details-heading">Kontak Langsung</h3>
+            <div class="contact-info-item">
+              <span class="contact-info-label">Email</span>
+              <a href="mailto:pratama.ranggaayi@gmail.com" class="contact-info-val">pratama.ranggaayi@gmail.com</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/rangga-ayi-pratama/" target="_blank" rel="noopener noreferrer" class="contact-info-val">linkedin.com/in/rangga-ayi-pratama</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-info-label">GitHub</span>
+              <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer" class="contact-info-val">github.com/rangga-ayi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ══════════════════════════════════════════
        FOOTER
@@ -662,39 +726,23 @@
   <footer id="footer" class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-logo">
-          <div class="logo-icon">
-            <i data-lucide="zap" style="width: 18px; height: 18px;"></i>
-          </div>
-          Rangga
-        </div>
+        <div class="footer-logo">MyPorto</div>
 
         <p class="footer-copy">
-          © 2026 Rangga — Junior IT Generalist &amp; Continuous Learner
+          © 2026 Rangga Ayi Pratama — D3 Teknik Komputer Polsri
         </p>
 
         <div class="social-icons">
-          <a href="#" class="social-btn" aria-label="LinkedIn">
-            <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+          <a href="https://www.linkedin.com/in/rangga-ayi-pratama/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </a>
           <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-            <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
           </a>
           <a href="mailto:pratama.ranggaayi@gmail.com" class="social-btn" aria-label="Email">
             <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
           </a>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-legal">
-          <a href="#" aria-disabled="true">Kebijakan Privasi</a>
-          <a href="#" aria-disabled="true">Syarat &amp; Ketentuan</a>
-          <a href="PRD.md">PRD Spec</a>
-        </div>
-        <p style="font-size: 0.78rem; color: #334155;">
-          Dibangun dengan HTML, CSS &amp; Passion for Hardware, Networks &amp; AI ⚡
-        </p>
       </div>
     </div>
   </footer>
@@ -703,7 +751,7 @@
   <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="lightbox-content">
       <div class="lightbox-header">
-        <span id="lightbox-title">Pratinjau Gambar</span>
+        <span id="lightbox-title">Pratinjau Skematik &amp; Dokumentasi</span>
         <button class="lightbox-close-btn" id="lightbox-close" aria-label="Tutup pratinjau">
           <i data-lucide="x" style="width: 18px; height: 18px;"></i>
         </button>
@@ -717,6 +765,49 @@
   <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      /* Theme toggle logic */
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+
+      const updateThemeIcon = (theme) => {
+        if (!themeIcon) return;
+        if (theme === 'dark') {
+          themeIcon.setAttribute('data-lucide', 'sun');
+        } else {
+          themeIcon.setAttribute('data-lucide', 'moon');
+        }
+        lucide.createIcons();
+      };
+
+      const getCurrentTheme = () => document.documentElement.getAttribute('data-theme') || 'light';
+
+      updateThemeIcon(getCurrentTheme());
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          document.documentElement.classList.add('theme-transition');
+          const current = getCurrentTheme();
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateThemeIcon(next);
+          setTimeout(() => {
+            document.documentElement.classList.remove('theme-transition');
+          }, 300);
+        });
+      }
+
+      // Listen for OS theme changes if user hasn't set manual preference
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          if (!localStorage.getItem('theme')) {
+            const next = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            updateThemeIcon(next);
+          }
+        });
+      }
+
       lucide.createIcons();
 
       /* Mobile nav toggle */
@@ -770,7 +861,7 @@
         sections.forEach(s => observer.observe(s));
       }
 
-      /* Lightbox modal */
+      /* Lightbox modal for static images */
       const modal = document.getElementById('lightbox-modal');
       const modalImg = document.getElementById('lightbox-img');
       const modalTitle = document.getElementById('lightbox-title');
