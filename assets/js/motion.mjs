@@ -23,10 +23,10 @@ function initializeMotion(){
  function renderPose(progress){
   const pose=introPose(progress);hero.dataset.introProgress=progress.toFixed(3);hero.dataset.characterPose=pose;
   if(currentPose===pose)return;currentPose=pose;
-  const index=['wave','inspect','present'].indexOf(pose);
-  if(poses.length>1)poses.forEach((el,i)=>el.style.opacity=i===index?'1':'0');
-  else poses.forEach(el=>el.style.opacity='1');
-  captions.forEach((el,i)=>el.style.opacity=i===index?'1':'0');
+  const rawIndex=['wave','inspect','present'].indexOf(pose);
+  const activeIndex=poses.length?Math.min(poses.length-1,Math.max(0,rawIndex)):-1;
+  poses.forEach((el,i)=>el.style.opacity=i===activeIndex?'1':'0');
+  captions.forEach((el,i)=>el.style.opacity=i===activeIndex?'1':'0');
  }
  function rebuild(){
   resizeFrame=0;
