@@ -24,7 +24,9 @@ function initializeMotion(){
   const pose=introPose(progress);hero.dataset.introProgress=progress.toFixed(3);hero.dataset.characterPose=pose;
   if(currentPose===pose)return;currentPose=pose;
   const index=['wave','inspect','present'].indexOf(pose);
-  poses.forEach((el,i)=>el.style.opacity=i===index?'1':'0');captions.forEach((el,i)=>el.style.opacity=i===index?'1':'0');
+  if(poses.length>1)poses.forEach((el,i)=>el.style.opacity=i===index?'1':'0');
+  else poses.forEach(el=>el.style.opacity='1');
+  captions.forEach((el,i)=>el.style.opacity=i===index?'1':'0');
  }
  function rebuild(){
   resizeFrame=0;
@@ -47,6 +49,10 @@ function initializeMotion(){
      .fromTo(stage.querySelector('.hero-character-halo'),{scale:.8,opacity:.6},{scale:1.35,opacity:1,duration:1},0);
     const greeting=stage.querySelector('.hero-greeting');
     if(greeting)intro.to(greeting,{y:-26,opacity:0,duration:.45},0);
+    const overview=document.querySelector('#ringkasan');
+    if(overview&&!compact){
+     gsap.fromTo(stage,{opacity:1,y:0},{opacity:0,y:-18,ease:'none',scrollTrigger:{trigger:overview,start:'top 72%',end:'top 38%',scrub:true,invalidateOnRefresh:true}});
+    }
     // Phones keep the crossing in the character's column so it never passes behind paragraphs.
     if(crossing)intro.set(crossing,{xPercent:compact?10:20,yPercent:compact?30:55,scale:.45,rotation:-18,opacity:0},0)
      .to(crossing,{xPercent:compact?0:-60,yPercent:compact?-40:-70,scale:compact?.8:1.25,rotation:6,opacity:compact?.85:1,duration:.55},0)
