@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#170a2a">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23180b2a%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial%22 font-size=%2236%22 font-weight=%22bold%22 fill=%22%23e5c485%22 text-anchor=%22middle%22%3ER%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0a1322">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230a1322%22 stroke=%22%2338bdf8%22 stroke-width=%223%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial,sans-serif%22 font-size=%2234%22 font-weight=%22bold%22 fill=%22%2338bdf8%22 text-anchor=%22middle%22%3ER%3C/text%3E%3C/svg%3E">
   <title>Rangga Ayi Pratama — IT Infrastructure, Network &amp; Technical Support</title>
   <meta name="description" content="Portofolio Rangga Ayi Pratama: lulusan D3 Teknik Komputer Polsri IPK 3.64, pengalaman praktik PLN Icon Plus &amp; Zhanet Komputer, Juara 1 LKS IT Network Admin, aplikasi web Alzi Petshop, dan integrasi hardware Smart Locker.">
   <link rel="canonical" href="https://portofolio.proyekhub.my.id/">
@@ -16,10 +16,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://portofolio.proyekhub.my.id/assets/profile/Rangga.jpg">
 
-  <!-- Fonts: Archivo (Primary) & Caveat (Handwriting accent) -->
+  <!-- Fonts: Plus Jakarta Sans (Primary) & JetBrains Mono (Technical Spec) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Primary Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -56,7 +56,7 @@
 
   <!-- Header -->
   <header class="site-header portfolio-header">
-    <a class="wordmark" href="#profil" aria-label="Rangga, kembali ke profil">rangga<span>.</span></a>
+    <a class="wordmark" href="#profil" aria-label="Rangga, kembali ke profil">rangga<span>_</span></a>
     <nav class="section-navigation" aria-label="Bagian portofolio">
       <div class="section-links">
         <a href="#profil">Profil</a>
@@ -171,17 +171,29 @@
               </div>
             </div>
 
-            <div class="hero-character" aria-hidden="true">
-              <div class="hero-character-halo"></div>
-              <span class="hero-greeting">Meet Rangga.</span>
+            <div class="hero-character" role="region" aria-label="Identitas teknis Rangga">
+              <div class="hero-character-halo" aria-hidden="true"></div>
               <div class="hero-camera">
                 <div class="hero-parallax">
                   <div class="hero-life">
                     <div class="hero-pose pose-wave">
-                      <picture>
-                        <source type="image/avif" srcset="assets/profile/Rangga.avif">
-                        <img src="assets/profile/Rangga.jpg" width="1800" height="1800" alt="Foto studio Rangga Ayi Pratama mengenakan jas hitam dan dasi merah." loading="eager" decoding="async" fetchpriority="high" data-essential>
-                      </picture>
+                      <div class="hero-spec-head">
+                        <span class="hero-spec-status"><i aria-hidden="true"></i> READY FOR WORK</span>
+                        <span class="hero-spec-code">ID // PLG</span>
+                      </div>
+                      <div class="hero-spec-photo">
+                        <picture>
+                          <source type="image/avif" srcset="assets/profile/Rangga.avif">
+                          <img src="assets/profile/Rangga.jpg" width="1800" height="1800" alt="Foto studio Rangga Ayi Pratama mengenakan jas hitam dan dasi merah." loading="eager" decoding="async" fetchpriority="high" data-essential>
+                        </picture>
+                      </div>
+                      <div class="hero-spec-foot" aria-label="Fokus keahlian inti">
+                        <span>MikroTik</span>
+                        <span>Debian Linux</span>
+                        <span>UTP &amp; CCTV</span>
+                        <span>PHP/MySQL</span>
+                        <span>ESP32</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -745,8 +757,14 @@
         </div>
 
         <section class="editorial-block" id="capabilities" aria-label="Bidang keahlian">
+          <div class="skill-filters filter-bar" role="group" aria-label="Filter kategori keahlian" hidden>
+            <button type="button" data-skill-filter="all" aria-pressed="true">Semua (7)</button>
+            <button type="button" data-skill-filter="infra" aria-pressed="false">Jaringan &amp; Linux (3)</button>
+            <button type="button" data-skill-filter="hardware" aria-pressed="false">Hardware &amp; IoT (2)</button>
+            <button type="button" data-skill-filter="apps" aria-pressed="false">Web, DB &amp; Keamanan (2)</button>
+          </div>
           <div class="capability-grid">
-            <article class="capability" data-skill-category="network">
+            <article class="capability" data-skill-category="infra">
               <span>Jaringan / MikroTik &amp; Protokol</span>
               <h3>MikroTik RouterOS &amp; TCP/IP</h3>
               <p>Konfigurasi routing dinamis/statis, firewall filter, NAT, bandwidth management, VLAN, dan troubleshooting jaringan komputer.</p>
@@ -760,21 +778,21 @@
               <a href="#zhanet-komputer">Lihat praktik di Zhanet ↗</a>
             </article>
 
-            <article class="capability" data-skill-category="network">
+            <article class="capability" data-skill-category="infra">
               <span>Infrastruktur / Lapangan</span>
               <h3>Kabel UTP &amp; Instalasi CCTV</h3>
               <p>Penarikan kabel terstruktur, terminasi konektor RJ45 standar T568B, pengujian kabel tester, dan instalasi perangkat CCTV di lapangan.</p>
               <a href="#pln-icon-plus">Lihat kerja di PLN Icon Plus ↗</a>
             </article>
 
-            <article class="capability" data-skill-category="server">
+            <article class="capability" data-skill-category="infra">
               <span>Server &amp; Linux</span>
               <h3>Debian Server &amp; Web Services</h3>
               <p>Instalasi dan administrasi Debian/Ubuntu Server, manajemen service systemd, deployment Apache, PHP, MySQL, serta konfigurasi DNS.</p>
               <a href="#lks-network">Buka studi kasus server ↗</a>
             </article>
 
-            <article class="capability" data-skill-category="data">
+            <article class="capability" data-skill-category="apps">
               <span>Web &amp; Database / Proyek</span>
               <h3>PHP, MySQL &amp; Payment API</h3>
               <p>Perancangan basis data relasional, sanitasi input aman, Role-Based Access Control (RBAC), serta integrasi Midtrans Snap API &amp; Webhook.</p>
@@ -788,7 +806,7 @@
               <a href="#smart-locker">Buka prototype Smart Locker ↗</a>
             </article>
 
-            <article class="capability" data-skill-category="security">
+            <article class="capability" data-skill-category="apps">
               <span>Virtualisasi &amp; Keamanan (Akademik)</span>
               <h3>VMware, Proxmox, pfSense &amp; SIEM</h3>
               <p>Eksplorasi virtual environment server (VMware &amp; Proxmox), konfigurasi firewall pfSense, serta pengenalan monitoring keamanan dengan Wazuh &amp; Suricata.</p>
@@ -857,9 +875,19 @@
           <span class="section-rule" aria-hidden="true"><i></i></span>
         </div>
 
-        <section class="certificate-gallery" aria-label="Galeri sertifikat dan pencapaian">
+        <div class="cert-controls" hidden>
+          <div class="cert-tabs filter-bar" role="tablist" aria-label="Filter kategori sertifikat">
+            <button type="button" id="cert-tab-all" role="tab" aria-selected="true" tabindex="0" data-cert-filter="all">Semua (10)</button>
+            <button type="button" id="cert-tab-network" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="network">Jaringan &amp; Siber (6)</button>
+            <button type="button" id="cert-tab-data" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="data">Basis Data (2)</button>
+            <button type="button" id="cert-tab-field" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="field">Industri &amp; Bahasa (2)</button>
+          </div>
+          <p class="cert-count" id="cert-filter-status" aria-live="polite">Menampilkan 10 dari 10 dokumen terverifikasi</p>
+        </div>
+
+        <section class="certificate-gallery" id="cert-panel" role="tabpanel" aria-labelledby="cert-tab-all" aria-label="Galeri sertifikat dan pencapaian">
           <!-- Cert 1: BNSP Database Programmer -->
-          <article class="certificate-card" id="cert-bnsp">
+          <article class="certificate-card" id="cert-bnsp" data-cert-category="data">
             <div class="certificate-copy">
               <p class="certificate-issuer">Sertifikasi · Badan Nasional Sertifikasi Profesi (BNSP) · 2026</p>
               <h3>Pemrogram Basis Data (Database Programmer)</h3>
@@ -871,7 +899,7 @@
           </article>
 
           <!-- Cert 2: CCEP -->
-          <article class="certificate-card" id="cert-ccep">
+          <article class="certificate-card" id="cert-ccep" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Sertifikasi · Red Team Cyber · 2026</p>
               <h3>Certified Cybersecurity Educator Professional (CCEP)</h3>
@@ -883,7 +911,7 @@
           </article>
 
           <!-- Cert 3: LKS -->
-          <article class="certificate-card" id="cert-lks">
+          <article class="certificate-card" id="cert-lks" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Kompetisi · MKKS SMK Muara Enim / Diknas Sumsel · 2022</p>
               <h3>Juara 1 — LKS IT Network System Administration</h3>
@@ -895,7 +923,7 @@
           </article>
 
           <!-- Cert 4: Cisco Networking Basics -->
-          <article class="certificate-card" id="cert-cisco">
+          <article class="certificate-card" id="cert-cisco" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Cisco Networking Academy · 2026</p>
               <h3>Networking Basics</h3>
@@ -907,7 +935,7 @@
           </article>
 
           <!-- Cert 5: DTS Kominfo -->
-          <article class="certificate-card" id="cert-dts-intermediate">
+          <article class="certificate-card" id="cert-dts-intermediate" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Digital Talent Scholarship (Kominfo) · 2026</p>
               <h3>Intermediate Associate Network Administrator</h3>
@@ -919,7 +947,7 @@
           </article>
 
           <!-- Cert 6: DTA Kominfo -->
-          <article class="certificate-card" id="cert-dta-fundamental">
+          <article class="certificate-card" id="cert-dta-fundamental" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Digital Talent Academy (Kominfo) · 2026</p>
               <h3>Fundamental of Associate Network Administrator</h3>
@@ -931,7 +959,7 @@
           </article>
 
           <!-- Cert 7: Simplilearn SQL -->
-          <article class="certificate-card" id="cert-sql">
+          <article class="certificate-card" id="cert-sql" data-cert-category="data">
             <div class="certificate-copy">
               <p class="certificate-issuer">Kursus · Simplilearn · 2026</p>
               <h3>Introduction to SQL</h3>
@@ -943,7 +971,7 @@
           </article>
 
           <!-- Cert 8: ID-Networkers Cisco -->
-          <article class="certificate-card" id="cert-cisco-dasar">
+          <article class="certificate-card" id="cert-cisco-dasar" data-cert-category="network">
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · ID-Networkers · 2026</p>
               <h3>Cisco Dasar (Training &amp; Lab)</h3>
@@ -955,7 +983,7 @@
           </article>
 
           <!-- Cert 9: Magang PLN -->
-          <article class="certificate-card" id="cert-pln">
+          <article class="certificate-card" id="cert-pln" data-cert-category="field">
             <div class="certificate-copy">
               <p class="certificate-issuer">Magang Industri · PT PLN Icon Plus · 2025</p>
               <h3>Sertifikat Praktik Kerja Lapangan</h3>
@@ -967,7 +995,7 @@
           </article>
 
           <!-- Cert 10: English Score 610 -->
-          <article class="certificate-card" id="cert-english">
+          <article class="certificate-card" id="cert-english" data-cert-category="field">
             <div class="certificate-copy">
               <p class="certificate-issuer">Kemampuan Bahasa · Daily Bahasa Inggris · 2026</p>
               <h3>English Proficiency Test — Score 610</h3>
@@ -1053,7 +1081,7 @@
   <div class="panel-transition" aria-hidden="true">
     <div class="transition-sheet sheet-back"></div>
     <div class="transition-sheet sheet-front">
-      <span class="transition-wordmark">rangga<span>.</span></span>
+      <span class="transition-wordmark">rangga<span>_</span></span>
       <span data-transition-label></span>
       <i></i>
     </div>
@@ -1070,7 +1098,7 @@
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="wrap footer-row">
-      <a class="wordmark" href="#profil">rangga<span>.</span></a>
+      <a class="wordmark" href="#profil">rangga<span>_</span></a>
       <p>Rangga Ayi Pratama<br>D3 Teknik Komputer · Politeknik Negeri Sriwijaya. Seluruh foto proyek dan kegiatan adalah dokumentasi asli.</p>
       <div class="footer-contact-links">
         <a href="mailto:pratama.ranggaayi@gmail.com">Email Rangga ↗</a>

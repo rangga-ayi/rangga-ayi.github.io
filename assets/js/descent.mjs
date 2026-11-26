@@ -42,6 +42,11 @@ export function initializeDescent(gsap){
   },{rootMargin:'-46% 0px -46% 0px'});
   cards.forEach(card=>observer.observe(card));
   select(0);
+  document.addEventListener('portfolio:skill-filter',()=>{
+   const visibleIndex=cards.findIndex(c=>!c.hidden);
+   stage?.querySelectorAll('.skill-stage-dots i').forEach((dot,i)=>{dot.hidden=cards[i]?.hidden||false;});
+   if(visibleIndex>=0){active=-1;select(visibleIndex);}
+  });
  }
  function choose(index){held=performance.now()+1200;select(index);}
  function select(index){

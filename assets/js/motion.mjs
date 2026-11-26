@@ -44,8 +44,9 @@ function initializeMotion(){
     // The surface rises through the name while the character sinks into the depth and an object crosses behind.
     const camera=stage.querySelector('.hero-camera'),crossing=scene.querySelector('.descent-object');
     intro.fromTo(camera,{yPercent:0,scale:1,transformOrigin:'50% 100%'},{yPercent:compact?6:10,scale:compact?.94:.86,duration:1},0)
-     .fromTo(stage.querySelector('.hero-character-halo'),{scale:.8,opacity:.6},{scale:1.35,opacity:1,duration:1},0)
-     .to(stage.querySelector('.hero-greeting'),{y:-26,opacity:0,duration:.45},0);
+     .fromTo(stage.querySelector('.hero-character-halo'),{scale:.8,opacity:.6},{scale:1.35,opacity:1,duration:1},0);
+    const greeting=stage.querySelector('.hero-greeting');
+    if(greeting)intro.to(greeting,{y:-26,opacity:0,duration:.45},0);
     // Phones keep the crossing in the character's column so it never passes behind paragraphs.
     if(crossing)intro.set(crossing,{xPercent:compact?10:20,yPercent:compact?30:55,scale:.45,rotation:-18,opacity:0},0)
      .to(crossing,{xPercent:compact?0:-60,yPercent:compact?-40:-70,scale:compact?.8:1.25,rotation:6,opacity:compact?.85:1,duration:.55},0)
