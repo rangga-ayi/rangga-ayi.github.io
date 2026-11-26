@@ -15,8 +15,7 @@ export function initializeInteractions(gsap){
  }));
  const registry=[
   ...careerProof('#pengalaman .career-entry[data-proof-label]'),
-  {key:'presensi',label:'Proyek presensi',note:'Perancangan dan pengujian',section:'#proyek',source:'#presensi',copy:'#presensi>.body-copy',photo:'#presensi .documentary'},
-  ...careerProof('#organisasi-relawan .career-entry[data-proof-label]')
+  {key:'alzi-petshop',label:'Alzi Petshop',note:'E-Commerce & Midtrans API',section:'#proyek',source:'#alzi-petshop',copy:'#alzi-petshop>.body-copy',photo:'#alzi-petshop .documentary'}
  ].filter(item=>document.querySelector(item.copy)&&document.querySelector(item.photo));
  const explorer=document.querySelector('[data-proof-explorer]');
  const tabs=[],panels=[];let selected=-1,proofTween=null,hoverTimer=0;
@@ -46,7 +45,7 @@ export function initializeInteractions(gsap){
    const original=document.querySelector(item.photo),picture=original.querySelector('picture');
    const tab=document.createElement('button');tab.type='button';tab.className='proof-pick';tab.id='proof-tab-'+item.key;
    tab.setAttribute('role','tab');tab.setAttribute('aria-controls','proof-panel-'+item.key);
-   const thumb=original.querySelector('img').cloneNode();thumb.alt='';thumb.loading='eager';
+   const thumb=original.querySelector('img').cloneNode();thumb.alt='';thumb.loading='eager';thumb.decoding='sync';
    const text=document.createElement('span'),title=document.createElement('b'),note=document.createElement('small'),arrow=document.createElement('i');
    title.textContent=item.label;note.textContent=item.note;text.append(title,note);arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');tab.append(thumb,text,arrow);
    const panel=document.createElement('article');panel.id='proof-panel-'+item.key;panel.className='proof-panel';panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tab.id);panel.tabIndex=0;
@@ -86,6 +85,7 @@ export function initializeInteractions(gsap){
  }
  function navigate(link,target){
   resetCurtain();
+  if(document.hidden){arrive(link,target);return;}
   overlay.querySelector('[data-transition-label]').textContent=(link.textContent||'').replace(/[↗↓]/g,'').trim();
   overlay.classList.add('is-active');
   gsap.set(sheets,{yPercent:105,skewY:-5});
@@ -109,7 +109,9 @@ export function initializeInteractions(gsap){
   image.src=opener.href;image.alt=original.alt;
   const caption=opener.closest('figure')?.querySelector('figcaption')?.textContent||original.alt;
   dialog.querySelector('p').textContent=caption;dialog.setAttribute('aria-label',caption);dialog.querySelector('[data-original-image]').href=opener.href;
-  opener.focus({preventScroll:true});dialog.showModal();dialog.classList.add('is-zooming');
+  opener.focus({preventScroll:true});dialog.showModal();
+  if(document.hidden)return;
+  dialog.classList.add('is-zooming');
   const from=originTransform();
   photoTween=gsap.timeline({onComplete:()=>{dialog.classList.remove('is-zooming');}})
    .fromTo(dialog,{'--dialog-shade':0},{'--dialog-shade':.9,duration:.4},0)
@@ -118,15 +120,20 @@ export function initializeInteractions(gsap){
  function closePhoto(){
   if(closing||!dialog.open)return;
   photoTween?.kill();gsap.set(image,{clearProps:'transform,opacity'});
-  if(!enabled()||!photoOpener?.isConnected){dialog.close();resetPhoto();return;}
+  if(!enabled()||document.hidden||!photoOpener?.isConnected){dialog.close();resetPhoto();return;}
   closing=true;dialog.classList.add('is-zooming');const to=originTransform();
   photoTween=gsap.timeline({onComplete:()=>{dialog.close();resetPhoto();}})
    .to(image,{...to,opacity:.25,duration:.25,ease:'power2.in'},0)
    .to(dialog,{'--dialog-shade':0,duration:.25},0);
  }
+ function isBackdropClick(event){
+  if(event.target!==dialog)return false;
+  const r=dialog.getBoundingClientRect();
+  return event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom;
+ }
  document.addEventListener('click',event=>{
   if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button>0)return;
-  if(dialog?.open&&enabled()&&(event.target===dialog||event.target.closest('#photo-dialog button'))){event.preventDefault();event.stopPropagation();closePhoto();return;}
+  if(dialog?.open&&enabled()&&(isBackdropClick(event)||event.target.closest('#photo-dialog button'))){event.preventDefault();event.stopPropagation();closePhoto();return;}
   const photo=event.target.closest('a[data-lightbox]');
   if(photo&&enabled()&&dialog){event.preventDefault();event.stopPropagation();openPhoto(photo);return;}
   const link=event.target.closest('a[href]');if(!link||!enabled()||!overlay||link.matches('.skip-link')||link.hasAttribute('download')||link.target==='_blank')return;
@@ -134,9 +141,9 @@ export function initializeInteractions(gsap){
   const target=document.getElementById(decodeURIComponent(url.hash.slice(1)));if(!target||!target.closest('main'))return;
   event.preventDefault();event.stopPropagation();navigate(link,target);
  },true);
- dialog?.addEventListener('cancel',event=>{if(enabled()){event.preventDefault();closePhoto();}});
+ dialog?.addEventListener('cancel',event=>{if(enabled()&&!document.hidden){event.preventDefault();closePhoto();}});
  dialog?.addEventListener('close',()=>{const opener=photoOpener;photoOpener=null;opener?.focus({preventScroll:true});resetPhoto();});
- document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation){resetCurtain();}});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(dialog?.open){event.preventDefault();closePhoto();}if(navigation)resetCurtain();}});
  addEventListener('popstate',resetCurtain);
  const buttons=document.querySelector('.path-buttons');let indicator=null;
  if(buttons){indicator=document.createElement('span');indicator.className='path-indicator';indicator.setAttribute('aria-hidden','true');buttons.prepend(indicator);buttons.classList.add('has-indicator');}

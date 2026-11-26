@@ -19,9 +19,9 @@ export function initializeStudio(){
   const art=heading.querySelector('.scene-heading-art');if(art)heading.insertBefore(art,heading.querySelector('h2'));
   const serial=decorative('span','chapter-serial');serial.textContent=heading.dataset.chapter;heading.prepend(serial);
  });
- const kinds=['data','ledger','network','database','device','network'];
+ const kinds=['network','device','data','database','ledger','device','papers'];
  document.querySelectorAll('.capability').forEach((card,index)=>{
-  const art=decorative('div','capability-object');art.append(createStudioObject(kinds[index]));
+  const art=decorative('div','capability-object');art.append(createStudioObject(kinds[index]||'data'));
   const number=decorative('span','object-index');number.textContent=String(index+1).padStart(2,'0');art.append(number);card.prepend(art);card.classList.add('has-studio-object');
  });
  document.querySelectorAll('.proof-pick').forEach((card,index)=>card.dataset.order=String(index+1).padStart(2,'0'));
@@ -31,7 +31,7 @@ export function initializeStudio(){
   const link=plane.querySelector('a[data-lightbox]');const cue=decorative('span','photo-view-cue');cue.textContent='Perbesar foto ↗';link?.append(cue);
  });
  const footer=document.querySelector('.portfolio-page .site-footer');
- if(footer){const signature=decorative('div','footer-signature');signature.innerHTML='<span>avip<span>.</span></span><i></i>';footer.append(signature);}
+ if(footer){const signature=decorative('div','footer-signature');signature.innerHTML='<span>rangga<span>.</span></span><i></i>';footer.append(signature);}
  document.querySelectorAll('.button>span[aria-hidden],.portfolio-header-actions>a>span,.hero-project-link>span').forEach(icon=>icon.classList.add('action-icon'));
  const surfaces=[...document.querySelectorAll('.capability,.certificate-card,.proof-pick,.media-plane,.social-link,.chapter-panel')];
  const watched=[...surfaces,stage].filter(Boolean);

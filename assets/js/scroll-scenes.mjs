@@ -4,7 +4,7 @@ import {createStudioObject as symbol} from './studio-objects.mjs';
 
 export function initializeScrollScenes(gsap,ScrollTrigger){
  const root=document.documentElement;
- const registry=[['.portfolio-overview','data'],['.proof-explorer','data'],['#pengalaman','data'],['#proyek','device'],['#keahlian','network'],['#sertifikat','papers'],['#organisasi-relawan','people'],['#kontak','contact']];
+ const registry=[['.portfolio-overview','data'],['.proof-explorer','data'],['#pengalaman','data'],['#proyek','device'],['#keahlian','network'],['#pendidikan','ledger'],['#sertifikat','papers'],['#organisasi-relawan','people'],['#kontak','contact']];
  const worlds=[];
  for(const [selector,kind] of registry){
   const section=document.querySelector(selector);if(!section)continue;

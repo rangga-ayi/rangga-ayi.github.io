@@ -3,7 +3,7 @@
 const NS='http://www.w3.org/2000/svg';
 let serial=0;
 export function createStudioObject(kind='data'){
- const id='avip-sculpture-'+serial++;
+ const id='rangga-sculpture-'+serial++;
  const paint=name=>`url(#${id}-${name})`;
  const plum=paint('plum'),side=paint('side'),opal=paint('opal'),gold=paint('gold'),glass=paint('glass');
  const edge='stroke="#f4eafa" stroke-opacity=".55" stroke-width="1.5" stroke-linejoin="round"';

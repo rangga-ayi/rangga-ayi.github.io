@@ -16,7 +16,7 @@ function initializeMotion(){
  const studio=initializeStudio();
  const descent=initializeDescent(gsap);
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let preference=null;try{preference=localStorage.getItem('avip-motion');}catch{}
+ let preference=null;try{preference=localStorage.getItem('rangga-motion');}catch{}
  let context=null,resizeFrame=0,restoreFrame=0,proofFrame=0,readingPosition=null,signature='';
  const poses=[...stage.querySelectorAll('.hero-pose')],captions=[...stage.querySelectorAll('.hero-scene-caption>span')];
  let currentPose='';
@@ -73,7 +73,7 @@ function initializeMotion(){
  const refreshLayout=()=>{if(!proofFrame)proofFrame=requestAnimationFrame(()=>{proofFrame=0;ScrollTrigger.refresh();});};
  document.addEventListener('portfolio:proof-change',refreshLayout);
  document.addEventListener('toggle',event=>{if(event.target.matches('details'))refreshLayout();},true);
- control.addEventListener('click',()=>{preference=motionEnabled(preference,reduced.matches)?'off':'on';try{localStorage.setItem('avip-motion',preference);}catch{}signature='';schedule();});
+ control.addEventListener('click',()=>{preference=motionEnabled(preference,reduced.matches)?'off':'on';try{localStorage.setItem('rangga-motion',preference);}catch{}signature='';if(resizeFrame){cancelAnimationFrame(resizeFrame);resizeFrame=0;}rebuild();});
  reduced.addEventListener('change',()=>{signature='';schedule();});addEventListener('resize',schedule);addEventListener('pageshow',schedule);
  const observer=new ResizeObserver(schedule);observer.observe(scene);observer.observe(document.querySelector('.portfolio-header'));document.fonts.ready.then(schedule);rebuild();
 }
