@@ -1,950 +1,1010 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html class="portfolio-document" lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rangga Ayi Pratama — Pranata Komputer, IT Support &amp; Web Developer</title>
-  <meta name="description" content="Portfolio Rangga Ayi Pratama, lulusan D3 Teknik Komputer Polsri IPK 3.64. Pengalaman perakitan &amp; troubleshooting PC, instalasi jaringan kabel &amp; CCTV, pengembangan web &amp; basis data (PHP &amp; MySQL), serta administrasi dokumen B2B dan SAP.">
-  <meta property="og:title" content="Rangga Ayi Pratama — Pranata Komputer, IT Support &amp; Web Developer">
-  <meta property="og:description" content="D3 Teknik Komputer Polsri IPK 3.64. Magang PLN Icon Plus &amp; Zhanet Komputer. Pengalaman Web PHP/MySQL, Jaringan LAN, Perakitan PC, Hak Cipta Kemenkumham RI, serta sertifikasi Cisco &amp; Dicoding.">
-  <meta property="og:type" content="website">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170a2a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23180b2a%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-family=%22Arial%22 font-size=%2236%22 font-weight=%22bold%22 fill=%22%23e5c485%22 text-anchor=%22middle%22%3ER%3C/text%3E%3C/svg%3E">
+  <title>Rangga Ayi Pratama — IT Infrastructure, Network &amp; Technical Support</title>
+  <meta name="description" content="Portofolio Rangga Ayi Pratama: lulusan D3 Teknik Komputer Polsri IPK 3.64, pengalaman praktik PLN Icon Plus &amp; Zhanet Komputer, Juara 1 LKS IT Network Admin, aplikasi web Alzi Petshop, dan integrasi hardware Smart Locker.">
+  <link rel="canonical" href="https://portofolio.proyekhub.my.id/">
+  <meta property="og:title" content="Rangga Ayi Pratama — IT Infrastructure, Network &amp; Technical Support">
+  <meta property="og:description" content="Fresh graduate D3 Teknik Komputer Polsri IPK 3.64. Pengalaman jaringan MikroTik, Linux Debian, perakitan &amp; perbaikan PC, instalasi kabel UTP &amp; CCTV, serta web PHP &amp; MySQL.">
+  <meta property="og:type" content="profile">
   <meta property="og:url" content="https://portofolio.proyekhub.my.id/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23006C4C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  <meta property="og:image" content="assets/profile/Rangga.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/profile/Rangga.jpg">
 
-  <!-- Immediate Theme Initialization (Anti-FOUC) -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
-    })();
-  </script>
-
-  <!-- Google Fonts: Plus Jakarta Sans (Primary M3 Typography), Inter (Fallback), JetBrains Mono (Specs) -->
+  <!-- Fonts: Archivo (Primary) & Caveat (Handwriting accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- CSS (Versioned to bust Cloudflare edge cache) -->
-  <link rel="stylesheet" href="style.css?v=2.0">
+  <!-- Primary Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Lucide Icons (Minimal utility usage only) -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Scripts: GSAP, ScrollTrigger & Modular Components -->
+  <script defer src="assets/js/gsap.min.js"></script>
+  <script defer src="assets/js/ScrollTrigger.min.js"></script>
+  <script type="module" src="assets/js/common.mjs"></script>
+  <script type="module" src="assets/js/portfolio.mjs"></script>
+  <script type="module" src="assets/js/motion.mjs"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rangga Ayi Pratama",
+    "url": "https://portofolio.proyekhub.my.id/",
+    "image": "assets/profile/Rangga.jpg",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Politeknik Negeri Sriwijaya"
+    },
+    "sameAs": [
+      "https://github.com/rangga-ayi",
+      "https://www.linkedin.com/in/rangga-ayi-pratama"
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="portfolio-page" data-tone="light">
+  <div id="top-sentinel" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
 
-  <!-- Skip Nav -->
-  <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- ══════════════════════════════════════════
-       M3 TOP APP BAR / NAVBAR
-  ══════════════════════════════════════════ -->
-  <header class="navbar-wrapper">
-    <nav id="navbar" class="navbar">
-      <a href="/" class="logo">
-        <span class="logo-text">MyPorto</span>
-      </a>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about"       class="nav-link">Tentang</a></li>
-        <li><a href="#skills"      class="nav-link">Keahlian</a></li>
-        <li><a href="#projects"    class="nav-link">Proyek &amp; Lab</a></li>
-        <li><a href="#experience"  class="nav-link">Pengalaman</a></li>
-        <li><a href="#credentials" class="nav-link">Sertifikasi</a></li>
-        <li><a href="#contact"     class="nav-link">Kontak</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Theme Toggle Button -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti mode tema (Terang / Gelap)" title="Ganti mode tema">
-          <i data-lucide="moon" id="theme-icon" style="width: 20px; height: 20px;"></i>
-        </button>
-
-        <a href="#contact" class="btn btn-primary btn-contact">
-          Hubungi Saya
-        </a>
-
-        <!-- Mobile Navigation Menu Toggle -->
-        <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links" id="nav-toggle">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+  <!-- Header -->
+  <header class="site-header portfolio-header">
+    <a class="wordmark" href="#profil" aria-label="Rangga, kembali ke profil">rangga<span>.</span></a>
+    <nav class="section-navigation" aria-label="Bagian portofolio">
+      <div class="section-links">
+        <a href="#profil">Profil</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#sertifikat">Sertifikat</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#kontak">Kontak</a>
       </div>
+      <button class="motion-control" data-motion-control type="button" aria-label="Animasi halaman" aria-pressed="false" hidden>
+        <span class="motion-control-icon" aria-hidden="true">✦</span>
+        <span class="motion-control-label">Animasi</span>
+        <small aria-hidden="true">mati</small>
+      </button>
     </nav>
+    <div class="portfolio-header-actions">
+      <a class="header-cv" href="https://drive.google.com/file/d/1IIZkL3zpGqxjT2IWeCBRteo_yanAcnW3/view?usp=sharing" target="_blank" rel="noopener noreferrer">Unduh CV <span aria-hidden="true">↓</span></a>
+      <a class="header-contact" href="mailto:pratama.ranggaayi@gmail.com">Email Rangga <span aria-hidden="true">↗</span></a>
+    </div>
+    <span class="reading-progress" aria-hidden="true"><i></i></span>
   </header>
 
-  <!-- ══════════════════════════════════════════
-       HERO (M3 Mobile-First Section)
-  ══════════════════════════════════════════ -->
-  <main id="main">
-    <section id="hero" class="hero-wrapper">
-      <div class="container hero-section">
+  <!-- SVG Icon Definitions -->
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-data" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="8" ry="3"/>
+      <path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/>
+    </symbol>
+    <symbol id="i-network" viewBox="0 0 24 24">
+      <rect x="8" y="2" width="8" height="6" rx="1"/>
+      <path d="M12 8v6M4 14h16M4 14v3m8-3v3m8-3v3"/>
+      <rect x="1" y="17" width="6" height="5" rx="1"/>
+      <rect x="9" y="17" width="6" height="5" rx="1"/>
+      <rect x="17" y="17" width="6" height="5" rx="1"/>
+    </symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24">
+      <rect x="6" y="6" width="12" height="12" rx="2"/>
+      <rect x="10" y="10" width="4" height="4"/>
+      <path d="M9 2v4m6-4v4m-6 12v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="10" cy="10" r="6"/>
+      <path d="m15 15 6 6"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L20 5"/>
+    </symbol>
+    <symbol id="i-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="6"/>
+      <path d="m8 13-2 9 6-3 6 3-2-9"/>
+    </symbol>
+  </svg>
 
-        <!-- Left: Text Content -->
-        <div class="hero-content">
-          <div class="hero-avail-badge">
-            <span class="dot-pulse"></span>
-            D3 Teknik Komputer Polsri · Open to Work
-          </div>
-
-          <h1 class="hero-title">Rangga Ayi Pratama</h1>
-          <p class="hero-role">Pranata Komputer, IT Support &amp; Web Developer</p>
-
-          <p class="hero-subtitle">
-            Lulusan D3 Teknik Komputer Polsri (IPK 3.64) dengan keahlian perakitan &amp; troubleshooting PC, instalasi jaringan &amp; CCTV, pengembangan web &amp; basis data (PHP &amp; MySQL), serta administrasi dokumen B2B dan SAP.
-          </p>
-
-          <div class="hero-ctas">
-            <a href="#experience" class="btn btn-primary">
-              <span>Lihat Pengalaman &amp; Proyek</span>
-              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
-            </a>
-            <a href="#contact" class="btn btn-tonal">
-              <span>Hubungi Saya</span>
-            </a>
-          </div>
-
-          <!-- Stats (Clean M3 Key Metric Display) -->
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-value">3.64</span>
-              <span class="stat-label">IPK D3 Polsri</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">Top 5</span>
-              <span class="stat-label">LKS Jaringan Sumsel</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">Hak Cipta</span>
-              <span class="stat-label">Kemenkumham RI</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Competency Overview Card -->
-        <div class="hero-visual-wrapper">
-          <div class="m3-card hero-card">
-            <div class="card-header-clean">
-              <h2 class="card-header-title">Ringkasan Kompetensi</h2>
-              <p class="card-header-subtitle">Hardware · Jaringan · Web &amp; Database · Administrasi</p>
-            </div>
-
-            <!-- Field Competency Rows (Clean, Uncluttered, Icon-Free) -->
-            <div class="lab-matrix">
-              <div class="lab-row">
-                <div class="lab-row-top">
-                  <span class="lab-row-title">Perakitan &amp; Troubleshooting PC</span>
-                  <span class="lab-tag">Zhanet Komputer</span>
+  <main id="main" tabindex="-1">
+    <!-- 00 / Hero Section -->
+    <section class="portfolio-hero descent-hero" id="profil" data-portfolio-section aria-labelledby="profile-name" tabindex="-1">
+      <div class="intro-track">
+        <div class="hero-scene" data-surface-stage="hero">
+          <span class="descent-object" aria-hidden="true"></span>
+          <div class="wrap hero-layout">
+            <div class="hero-top">
+              <span id="ringkas" class="anchor-alias" aria-hidden="true"></span>
+              <div class="hero-identity">
+                <a class="portfolio-person-photo" href="assets/profile/Rangga.jpg" data-lightbox aria-label="Perbesar foto asli Rangga">
+                  <picture>
+                    <source type="image/avif" srcset="assets/profile/Rangga.avif">
+                    <img src="assets/profile/Rangga.jpg" width="800" height="1067" alt="Foto formal Rangga Ayi Pratama dengan jas hitam dan dasi." loading="eager" decoding="async" fetchpriority="high">
+                  </picture>
+                </a>
+                <div class="hero-identity-copy">
+                  <span class="eyebrow">D3 Teknik Komputer · Polsri</span>
+                  <span class="hero-place">Muara Enim / Palembang, Sumsel</span>
                 </div>
-                <p class="lab-row-desc">Troubleshooting komponen, perakitan custom PC, dan instalasi sistem operasi.</p>
               </div>
+            </div>
 
-              <div class="lab-row">
-                <div class="lab-row-top">
-                  <span class="lab-row-title">Jaringan &amp; CCTV Lapangan</span>
-                  <span class="lab-tag">PLN Icon Plus</span>
+            <h1 id="profile-name" class="hero-title">
+              <span class="title-ink">Rangga Ayi<br>Pratama.</span>
+              <span class="title-depth" data-surface-clone aria-hidden="true">Rangga Ayi<br>Pratama.</span>
+            </h1>
+
+            <div class="hero-profile">
+              <div class="hero-lead">
+                <p class="hero-profession">IT Infrastructure, Network &amp;<br>Technical Support.</p>
+                <p class="hero-description">Fresh graduate D3 Teknik Komputer Polsri dengan pengalaman hands-on dalam networking, hardware troubleshooting, Linux/server administration, dan pekerjaan teknis lapangan.</p>
+                <div class="hero-context">
+                  <span>D3 Teknik Komputer · Politeknik Negeri Sriwijaya<br>
+                    <small>IPK 3.64 / 4.00 · Pengalaman Lapangan &amp; Laboratorium</small>
+                  </span>
                 </div>
-                <p class="lab-row-desc">Penarikan kabel UTP dan instalasi CCTV kawasan Jembatan Ampera dengan standar K3.</p>
               </div>
 
-              <div class="lab-row">
-                <div class="lab-row-top">
-                  <span class="lab-row-title">Web &amp; Basis Data (PHP &amp; MySQL)</span>
-                  <span class="lab-tag">Alzi Petshop CRUD</span>
+              <div class="hero-proof">
+                <div class="portfolio-metrics" role="group" aria-label="Ringkasan kompetensi utama">
+                  <div>
+                    <b>158</b>
+                    <span>commits Git proyek</span>
+                  </div>
+                  <div>
+                    <b>3.64</b>
+                    <span>IPK kelulusan Polsri</span>
+                  </div>
+                  <div>
+                    <b>Juara 1</b>
+                    <span>LKS IT Network Admin</span>
+                  </div>
                 </div>
-                <p class="lab-row-desc">Aplikasi e-commerce &amp; inventaris stok, integrasi payment gateway Midtrans, dan database relasional.</p>
-              </div>
-
-              <div class="lab-row">
-                <div class="lab-row-top">
-                  <span class="lab-row-title">Administrasi B2B &amp; SAP</span>
-                  <span class="lab-tag">PLN Icon Plus</span>
+                <p class="hero-evidence-source">Praktik kerja PLN Icon Plus, Zhanet Komputer, kompetisi LKS, dan proyek komputasi terapan.</p>
+                <div class="hero-actions">
+                  <a class="button button-white" href="#pengalaman">Lihat pengalaman <span aria-hidden="true">↓</span></a>
+                  <a class="hero-project-link" href="#proyek">Lihat proyek <span aria-hidden="true">↓</span></a>
                 </div>
-                <p class="lab-row-desc">Verifikasi dokumen BAPS, BoQ, DokTek, dan rekonsiliasi data penagihan.</p>
               </div>
+            </div>
 
-              <div class="lab-row">
-                <div class="lab-row-top">
-                  <span class="lab-row-title">Firmware IoT &amp; Server Lab</span>
-                  <span class="lab-tag">Hak Cipta RI</span>
+            <div class="hero-character" aria-hidden="true">
+              <div class="hero-character-halo"></div>
+              <span class="hero-greeting">Meet Rangga.</span>
+              <div class="hero-camera">
+                <div class="hero-parallax">
+                  <div class="hero-life">
+                    <div class="hero-pose pose-wave">
+                      <picture>
+                        <source type="image/avif" srcset="assets/profile/Rangga.avif">
+                        <img src="assets/profile/Rangga.jpg" width="600" height="800" alt="Foto Rangga Ayi Pratama" loading="eager" decoding="async" data-essential style="border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.15);width:100%;max-width:320px;height:auto;">
+                      </picture>
+                    </div>
+                  </div>
                 </div>
-                <p class="lab-row-desc">ESP32 FreeRTOS, homelab Proxmox VE, serta sertifikasi Cisco dan Dicoding.</p>
               </div>
             </div>
 
-            <a href="#projects" class="btn btn-outlined" style="width: 100%; justify-content: center;">
-              <span>Lihat Detail Portofolio &amp; Lab</span>
-              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-            </a>
+            <a class="continue-reading" href="#pengalaman">Scroll untuk membaca profil lengkap <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         ABOUT
-    ══════════════════════════════════════════ -->
-    <section id="about" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Tentang</span>
-        <h2 class="section-title">Teknis Lapangan &amp; Administrasi B2B</h2>
-        <p class="section-subtitle">Menghubungkan keahlian teknis operasional hardware dan jaringan dengan ketelitian administrasi data transaksi.</p>
+    <!-- Overview Section -->
+    <section class="portfolio-overview" id="ringkasan" aria-labelledby="overview-heading">
+      <div class="wrap">
+        <div class="overview-heading">
+          <span class="eyebrow">Profil singkat</span>
+          <h2 id="overview-heading">Pengalaman teknis yang teruji di lapangan &amp; laboratorium.</h2>
+        </div>
+        <p>Lulusan D3 Teknik Komputer Politeknik Negeri Sriwijaya dengan IPK <strong>3,64/4,00</strong>. Memiliki pengalaman hands-on dalam konfigurasi jaringan MikroTik, administrasi Debian Server, perakitan dan troubleshooting PC, instalasi kabel UTP &amp; CCTV di lapangan, serta pengembangan aplikasi web PHP &amp; MySQL.</p>
+        <p class="overview-guide">Baca berurutan dengan scroll, atau pilih bagian di navigasi atas.</p>
       </div>
+    </section>
 
-      <div class="m3-card about-card">
-        <div class="about-grid">
-          <!-- Photo Col -->
-          <div class="about-photo-col">
-            <img
-              src="./assets/profile/Rangga.avif"
-              alt="Foto Profil Rangga Ayi Pratama"
-              class="about-photo"
-              loading="lazy"
-            >
-            <div class="about-photo-info">
-              <div class="about-status">
-                <span class="dot-pulse"></span>
-                Open to Work
+    <!-- 01 / Experience Section -->
+    <section class="portfolio-section" id="pengalaman" data-portfolio-section aria-labelledby="experience-title" tabindex="-1">
+      <div class="chapter-depth" aria-hidden="true">
+        <span>01</span>
+        <i></i>
+      </div>
+      <div class="wrap">
+        <span id="experience-heading" class="anchor-alias" aria-hidden="true"></span>
+        <div class="portfolio-section-heading chapter-panel">
+          <span class="eyebrow">01 / Pengalaman</span>
+          <h2 id="experience-title">Pengalaman kerja &amp; praktik teknis.</h2>
+          <p>Peran, kontribusi lapangan, dan bukti otentik dari setiap kegiatan.</p>
+          <svg class="chapter-circuit" viewBox="0 0 360 200" fill="none" aria-hidden="true">
+            <path d="M12 145H95Q118 145 118 122V62Q118 40 140 40H230Q252 40 252 62V126Q252 150 278 150H350"/>
+            <circle cx="12" cy="145" r="8"/>
+            <circle cx="140" cy="40" r="8"/>
+            <circle cx="278" cy="150" r="8"/>
+            <circle cx="350" cy="150" r="8"/>
+          </svg>
+          <div class="chapter-leaf" aria-hidden="true"></div>
+          <span class="section-rule" aria-hidden="true"><i></i></span>
+        </div>
+
+        <nav class="experience-sections" aria-label="Pilih pengalaman">
+          <a href="#pln-icon-plus">PLN Icon Plus</a>
+          <a href="#zhanet-komputer">Zhanet Komputer</a>
+          <a href="#lks-network">LKS IT Network Admin</a>
+        </nav>
+
+        <div class="career-list">
+          <!-- Entry 1: PLN Icon Plus -->
+          <article class="career-entry" id="pln-icon-plus" aria-labelledby="pln-title" data-proof-label="PLN Icon Plus" data-proof-note="Instalasi Jaringan &amp; CCTV">
+            <header class="entry-heading">
+              <span class="entry-kind">Praktik Kerja Lapangan</span>
+              <h3 id="pln-title">PT PLN Icon Plus SBU Sumbagsel</h3>
+              <div class="journal-meta">
+                <div>
+                  <span>Peran</span>
+                  <p>Teknisi Jaringan &amp; Lapangan</p>
+                </div>
+                <div>
+                  <span>Lingkup</span>
+                  <p>Palembang, Sumsel<br>Juli – Oktober 2025</p>
+                </div>
+                <div>
+                  <span>Fokus Teknis</span>
+                  <p>UTP, RJ45, Pengujian Link</p>
+                </div>
               </div>
-              <div class="about-meta">
-                <span>D3 Teknik Komputer Polsri</span>
-                <span>Palembang &amp; Muara Enim</span>
-                <span>On-site · Hybrid · Remote</span>
+            </header>
+            <p class="entry-focus">Instalasi infrastruktur jaringan kabel dan perangkat pemantau lapangan.</p>
+            <p class="body-copy">Terlibat langsung dalam penarikan kabel UTP dan terminasi RJ45, pengujian kelayakan konektivitas hingga online saat serah terima, mencatat sekitar 10 aset jaringan per hari, serta membantu instalasi perangkat CCTV di landmark Jembatan Ampera dan switch PoE lapangan dengan mematuhi SOP K3.</p>
+            
+            <div class="numbers-row">
+              <div>
+                <b>100%</b>
+                <span>konektivitas terverifikasi</span>
+              </div>
+              <div>
+                <b>RJ45</b>
+                <span>terminasi standar T568B</span>
+              </div>
+              <div>
+                <b>CCTV</b>
+                <span>instalasi perangkat fisik</span>
+              </div>
+              <div>
+                <b>K3</b>
+                <span>standar keselamatan lapangan</span>
               </div>
             </div>
-          </div>
+            <p class="source-note">Pengujian konektivitas dilakukan secara langsung menggunakan cable tester dan verifikasi transmisi data ke switch di lapangan.</p>
+            
+            <section class="entry-content" id="alur-pln" aria-labelledby="alur-pln-title">
+              <span class="eyebrow">Cara kerja di lapangan</span>
+              <h4 id="alur-pln-title">Tarik. Terminasi. Uji kelayakan.</h4>
+              <p class="body-copy">Pekerjaan instalasi fisik membutuhkan ketelitian jalur rute kabel, pelabelan, terminasi bebas crosstalk, dan verifikasi perangkat aktif.</p>
+              <div class="work-steps">
+                <article class="work-step">
+                  <b>01</b>
+                  <h5>Penarikan kabel UTP</h5>
+                  <p>Menentukan rute jalur kabel yang aman, rapi, dan terhindar dari interferensi listrik tegangan tinggi.</p>
+                </article>
+                <article class="work-step">
+                  <b>02</b>
+                  <h5>Terminasi &amp; Crimping RJ45</h5>
+                  <p>Pemasangan konektor RJ45 sesuai standar urutan pin dan pengetesan kesinambungan sinyal dengan cable tester.</p>
+                </article>
+                <article class="work-step">
+                  <b>03</b>
+                  <h5>Instalasi CCTV &amp; Integrasi</h5>
+                  <p>Pemasangan fisik kamera CCTV dan pengujian koneksi data serta daya hingga sistem perekam aktif.</p>
+                </article>
+              </div>
+            </section>
 
-          <!-- Content Col -->
-          <div class="about-content">
-            <h3 class="about-greeting">Halo, saya Rangga</h3>
-            <p class="about-role-label">D3 Teknik Komputer — Hardware, Jaringan &amp; Web Developer</p>
-            <p>
-              Lulusan D3 Teknik Komputer Politeknik Negeri Sriwijaya (IPK 3.64) dengan dasar Teknik Komputer dan Jaringan sejak SMK Bukit Asam. Memiliki keahlian terintegrasi di bidang teknis hardware &amp; jaringan (perakitan PC, troubleshooting komponen, instalasi kabel UTP &amp; CCTV), pengembangan web &amp; basis data (PHP, MySQL, Midtrans API), serta ketelitian administrasi operasional (verifikasi berkas transaksi B2B dan rekonsiliasi data SAP).
-            </p>
-            <p>
-              Saat magang di PLN Icon Plus, saya memeriksa dan merekap dokumen transaksi B2B (BAPS, BoQ, dan DokTek) menggunakan SAP dan Microsoft Office rata-rata 10+ berkas per hari. Di lapangan, saya ikut dalam penarikan kabel UTP dan instalasi CCTV di kawasan Jembatan Ampera serta Terminal Karya Jaya bersama Diskominfo Palembang dengan kepatuhan standar K3.
-            </p>
-            <p>
-              Di Zhanet Komputer, saya menangani perakitan custom PC dan troubleshooting komponen komputer pelanggan. Selain itu, saya mengembangkan aplikasi web e-commerce berbasis PHP &amp; MySQL, meraih Juara 1 LKS Tingkat Kabupaten Muara Enim dan Peringkat 5 Provinsi Sumatera Selatan (IT Network System Administration), tersertifikasi Cisco dan Dicoding, serta memegang Hak Cipta Kemenkumham RI untuk prototipe Smart Locker berbasis ESP32 FreeRTOS.
-            </p>
-            <div class="about-badges">
-              <span class="chip">IPK 3.64 Polsri</span>
-              <span class="chip">LKS Top 5 Provinsi</span>
-              <span class="chip">PHP &amp; MySQL CRUD</span>
-              <span class="chip">SAP &amp; B2B Admin</span>
-              <span class="chip">HKI Kemenkumham</span>
-              <span class="chip">Cisco Certified</span>
+            <section class="entry-content" id="dokumentasi-pln" aria-labelledby="dokumentasi-pln-title">
+              <span class="eyebrow">Dokumentasi asli / Praktik kerja lapangan</span>
+              <h4 id="dokumentasi-pln-title">Dokumentasi kegiatan di PLN Icon Plus.</h4>
+              <p class="body-copy">Dokumentasi teknis saat penarikan kabel, terminasi, dan instalasi perangkat di lapangan.</p>
+              <div class="photo-pair">
+                <figure class="documentary">
+                  <a href="assets/03_PLN/pln_lapangan_01.jpg" data-lightbox aria-label="Perbesar foto: Persiapan dan penarikan kabel di lapangan.">
+                    <img src="assets/03_PLN/pln_lapangan_01.jpg" width="1280" height="960" alt="Persiapan dan penarikan kabel di lapangan PLN Icon Plus." loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Pekerjaan penarikan kabel UTP di lokasi instalasi.</figcaption>
+                </figure>
+                <figure class="documentary">
+                  <a href="assets/03_PLN/pln_lapangan_02.jpg" data-lightbox aria-label="Perbesar foto: Proses terminasi kabel jaringan.">
+                    <img src="assets/03_PLN/pln_lapangan_02.jpg" width="1280" height="960" alt="Proses terminasi kabel jaringan di PLN Icon Plus." loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Terminasi dan penataan kabel pada titik koneksi.</figcaption>
+                </figure>
+              </div>
+              <figure class="documentary expand-photo" style="margin-top:20px;">
+                <a href="assets/03_PLN/pln_lapangan_03.jpg" data-lightbox aria-label="Perbesar foto: Pemasangan dan pengetesan CCTV di lapangan.">
+                  <img src="assets/03_PLN/pln_lapangan_03.jpg" width="1280" height="960" alt="Pemasangan dan pengetesan CCTV di lapangan." loading="lazy" decoding="async">
+                </a>
+                <figcaption>Pemasangan perangkat pemantau CCTV dan verifikasi sambungan jaringan.</figcaption>
+              </figure>
+            </section>
+          </article>
+
+          <!-- Entry 2: Zhanet Komputer -->
+          <article class="career-entry" id="zhanet-komputer" aria-labelledby="zhanet-title" data-proof-label="Zhanet Komputer" data-proof-note="Hardware &amp; PC Support">
+            <header class="entry-heading">
+              <span class="entry-kind">Praktik Kerja Industri</span>
+              <h3 id="zhanet-title">Zhanet Komputer</h3>
+              <div class="journal-meta">
+                <div>
+                  <span>Peran</span>
+                  <p>Hardware &amp; Technical Support</p>
+                </div>
+                <div>
+                  <span>Fokus</span>
+                  <p>Muara Enim · Jan – Apr 2022</p>
+                </div>
+                <div>
+                  <span>Pengerjaan</span>
+                  <p>Perakitan, OS Windows &amp; Driver</p>
+                </div>
+              </div>
+            </header>
+            <p class="entry-focus">Diagnosis kerusakan hardware, perakitan PC, instalasi sistem operasi, dan quality testing.</p>
+            <p class="body-copy">Menangani sekitar 30 unit komputer per minggu untuk diagnosis keluhan pelanggan dan perbaikan hardware (RAM, storage, PSU, motherboard). Merakit sekitar 5 unit PC baru per bulan dari nol, instalasi Windows &amp; driver lengkap, serta menjalankan stress test kestabilan sistem sebelum diserahkan.</p>
+            
+            <div class="numbers-row">
+              <div>
+                <b>Hardware</b>
+                <span>diagnosis motherboard &amp; PSU</span>
+              </div>
+              <div>
+                <b>Perakitan</b>
+                <span>cable management &amp; thermal</span>
+              </div>
+              <div>
+                <b>Windows</b>
+                <span>instalasi OS &amp; driver lengkap</span>
+              </div>
+              <div>
+                <b>Testing</b>
+                <span>validasi kestabilan perangkat</span>
+              </div>
             </div>
-          </div>
+
+            <section class="entry-content" id="alur-zhanet" aria-labelledby="alur-zhanet-title">
+              <span class="eyebrow">Alur penanganan teknis</span>
+              <h4 id="alur-zhanet-title">Diagnosis. Perbaikan. Pengujian kestabilan.</h4>
+              <div class="work-steps">
+                <article class="work-step">
+                  <b>01</b>
+                  <h5>Identifikasi Gejala</h5>
+                  <p>Memeriksa gejala error (no post, freeze, bluescreen) dan isolasi komponen yang bermasalah.</p>
+                </article>
+                <article class="work-step">
+                  <b>02</b>
+                  <h5>Perakitan &amp; Pemasangan</h5>
+                  <p>Pemasangan part baru, penggantian thermal paste, serta instalasi sistem operasi dan driver.</p>
+                </article>
+                <article class="work-step">
+                  <b>03</b>
+                  <h5>Uji Kestabilan (QC)</h5>
+                  <p>Menjalankan stress test beban kerja dan pemantauan suhu untuk menjamin kestabilan PC.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="entry-content" id="dokumentasi-zhanet" aria-labelledby="dokumentasi-zhanet-title">
+              <span class="eyebrow">Dokumentasi pengerjaan di Zhanet Komputer</span>
+              <h4 id="dokumentasi-zhanet-title">Meja kerja perakitan dan pemeriksaan PC.</h4>
+              <figure class="documentary expand-photo">
+                <a href="assets/02_Zhanet/zhanet_pengerjaan.jpg" data-lightbox aria-label="Perbesar foto: Perakitan dan pengujian motherboard PC di Zhanet Komputer.">
+                  <img src="assets/02_Zhanet/zhanet_pengerjaan.jpg" width="1280" height="960" alt="Perakitan dan pengujian motherboard PC di Zhanet Komputer." loading="lazy" decoding="async">
+                </a>
+                <figcaption>Proses perakitan, pengecekan koneksi motherboard, dan pengujian sistem di meja servis.</figcaption>
+              </figure>
+            </section>
+          </article>
+
+          <!-- Entry 3: LKS IT Network System Administration -->
+          <article class="career-entry" id="lks-network" aria-labelledby="lks-title" data-proof-label="LKS IT Network" data-proof-note="Juara 1 Tingkat Kabupaten">
+            <header class="entry-heading">
+              <span class="entry-kind">Kompetisi Kejuruan</span>
+              <h3 id="lks-title">LKS IT Network System Administration</h3>
+              <div class="journal-meta">
+                <div>
+                  <span>Pencapaian</span>
+                  <p>Juara 1 Kab. Muara Enim (2022)</p>
+                </div>
+                <div>
+                  <span>Kelanjutan</span>
+                  <p>Peserta LKS Provinsi Sumsel</p>
+                </div>
+                <div>
+                  <span>Lingkup</span>
+                  <p>MikroTik &amp; Debian Server</p>
+                </div>
+              </div>
+            </header>
+            <p class="entry-focus">Konfigurasi router MikroTik, administrasi server Debian, dan pemecahan masalah dependency sistem.</p>
+            <p class="body-copy">Mengikuti kompetisi intensif yang menguji kecepatan dan ketepatan crimping kabel UTP, konfigurasi routing dan firewall pada MikroTik RouterOS, instalasi Debian Server, deployment web server Apache, PHP, MySQL, serta deployment WordPress dengan pemecahan kendala dependensi komponen server.</p>
+
+            <section class="entry-content" id="dokumentasi-lks" aria-labelledby="dokumentasi-lks-title">
+              <span class="eyebrow">Dokumentasi kompetisi LKS</span>
+              <h4 id="dokumentasi-lks-title">Pengerjaan sistem jaringan dan tim kompetisi.</h4>
+              <div class="photo-pair">
+                <figure class="documentary">
+                  <a href="assets/01_LKS/lks_kerja.jpg" data-lightbox aria-label="Perbesar foto: Pengerjaan konfigurasi server dan kabel saat LKS.">
+                    <img src="assets/01_LKS/lks_kerja.jpg" width="1280" height="960" alt="Pengerjaan konfigurasi server dan kabel saat LKS." loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Pengerjaan modul administrasi server Debian dan pengujian jaringan.</figcaption>
+                </figure>
+                <figure class="documentary">
+                  <a href="assets/01_LKS/lks_setup.jpg" data-lightbox aria-label="Perbesar foto: Setup perangkat kerja dan workstation lomba.">
+                    <img src="assets/01_LKS/lks_setup.jpg" width="1280" height="960" alt="Setup perangkat kerja dan workstation lomba LKS." loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Persiapan workstation, router MikroTik, dan media pengujian.</figcaption>
+                </figure>
+              </div>
+              <figure class="documentary expand-photo" style="margin-top:20px;">
+                <a href="assets/01_LKS/lks_bersama.jpg" data-lightbox aria-label="Perbesar foto: Tim peserta LKS Provinsi Sumatera Selatan.">
+                  <img src="assets/01_LKS/lks_bersama.jpg" width="1280" height="960" alt="Tim peserta LKS Provinsi Sumatera Selatan." loading="lazy" decoding="async">
+                </a>
+                <figcaption>Dokumentasi bersama tim kontingen LKS Tingkat Provinsi Sumatera Selatan.</figcaption>
+              </figure>
+            </section>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         SKILLS
-    ══════════════════════════════════════════ -->
-    <section id="skills" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Keahlian</span>
-        <h2 class="section-title">Keahlian Teknis &amp; Perangkat</h2>
-        <p class="section-subtitle">Kemampuan operasional hardware, instalasi jaringan fisik, mikrokontroler IoT, dan sistem administrasi.</p>
+    <!-- 02 / Projects Section -->
+    <section class="portfolio-section section-tinted" id="proyek" data-portfolio-section aria-labelledby="project-title" tabindex="-1">
+      <div class="chapter-depth" aria-hidden="true">
+        <span>02</span>
+        <i></i>
       </div>
-
-      <div class="grid grid-cols-2">
-        <!-- Card 1: Computer Hardware & Troubleshooting -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">Perakitan PC &amp; Troubleshooting Hardware</h3>
-          <p class="skill-desc">
-            Perakitan unit PC desktop sesuai kebutuhan, diagnosis kerusakan komponen (motherboard, RAM, PSU, storage), instalasi sistem operasi Windows dan driver, serta uji stabilitas perangkat.
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">Perakitan PC Kustom</span>
-            <span class="skill-chip">Diagnostik Motherboard &amp; RAM</span>
-            <span class="skill-chip">Pengujian PSU &amp; Storage</span>
-            <span class="skill-chip">Instalasi Windows OS &amp; Driver</span>
-            <span class="skill-chip">Troubleshooting Hardware</span>
-            <span class="skill-chip">Penyolderan &amp; Multitester</span>
-            <span class="skill-chip">Standar K3 Elektronika</span>
-            <span class="skill-chip">Thermal &amp; Stability Testing</span>
-          </div>
+      <div class="wrap">
+        <span id="karya" class="anchor-alias" aria-hidden="true"></span>
+        <div class="portfolio-section-heading chapter-panel">
+          <span class="eyebrow">02 / Proyek dan dokumentasi</span>
+          <h2 id="project-title">Aplikasi web e-commerce &amp; prototype terapan.</h2>
+          <p>Kontribusi kode nyata, arsitektur sistem, dan bukti dokumentasi.</p>
+          <svg class="chapter-circuit" viewBox="0 0 360 200" fill="none" aria-hidden="true">
+            <path d="M12 145H95Q118 145 118 122V62Q118 40 140 40H230Q252 40 252 62V126Q252 150 278 150H350"/>
+            <circle cx="12" cy="145" r="8"/>
+            <circle cx="140" cy="40" r="8"/>
+            <circle cx="278" cy="150" r="8"/>
+            <circle cx="350" cy="150" r="8"/>
+          </svg>
+          <div class="chapter-leaf" aria-hidden="true"></div>
+          <span class="section-rule" aria-hidden="true"><i></i></span>
         </div>
 
-        <!-- Card 2: Computer Networking & Infrastruktur Lapangan -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">Jaringan Komputer &amp; Instalasi Lapangan</h3>
-          <p class="skill-desc">
-            Instalasi fisik kabel UTP dan CCTV lapangan dengan standar K3, konfigurasi perangkat jaringan Cisco dan MikroTik, pengalamatan IP, serta pengujian kontinuitas kabel jaringan LAN.
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">Penarikan &amp; Crimping UTP</span>
-            <span class="skill-chip">Pengujian LAN Tester &amp; Fluke</span>
-            <span class="skill-chip">Instalasi &amp; Setting CCTV</span>
-            <span class="skill-chip">Standar K3 Lapangan</span>
-            <span class="skill-chip">Dasar Jaringan Cisco (CCNA)</span>
-            <span class="skill-chip">MikroTik RouterOS Dasar</span>
-            <span class="skill-chip">Pengalamatan IPv4 &amp; Subnetting VLSM</span>
-            <span class="skill-chip">VLAN &amp; Routing Packet Tracer</span>
-          </div>
-        </div>
-
-        <!-- Card 3: Web Programming & Database (PHP & MySQL) -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">Pemrograman Web &amp; Basis Data (PHP &amp; MySQL)</h3>
-          <p class="skill-desc">
-            Pengembangan sistem web dinamis, perancangan basis data relasional MySQL, operasi CRUD lengkap, implementasi prepared statement untuk keamanan query, serta integrasi API gateway.
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">PHP Native (OOP &amp; Prosedural)</span>
-            <span class="skill-chip">Basis Data MySQL / MariaDB</span>
-            <span class="skill-chip">Query SQL &amp; Prepared Statements</span>
-            <span class="skill-chip">CRUD Management &amp; Sesi User</span>
-            <span class="skill-chip">Integrasi Midtrans Snap API</span>
-            <span class="skill-chip">HTML5, CSS3 &amp; Bootstrap</span>
-            <span class="skill-chip">Upload Berkas &amp; Validasi Ekstensi</span>
-            <span class="skill-chip">Hosting CPanel &amp; phpMyAdmin</span>
-          </div>
-        </div>
-
-        <!-- Card 4: Operating Systems, Server Lab & Helpdesk -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">Sistem Operasi, Server Lab &amp; Helpdesk</h3>
-          <p class="skill-desc">
-            Pengelolaan sistem operasi Linux dan Windows Server, virtualisasi homelab Proxmox VE, konfigurasi firewall pfSense, instalasi software kantor, dan pendampingan teknis pengguna (helpdesk).
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">Debian Linux &amp; Windows Server</span>
-            <span class="skill-chip">Proxmox VE (2-Laptop Node Lab)</span>
-            <span class="skill-chip">pfSense Firewall &amp; Router</span>
-            <span class="skill-chip">Instalasi Aplikasi Perkantoran</span>
-            <span class="skill-chip">Dukungan Helpdesk &amp; User Support</span>
-            <span class="skill-chip">Git &amp; GitHub Version Control</span>
-            <span class="skill-chip">Remote Desktop &amp; SSH Terminal</span>
-          </div>
-        </div>
-
-        <!-- Card 5: IoT & Embedded Systems (Hak Cipta) -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">IoT &amp; Embedded Systems (Hak Cipta Terdaftar)</h3>
-          <p class="skill-desc">
-            Pengembangan firmware mikrokontroler real-time menggunakan FreeRTOS pada ESP32, integrasi sensor jarak laser ToF, autentikasi RFID e-KTP, dan integrasi Telegram Bot API.
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">ESP32 FreeRTOS Dual-Core</span>
-            <span class="skill-chip">ESP32-CAM (UART Snapshot)</span>
-            <span class="skill-chip">Wemos D1 Mini (ESP8266)</span>
-            <span class="skill-chip">VL53L0X Laser ToF Sensor</span>
-            <span class="skill-chip">RFID RC522 (e-KTP Auth)</span>
-            <span class="skill-chip">Telegram Bot OTP Auto-burn</span>
-            <span class="skill-chip">Firebase Realtime Database</span>
-            <span class="skill-chip">NVS Offline Data Storage</span>
-            <span class="skill-chip">Hak Cipta EC002026135705</span>
-          </div>
-        </div>
-
-        <!-- Card 6: Administrasi B2B, SAP & Perkantoran -->
-        <div class="m3-card skill-card">
-          <h3 class="skill-title">Administrasi Dokumen B2B &amp; SAP</h3>
-          <p class="skill-desc">
-            Verifikasi kelengkapan dokumen penagihan B2B (BAPS, BoQ, DokTek) di SAP, rekonsiliasi data proyek operasional, penyusunan buku panduan teknis/SOP, serta pengolahan spreadsheet.
-          </p>
-          <div class="skill-chip-list">
-            <span class="skill-chip">SAP (B2B Document Management)</span>
-            <span class="skill-chip">Verifikasi BAPS, BoQ &amp; DokTek</span>
-            <span class="skill-chip">Penyusunan Dokumentasi &amp; SOP</span>
-            <span class="skill-chip">Microsoft Excel, Word &amp; PowerPoint</span>
-            <span class="skill-chip">Pengelolaan Backlog Proyek</span>
-            <span class="skill-chip">Rekonsiliasi Data Transaksi</span>
-            <span class="skill-chip">Kerapian Arsip Digital</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         PROJECTS & LABS (Static Semantic M3 Markup — Zero Runtime Delay)
-    ══════════════════════════════════════════ -->
-    <section id="projects" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Proyek &amp; Lab</span>
-        <h2 class="section-title">Proyek Pilihan &amp; Eksperimen Lab</h2>
-        <p class="section-subtitle">Dokumentasi prototipe hardware IoT ber-HKI, lab simulasi jaringan &amp; server, serta aplikasi pendukung.</p>
-      </div>
-
-      <div class="grid grid-cols-2" id="portfolio-projects-grid">
-        
-        <!-- Project 1: Smart Locker -->
-        <article class="m3-card project-card">
-          <div class="project-banner clickable" data-lightbox="https://raw.githubusercontent.com/rangga-ayi/Smart-Locker/main/schematics/skematik_rangkaian.avif" data-caption="Skematik Rangkaian Detail Smart Locker 3-Pintu ESP32 FreeRTOS">
-            <img src="https://raw.githubusercontent.com/rangga-ayi/Smart-Locker/main/schematics/skematik_rangkaian.avif" alt="Skematik Rangkaian Smart Locker 3 Pintu ESP32 FreeRTOS" loading="lazy">
-            <span class="banner-zoom-badge">
-              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Skema
-            </span>
-          </div>
-          <div class="project-badges">
-            <span class="chip">Tugas Akhir 2026</span>
-            <a href="https://pdki-indonesia.dgip.go.id:/link/45433030323032363133353730357c636f70797269676874" target="_blank" rel="noopener noreferrer" class="chip chip-interactive" title="Verifikasi HKI Kemenkumham RI">
-              HKI Kemenkumham RI <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i>
-            </a>
-            <span class="chip">FreeRTOS Dual-Core</span>
-          </div>
-          <h3 class="project-title">Smart Locker 3-Kompartemen: FreeRTOS, e-KTP &amp; OTP Telegram</h3>
-          <p class="project-role">Tugas Akhir · D3 Teknik Komputer Polsri</p>
-          <ul class="project-bullets">
-            <li>Merancang firmware ESP32 FreeRTOS Dual-Core untuk memisahkan proses jaringan dan kontrol perangkat keras secara paralel.</li>
-            <li>Mengintegrasikan autentikasi ganda menggunakan e-KTP (RFID RC522) dan kode OTP Telegram 4 digit sekali pakai.</li>
-            <li>Membangun modul ESP32-CAM via UART untuk merekam foto kurir saat menaruh paket ke dalam loker.</li>
-            <li>Memasang sensor laser VL53L0X ToF dan switch magnetik MC-38 pada 3 pintu untuk validasi isi loker dan status pintu.</li>
-            <li>Menerapkan penyimpanan lokal NVS ESP32 agar konfigurasi dan status loker tersimpan saat daya terputus.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="chip chip-tonal">ESP32 &amp; FreeRTOS</span>
-            <span class="chip chip-tonal">C++ (Arduino)</span>
-            <span class="chip chip-tonal">Telegram Bot API</span>
-            <span class="chip chip-tonal">RFID &amp; ToF Laser</span>
-            <span class="chip chip-tonal">Hardware Prototyping</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://drive.google.com/file/d/1wiqBW8Keu2OAa9X8Yy3FQXtn-wMUODry/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Dokumentasi (PDF)</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
-            </a>
-            <a href="https://github.com/rangga-ayi/Smart-Locker" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
-              <span>GitHub Repo</span> <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-            </a>
-            <a href="https://pdki-indonesia.dgip.go.id:/link/45433030323032363133353730357c636f70797269676874" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
-              <span>Verifikasi HKI</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2: Alzi Petshop E-Commerce -->
-        <article class="m3-card project-card">
-          <div class="project-banner clickable" data-lightbox="./assets/projects/alzi-petshop.png" data-caption="Katalog &amp; Manajemen Transaksi E-Commerce Alzi Petshop (PHP, MySQL &amp; Midtrans API)">
-            <img src="./assets/projects/alzi-petshop.png" alt="Antarmuka Web E-Commerce Alzi Petshop" loading="lazy">
-            <span class="banner-zoom-badge">
-              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Tampilan
-            </span>
-          </div>
-          <div class="project-badges">
-            <span class="chip">Proyek Perkuliahan</span>
-            <span class="chip">PHP &amp; MySQL</span>
-            <span class="chip">Midtrans Payment</span>
-          </div>
-          <h3 class="project-title">Alzi Petshop: E-Commerce &amp; Manajemen Stok Produk</h3>
-          <p class="project-role">Proyek Kolaborasi Perkuliahan · Tim 2 Orang</p>
-          <ul class="project-bullets">
-            <li>Membangun website katalog toko dan manajemen inventaris produk pet shop menggunakan PHP Native dan basis data MySQL.</li>
-            <li>Mengintegrasikan payment gateway Midtrans Snap API untuk pemrosesan transaksi pembayaran digital.</li>
-            <li>Mengembangkan panel kelola admin untuk operasi CRUD (Create, Read, Update, Delete) produk, upload gambar, dan pelacakan pesanan.</li>
-            <li>Menerapkan autentikasi multi-level user (pelanggan dan admin) serta pengelolaan sesi keranjang belanja (cart).</li>
-            <li>Mengamankan kueri basis data dengan prepared statements dan validasi tipe berkas unggahan gambar produk.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="chip chip-tonal">PHP Native</span>
-            <span class="chip chip-tonal">MySQL Database</span>
-            <span class="chip chip-tonal">Midtrans Snap API</span>
-            <span class="chip chip-tonal">Bootstrap &amp; CSS</span>
-            <span class="chip chip-tonal">CRUD Inventory</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://github.com/rangga-ayi/alzi-petshop-ecommerce" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>GitHub Repo</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 3: AeroNest -->
-        <article class="m3-card project-card">
-          <div class="project-banner clickable" data-lightbox="https://raw.githubusercontent.com/rangga-ayi/AeroNest/main/Assets/desktop_home.avif" data-caption="Dashboard Web 3D Digital Twin AeroNest (React 18, Three.js &amp; Firebase RTDB)">
-            <img src="https://raw.githubusercontent.com/rangga-ayi/AeroNest/main/Assets/desktop_home.avif" alt="Dashboard Web 3D Digital Twin AeroNest IoT Microclimate Monitoring" loading="lazy">
-            <span class="banner-zoom-badge">
-              <i data-lucide="zoom-in" style="width: 14px; height: 14px;"></i> Perbesar Tampilan
-            </span>
-          </div>
-          <div class="project-badges">
-            <span class="chip">3D Digital Twin</span>
-            <span class="chip">React 18 &amp; Three.js</span>
-            <span class="chip">Ollama Local LLM</span>
-          </div>
-          <h3 class="project-title">AeroNest: IoT Room Microclimate Monitoring &amp; 3D Digital Twin</h3>
-          <p class="project-role">Proyek Mandiri · IoT Hardware &amp; 3D Web Dashboard</p>
-          <ul class="project-bullets">
-            <li>Merancang node sensor IoT berdaya rendah menggunakan ESP8266 dengan Deep Sleep 5 menit dan baterai Li-ion.</li>
-            <li>Mengintegrasikan sensor AHT20 dan BMP280 via protokol I2C untuk membaca suhu, kelembapan, dan tekanan udara.</li>
-            <li>Mengirim data telemetri nirkabel ke Firebase Realtime Database untuk sinkronisasi langsung ke antarmuka pengguna.</li>
-            <li>Membangun dashboard web responsif memakai React 18, Vite, dan visualisasi interaktif 3D Digital Twin dengan Three.js.</li>
-            <li>Menghubungkan analisis berkala kondisi iklim ruangan berbasis model bahasa lokal via Ollama secara offline.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="chip chip-tonal">ESP8266 &amp; I2C</span>
-            <span class="chip chip-tonal">React 18 &amp; Vite</span>
-            <span class="chip chip-tonal">Three.js (3D)</span>
-            <span class="chip chip-tonal">Firebase RTDB</span>
-            <span class="chip chip-tonal">Ollama Local LLM</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://aeronest.proyekhub.my.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Buka Aplikasi</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
-            </a>
-            <a href="https://github.com/rangga-ayi/AeroNest" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">
-              <span>GitHub Repo</span> <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4: MusicNest -->
-        <article class="m3-card project-card">
-          <div class="project-banner project-banner-tonal">
-            <span class="project-banner-category">Web Application &amp; Multimedia</span>
-            <h4 class="project-banner-title">MusicNest</h4>
-          </div>
-          <div class="project-badges">
-            <span class="chip">Self-Hosted LAN</span>
-            <span class="chip">Next.js 16 &amp; React 19</span>
-            <span class="chip">MySQL 8+ FTS</span>
-          </div>
-          <h3 class="project-title">MusicNest: Pemutar Musik &amp; Katalog Server LAN</h3>
-          <p class="project-role">Proyek Mandiri · Full-Stack Web &amp; Multimedia</p>
-          <ul class="project-bullets">
-            <li>Membangun pemutar musik web di jaringan lokal menggunakan Next.js 16, TypeScript, dan Tailwind CSS.</li>
-            <li>Merancang modul pemindai folder musik otomatis dengan penyimpanan metadata lagu pada basis data MySQL 8+.</li>
-            <li>Menerapkan pencarian full-text real-time untuk katalog musik serta sinkronisasi lirik lagu.</li>
-            <li>Menyediakan streaming audio berbasis HTTP Range dengan transkode berkas musik secara lokal.</li>
-          </ul>
-          <div class="project-tags">
-            <span class="chip chip-tonal">Next.js 16</span>
-            <span class="chip chip-tonal">TypeScript</span>
-            <span class="chip chip-tonal">MySQL FTS</span>
-            <span class="chip chip-tonal">Audio Streaming</span>
-            <span class="chip chip-tonal">Self-Hosted LAN</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://musicnest.proyekhub.my.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Buka Aplikasi</span> <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         EXPERIENCE
-    ══════════════════════════════════════════ -->
-    <section id="experience" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Pengalaman</span>
-        <h2 class="section-title">Pengalaman Kerja &amp; Magang</h2>
-        <p class="section-subtitle">Rekam jejak magang industri, pekerjaan teknis lapangan, dan kompetisi kejuruan.</p>
-      </div>
-
-      <div class="timeline">
-        <!-- Milestone 1: PLN Icon Plus -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="m3-card timeline-card">
-            <div class="experience-header">
-              <h3 class="experience-role">Administrative Assistant &amp; Field Technician — Magang</h3>
-              <span class="tenure-badge">Jul 2025 – Okt 2025 · 4 Bulan</span>
-            </div>
-            <p class="experience-company">PLN Icon Plus — Palembang, Sumatera Selatan</p>
-            <ul class="experience-bullets">
-              <li>Memeriksa dan merekap berkas penagihan BAPS, BoQ, dan DokTek untuk transaksi B2B rata-rata 10+ dokumen per hari menggunakan SAP, Microsoft Excel, dan Word.</li>
-              <li>Menertibkan dan memverifikasi kelengkapan dokumen backlog pada periode puncak proyek untuk kelancaran termin penagihan mitra kerja.</li>
-              <li>Membantu penarikan kabel UTP, terminasi RJ45, pengujian koneksi, dan instalasi jaringan CCTV di kawasan Jembatan Ampera serta Terminal Karya Jaya bersama Diskominfo Palembang.</li>
-            </ul>
-            <div class="experience-tags">
-              <span class="chip">SAP B2B</span>
-              <span class="chip">BAPS &amp; BoQ</span>
-              <span class="chip">Penarikan Kabel UTP</span>
-              <span class="chip">Instalasi CCTV Lapangan</span>
-              <span class="chip">Standar K3</span>
-              <span class="chip">Microsoft Excel</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Milestone 2: Zhanet Komputer -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="m3-card timeline-card">
-            <div class="experience-header">
-              <h3 class="experience-role">Assistant Technician — Magang</h3>
-              <span class="tenure-badge">Jan 2022 – Apr 2022 · 4 Bulan</span>
-            </div>
-            <p class="experience-company">Zhanet Komputer — Muara Enim, Sumatera Selatan</p>
-            <ul class="experience-bullets">
-              <li>Mendiagnosis dan memperbaiki kerusakan hardware (RAM, storage, PSU, motherboard) serta masalah sistem operasi pada PC pelanggan.</li>
-              <li>Merakit unit PC desktop kustom dari komponen terpisah sesuai kebutuhan spesifikasi dan anggaran pelanggan.</li>
-              <li>Melakukan instalasi OS Windows, konfigurasi driver perangkat, serta stress test stabilitas sebelum unit diserahkan.</li>
-            </ul>
-            <div class="experience-tags">
-              <span class="chip">Perakitan PC Kustom</span>
-              <span class="chip">Hardware Troubleshooting</span>
-              <span class="chip">Windows Deployment</span>
-              <span class="chip">Konfigurasi Driver</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         CREDENTIALS
-    ══════════════════════════════════════════ -->
-    <section id="credentials" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Sertifikasi</span>
-        <h2 class="section-title">Sertifikasi &amp; Hak Cipta</h2>
-        <p class="section-subtitle">Sertifikasi kompetensi jaringan, machine learning, dan hak cipta terdaftar resmi di Kemenkumham RI.</p>
-      </div>
-
-      <div class="grid grid-cols-4">
-        <!-- Cert 1: Cisco -->
-        <div class="m3-card credential-card">
-          <span class="chip chip-sky">Cisco Networking Academy</span>
-          <h3 class="credential-title">Cisco Certified Networking Basics</h3>
-          <p class="credential-desc">
-            Konsep pengalamatan IPv4 &amp; IPv6, verifikasi konektivitas, troubleshooting jaringan lokal, serta konfigurasi router nirkabel.
-          </p>
-          <div class="credential-footer">Diterbitkan: Sep 2026</div>
-        </div>
-
-        <!-- Cert 2: Dicoding ML -->
-        <div class="m3-card credential-card">
-          <span class="chip chip-violet">Dicoding Indonesia</span>
-          <h3 class="credential-title">Belajar Machine Learning untuk Pemula</h3>
-          <p class="credential-desc">
-            Penerapan Python untuk supervised &amp; unsupervised learning, feature engineering, evaluasi model, dan hyperparameter tuning.
-          </p>
-          <div class="credential-footer">
-            ID: 1OP876E48ZQK · Berlaku s/d Sep 2029
-          </div>
-        </div>
-
-        <!-- Cert 3: LKS ITNSA Juara 1 Kab & Top 5 Prov -->
-        <div class="m3-card credential-card">
-          <span class="chip chip-amber">MKKS SMK &amp; Disdik Sumsel</span>
-          <h3 class="credential-title">Juara 1 LKS ITNSA Kab. Muara Enim</h3>
-          <p class="credential-desc">
-            Administrasi server Linux, konfigurasi routing MikroTik, deployment web server, dan simulasi penanganan insiden jaringan.
-          </p>
-          <div class="credential-footer">
-            No: 420/016/MKKS-SMK/ME/2022 · Jul 2022
-          </div>
-        </div>
-
-        <!-- Cert 4: HKI Kemenkumham -->
-        <div class="m3-card credential-card">
-          <span class="chip chip-green">Kemenkumham RI</span>
-          <h3 class="credential-title">Hak Cipta: Smart Locker FreeRTOS</h3>
-          <p class="credential-desc">
-            Surat Pencatatan Ciptaan Program Komputer: Sistem Smart Locker 3-Pintu Berbasis ESP32 FreeRTOS Dual-Core dengan autentikasi RFID e-KTP dan OTP Telegram.
-          </p>
-          <div class="credential-footer">
-            No: EC002026135705 · Terbit: 6 Agt 2026
-          </div>
-          <a href="https://pdki-indonesia.dgip.go.id/search?keyword=EC002026135705&amp;type=copyright" target="_blank" rel="noopener noreferrer" class="credential-link">
-            <span>Verifikasi di PDKI Kemenkumham</span>
-            <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         CONTACT
-    ══════════════════════════════════════════ -->
-    <section id="contact" class="container content-section">
-      <div class="section-header">
-        <span class="section-pill-tag">Kontak</span>
-        <h2 class="section-title">Kontak &amp; Ketersediaan</h2>
-        <p class="section-subtitle">Terbuka untuk posisi Teknisi Hardware, Network Administrator, IT Support, maupun Administrasi Operasional B2B.</p>
-      </div>
-
-      <div class="grid grid-cols-2 contact-layout">
-        <!-- Form -->
-        <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST" class="m3-card contact-form">
-          <div class="form-group">
-            <label for="name" class="form-label">Nama Lengkap</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required aria-required="true" aria-describedby="form-message">
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email Anda</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="nama@email.com" required aria-required="true" aria-describedby="form-message">
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Pesan</label>
-            <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tuliskan pesan, tawaran kerja, atau detail kebutuhan Anda di sini..." required aria-required="true" aria-describedby="form-message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submit-btn">
-            <span>Kirim Pesan</span>
-            <i data-lucide="send" style="width: 16px; height: 16px;"></i>
-          </button>
-          <div class="form-message" id="form-message" role="status" aria-live="polite" style="display: none;"></div>
-        </form>
-
-        <!-- Right column -->
-        <div class="contact-side-col">
-          <!-- Availability Banner -->
-          <div class="availability-card">
-            <span class="availability-badge">Tersedia</span>
+        <!-- Project 1: Alzi Petshop -->
+        <section class="editorial-block" id="alzi-petshop">
+          <span class="eyebrow">Aplikasi Web &amp; Database · 158 Commit Git</span>
+          <h3>Alzi Petshop: E-Commerce<br>&amp; Payment Gateway System.</h3>
+          <p class="body-copy">Aplikasi e-commerce berbasis PHP &amp; MySQL dengan Role-Based Access Control (RBAC), integrasi payment gateway Midtrans Snap API, webhook notifikasi transaksi real-time, geolokasi OpenStreetMap, dan invoice otomatis berformat PDF via Dompdf.</p>
+          
+          <div class="journal-meta project-summary">
             <div>
-              <p class="availability-title">Siap Bekerja &amp; Bergabung Segera</p>
-              <p class="availability-subtitle">Full-time · Kontrak · On-site (Palembang / Muara Enim / sekitarnya) atau Remote</p>
+              <span>Peran saya</span>
+              <p>Backend, Autentikasi, Database, Payment Midtrans, Admin, Fulfillment</p>
+            </div>
+            <div>
+              <span>Kolaborasi</span>
+              <p>110 commit oleh saya, 48 commit oleh rekan</p>
+            </div>
+            <div>
+              <span>Status</span>
+              <p>Selesai &amp; dapat diuji penuh secara lokal</p>
             </div>
           </div>
 
-          <!-- Direct Contact -->
-          <div class="m3-card contact-details-card">
-            <h3 class="contact-details-heading">Kontak Langsung</h3>
-            <div class="contact-info-item">
-              <span class="contact-info-label">Email</span>
-              <a href="mailto:pratama.ranggaayi@gmail.com" class="contact-info-val">pratama.ranggaayi@gmail.com</a>
+          <nav class="summary-jumps" aria-label="Bagian proyek Alzi Petshop">
+            <a href="#alur-petshop">Lihat arsitektur sistem ↓</a>
+            <a href="#dokumentasi-petshop">Tangkapan layar sistem ↓</a>
+            <a href="https://github.com/rangga-ayi/alzi-petshop-ecommerce" target="_blank" rel="noopener noreferrer" style="color:#8356bd;font-weight:600;">Repository GitHub ↗</a>
+          </nav>
+
+          <figure class="documentary project-cover expand-photo">
+            <a href="assets/04_petshop/petshop_landing_page.jpg" data-lightbox aria-label="Perbesar foto: Halaman utama Alzi Petshop.">
+              <img src="assets/04_petshop/petshop_landing_page.jpg" width="1280" height="800" alt="Tampilan halaman utama e-commerce Alzi Petshop." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Halaman utama e-commerce Alzi Petshop: katalog produk, kategori, dan navigasi transaksi.</figcaption>
+          </figure>
+
+          <div class="tag-list">
+            <span>PHP Native</span>
+            <span>MySQL</span>
+            <span>Midtrans Snap API</span>
+            <span>Webhook</span>
+            <span>Bootstrap</span>
+            <span>OpenStreetMap</span>
+            <span>Dompdf</span>
+            <span>RBAC Security</span>
+          </div>
+        </section>
+
+        <!-- Interactive Architecture Path Tabs -->
+        <section class="editorial-block" id="alur-petshop">
+          <span class="eyebrow">Jelajahi alur arsitektur sistem</span>
+          <h3>Alur transaksi, keamanan,<br>dan pemenuhan pesanan.</h3>
+          <p class="body-copy">Pilih tab di bawah untuk melihat bagaimana data dan keamanan diproses pada backend Alzi Petshop.</p>
+          
+          <div class="path-demo">
+            <div class="path-buttons" role="group" aria-label="Alur sistem Alzi Petshop">
+              <button type="button" data-path="transaksi" aria-pressed="true">Pembayaran Midtrans</button>
+              <button type="button" data-path="rbac" aria-pressed="false">Keamanan &amp; RBAC</button>
+              <button type="button" data-path="fulfillment" aria-pressed="false">Geolokasi &amp; Invoice</button>
             </div>
-            <div class="contact-info-item">
-              <span class="contact-info-label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/rangga-ayi-pratama/" target="_blank" rel="noopener noreferrer" class="contact-info-val">linkedin.com/in/rangga-ayi-pratama</a>
+
+            <div data-path-panel="transaksi">
+              <h4>Dari checkout hingga verifikasi webhook server-to-server.</h4>
+              <div class="path-flow" role="group" aria-label="Alur Transaksi">
+                <span>Keranjang Belanja</span>
+                <i aria-hidden="true">→</i>
+                <span>Snap Token Request</span>
+                <i aria-hidden="true">→</i>
+                <span>Midtrans Payment</span>
+                <i aria-hidden="true">→</i>
+                <span>Webhook Notification</span>
+                <i aria-hidden="true">→</i>
+                <span>Database Lunas</span>
+              </div>
+              <p>Pengguna memilih metode bayar pada pop-up Midtrans Snap. Setelah pembayaran selesai, server Midtrans mengirimkan HTTP POST webhook dengan signature SHA-512 ke backend PHP untuk validasi otomatis status pesanan tanpa celah bypass browser.</p>
             </div>
-            <div class="contact-info-item">
-              <span class="contact-info-label">GitHub</span>
-              <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer" class="contact-info-val">github.com/rangga-ayi</a>
+
+            <div data-path-panel="rbac" hidden>
+              <h4>Role-Based Access Control dan parameterisasi query.</h4>
+              <div class="path-flow" role="group" aria-label="Alur RBAC">
+                <span>Login &amp; Sanitasi</span>
+                <i aria-hidden="true">→</i>
+                <span>Prepared Statement</span>
+                <i aria-hidden="true">→</i>
+                <span>Verifikasi Session Role</span>
+                <i aria-hidden="true">→</i>
+                <span>Akses Admin / User</span>
+              </div>
+              <p>Mencegah SQL Injection dengan prepared statements. Setiap request melewati middleware pengecekan peran (Admin, Penjual, Pembeli) sehingga data transaksi dan hak kelola toko terisolasi secara aman.</p>
             </div>
+
+            <div data-path-panel="fulfillment" hidden>
+              <h4>Penentuan titik kirim geolokasi dan penerbitan bukti invoice PDF.</h4>
+              <div class="path-flow" role="group" aria-label="Alur Fulfillment">
+                <span>Koordinat Alamat</span>
+                <i aria-hidden="true">→</i>
+                <span>OpenStreetMap API</span>
+                <i aria-hidden="true">→</i>
+                <span>Kalkulasi Tarif Kirim</span>
+                <i aria-hidden="true">→</i>
+                <span>Generate PDF Dompdf</span>
+              </div>
+              <p>Pelanggan menentukan lokasi penerimaan via peta interaktif OpenStreetMap. Setelah pesanan dikonfirmasi, sistem backend mengompilasi bukti bayar berformat PDF resmi menggunakan library Dompdf.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project 1 Decisions & Screenshots -->
+        <section class="editorial-block">
+          <span class="eyebrow">Keputusan dalam proses pengembangan</span>
+          <h3>Pilihan teknis backend &amp; arsitektur.</h3>
+          <div class="work-steps">
+            <article class="work-step">
+              <b>01</b>
+              <h4>Integritas Transaksi Webhook</h4>
+              <p>Tidak mengandalkan return redirect dari sisi client browser. Perubahan status pembayaran mutlak ditentukan oleh payload webhook terotentikasi.</p>
+            </article>
+            <article class="work-step">
+              <b>02</b>
+              <h4>Pemisahan Kontribusi Git Transparan</h4>
+              <p>Dengan total 158 commit, saya mengerjakan 110 commit yang berfokus pada fondasi backend, database, RBAC, payment, dan fulfillment.</p>
+            </article>
+            <article class="work-step">
+              <b>03</b>
+              <h4>Otomasi Invoice Legal</h4>
+              <p>Invoice PDF terbit secara real-time mencakup rincian item, nomor resi, alamat peta kirim, dan status transaksi lunas.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="editorial-block" id="dokumentasi-petshop">
+          <span class="eyebrow">Tangkapan layar sistem / klik untuk memperbesar</span>
+          <h3>Antarmuka Alzi Petshop.</h3>
+          <div class="photo-pair">
+            <figure class="documentary">
+              <a href="assets/04_petshop/petshop_payment_gateway.jpg" data-lightbox aria-label="Perbesar foto: Alur pembayaran Midtrans Snap.">
+                <img src="assets/04_petshop/petshop_payment_gateway.jpg" width="1280" height="800" alt="Alur pembayaran Midtrans Snap API pada Alzi Petshop." loading="lazy" decoding="async">
+              </a>
+              <figcaption>Integrasi Midtrans Snap: berbagai metode pembayaran digital dan perbankan.</figcaption>
+            </figure>
+            <figure class="documentary">
+              <a href="assets/04_petshop/petshop_admin_dashboard.jpg" data-lightbox aria-label="Perbesar foto: Dashboard Super Admin Alzi Petshop.">
+                <img src="assets/04_petshop/petshop_admin_dashboard.jpg" width="1280" height="800" alt="Dashboard Super Admin Alzi Petshop." loading="lazy" decoding="async">
+              </a>
+              <figcaption>Dashboard Super Admin: pengelolaan hak akses, monitoring transaksi, dan audit data.</figcaption>
+            </figure>
+          </div>
+          <figure class="documentary expand-photo" style="margin-top:20px;">
+            <a href="assets/04_petshop/petshop_user_dashboard.jpg" data-lightbox aria-label="Perbesar foto: Dashboard pengguna dan order fulfillment.">
+              <img src="assets/04_petshop/petshop_user_dashboard.jpg" width="1280" height="800" alt="Dashboard pengguna dan riwayat transaksi Alzi Petshop." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Dashboard pengguna: pengelolaan profil, keranjang belanja, dan status fulfillment pesanan.</figcaption>
+          </figure>
+        </section>
+
+        <!-- Project 2: Smart Locker Prototype -->
+        <section class="editorial-block" id="smart-locker" style="margin-top:70px;">
+          <span class="eyebrow">Prototype Integrasi Hardware · ESP32 &amp; IoT</span>
+          <h3>Smart Locker Kompartemen Kos<br>Berbasis RFID &amp; Solenoid.</h3>
+          <p class="body-copy">Prototype fasilitas penyimpanan dan penitipan paket untuk penghuni kos. Setiap kompartemen terkunci secara elektronik dan hanya dapat dibuka menggunakan kartu identitas RFID penghuni yang terdaftar.</p>
+          
+          <div class="journal-meta project-summary">
+            <div>
+              <span>Peran saya</span>
+              <p>Perakitan fisik, wiring sirkuit, integrasi solenoid lock &amp; modul RFID</p>
+            </div>
+            <div>
+              <span>Platform</span>
+              <p>ESP32, Modul RFID RC522, Relay, Solenoid Lock 12V</p>
+            </div>
+            <div>
+              <span>Status</span>
+              <p>Prototype purwarupa fungsional laboratorium</p>
+            </div>
+          </div>
+
+          <div style="margin:16px 0 20px;">
+            <span style="display:inline-block;padding:7px 15px;background:#ede6f2;color:#5b2f76;border-radius:8px;font-size:13px;font-weight:700;border:1px solid #d4c4e2;">
+              ★ Hak Cipta DJKI Kemenkumham RI: No. EC002026135705 (Program Komputer)
+            </span>
+          </div>
+          <div class="photo-pair" style="margin-top:20px;">
+            <figure class="documentary">
+              <a href="assets/05_smart_locker/smartlocker_fisik.jpg" data-lightbox aria-label="Perbesar foto: Tampilan fisik prototype Smart Locker.">
+                <img src="assets/05_smart_locker/smartlocker_fisik.jpg" width="1280" height="960" alt="Tampilan fisik prototype Smart Locker." loading="lazy" decoding="async">
+              </a>
+              <figcaption>Bentuk fisik kompartemen prototype Smart Locker dengan mekanisme pengunci solenoid.</figcaption>
+            </figure>
+            <figure class="documentary">
+              <a href="assets/05_smart_locker/smartlocker_rfid.jpeg" data-lightbox aria-label="Perbesar foto: Integrasi sensor RFID dan kelistrikan.">
+                <img src="assets/05_smart_locker/smartlocker_rfid.jpeg" width="1280" height="960" alt="Integrasi sensor RFID dan kelistrikan Smart Locker." loading="lazy" decoding="async">
+              </a>
+              <figcaption>Pengujian modul pembaca kartu RFID dan rangkaian wiring pengontrol kunci.</figcaption>
+            </figure>
+          </div>
+          <figure class="documentary expand-photo" style="margin-top:20px;">
+            <a href="assets/05_smart_locker/smartlocker_telegram_otp.jpg" data-lightbox aria-label="Perbesar foto: Notifikasi Telegram dan kode OTP pengiriman paket.">
+              <img src="assets/05_smart_locker/smartlocker_telegram_otp.jpg" width="1280" height="720" alt="Notifikasi Bot Telegram dan kode OTP Smart Locker." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Integrasi Bot Telegram: pengiriman kode OTP sekali pakai, foto kurir via ESP32-CAM, dan konfirmasi buka pintu otomatis.</figcaption>
+          </figure>
+          <div class="note-box" style="margin-top:15px;">
+            <strong>Catatan Proyek:</strong> Smart Locker merupakan prototype rekayasa perangkat keras dan belum diimplementasikan secara komersial.
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 03 / Skills Section -->
+    <section class="portfolio-section" id="keahlian" data-portfolio-section aria-labelledby="skills-title" tabindex="-1">
+      <div class="chapter-depth" aria-hidden="true">
+        <span>03</span>
+        <i></i>
+      </div>
+      <div class="wrap">
+        <span id="skills-heading" class="anchor-alias" aria-hidden="true"></span>
+        <div class="portfolio-section-heading chapter-panel">
+          <span class="eyebrow">03 / Kemampuan dan keahlian</span>
+          <h2 id="skills-title">Keahlian dengan konteks penerapan.</h2>
+          <p>Pengalaman kerja praktik, kompetisi kejuruan, dan penerapan proyek nyata.</p>
+          <span class="section-rule" aria-hidden="true"><i></i></span>
+        </div>
+
+        <section class="editorial-block" id="capabilities" aria-label="Bidang keahlian">
+          <div class="capability-grid">
+            <article class="capability" data-skill-category="network">
+              <span>Jaringan / MikroTik &amp; Protokol</span>
+              <h3>MikroTik RouterOS &amp; TCP/IP</h3>
+              <p>Konfigurasi routing dinamis/statis, firewall filter, NAT, bandwidth management, VLAN, dan troubleshooting jaringan komputer.</p>
+              <a href="#lks-network">Lihat konteks di LKS Network ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="hardware">
+              <span>Hardware / Technical Support</span>
+              <h3>Perakitan &amp; Troubleshooting PC</h3>
+              <p>Diagnosis kerusakan motherboard, RAM, storage, dan PSU, perakitan PC, instalasi sistem operasi Windows &amp; driver, serta stress testing.</p>
+              <a href="#zhanet-komputer">Lihat praktik di Zhanet ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="network">
+              <span>Infrastruktur / Lapangan</span>
+              <h3>Kabel UTP &amp; Instalasi CCTV</h3>
+              <p>Penarikan kabel terstruktur, terminasi konektor RJ45 standar T568B, pengujian kabel tester, dan instalasi perangkat CCTV di lapangan.</p>
+              <a href="#pln-icon-plus">Lihat kerja di PLN Icon Plus ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="server">
+              <span>Server &amp; Linux</span>
+              <h3>Debian Server &amp; Web Services</h3>
+              <p>Instalasi dan administrasi Debian/Ubuntu Server, manajemen service systemd, deployment Apache, PHP, MySQL, serta konfigurasi DNS.</p>
+              <a href="#lks-network">Buka studi kasus server ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="data">
+              <span>Web &amp; Database / Proyek</span>
+              <h3>PHP, MySQL &amp; Payment API</h3>
+              <p>Perancangan basis data relasional, sanitasi input aman, Role-Based Access Control (RBAC), serta integrasi Midtrans Snap API &amp; Webhook.</p>
+              <a href="#alzi-petshop">Lihat arsitektur Alzi Petshop ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="hardware">
+              <span>IoT &amp; Integrasi Hardware</span>
+              <h3>ESP32, Sensor &amp; Mekanisme Kunci</h3>
+              <p>Pengkabelan rangkaian elektronik, pemrograman ESP32, integrasi sensor RFID, relay kendali, dan solenoid electronic lock.</p>
+              <a href="#smart-locker">Buka prototype Smart Locker ↗</a>
+            </article>
+
+            <article class="capability" data-skill-category="security">
+              <span>Virtualisasi &amp; Keamanan (Akademik)</span>
+              <h3>VMware, pfSense &amp; SIEM Monitoring</h3>
+              <p>Eksplorasi virtual environment server, konfigurasi firewall pfSense, dan pengenalan monitoring keamanan dengan Wazuh &amp; Suricata.</p>
+              <a href="#pendidikan">Lihat latar pendidikan ↗</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Education Sub-section -->
+        <section class="editorial-block" id="pendidikan" style="margin-top:60px;">
+          <span class="eyebrow">Pendidikan formal</span>
+          <h3>Pendidikan berkelanjutan<br>Teknik Komputer &amp; Jaringan.</h3>
+          
+          <div class="education-card">
+            <div>
+              <span class="study-status">Lulus · 2023–2026</span>
+              <h4>D3 Teknik Komputer</h4>
+              <p>Politeknik Negeri Sriwijaya</p>
+              <p>Fokus: Jaringan komputer, administrasi server Linux, perakitan &amp; perbaikan PC, serta komputasi terapan.</p>
+            </div>
+            <div class="education-grade">
+              <b>3,64</b>
+              <span>IPK / 4,00</span>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <div>
+              <span class="study-status">Lulus</span>
+              <h4>SMK Bukit Asam — Teknik Komputer dan Jaringan</h4>
+              <p>Nilai Akhir: <strong>88,92</strong> · Berkelanjutan ke D3 Teknik Komputer</p>
+              <p>Pondasi kejuruan: Infrastruktur jaringan LAN, konfigurasi perangkat jaringan, instalasi sistem operasi, dan perakitan komputer.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 04 / Certificates Section -->
+    <section class="portfolio-section section-tinted" id="sertifikat" data-portfolio-section aria-labelledby="certificates-title" tabindex="-1">
+      <div class="chapter-depth" aria-hidden="true">
+        <span>04</span>
+        <i></i>
+      </div>
+      <div class="wrap">
+        <div class="portfolio-section-heading chapter-panel">
+          <span class="eyebrow">04 / Dokumen pendukung</span>
+          <h2 id="certificates-title">Sertifikat &amp; pencapaian kompetensi.</h2>
+          <p>Dokumen sertifikasi resmi, kejuaraan kompetisi, dan pelatihan terverifikasi.</p>
+          <span class="section-rule" aria-hidden="true"><i></i></span>
+        </div>
+
+        <section class="certificate-gallery" aria-label="Galeri sertifikat dan pencapaian">
+          <!-- Cert 1: BNSP Database Programmer -->
+          <article class="certificate-card" id="cert-bnsp">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Badan Nasional Sertifikasi Profesi (BNSP) · 2026</p>
+              <h3>Pemrogram Basis Data (Database Programmer)</h3>
+              <p>Sertifikasi kompetensi nasional bidang perancangan, pengelolaan struktur tabel relasional, dan manipulasi basis data.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1OaAaKfiCYzsgHEWTfGnDnmQ2ZeWKfSr1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Dokumen BNSP <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 2: CCEP -->
+          <article class="certificate-card" id="cert-ccep">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Red Team Cyber · 2026</p>
+              <h3>Certified Cybersecurity Educator Professional (CCEP)</h3>
+              <p>Sertifikasi profesional bidang edukasi keamanan siber, pemahaman ancaman siber, dan pengamanan sistem informasi.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1-I9t-6fZQM1pAyD84pM84sHjTbO5KaEP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat CCEP <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 3: LKS -->
+          <article class="certificate-card" id="cert-lks">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">MKKS SMK Muara Enim / Diknas Sumsel · 2022</p>
+              <h3>Juara 1 — LKS IT Network System Administration</h3>
+              <p>Kejuaraan kompetisi kejuruan bidang konfigurasi MikroTik RouterOS, administrasi Debian Server, dan deployment layanan web.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/15Ln5qan2LwY-CuvMC_9zyXlXrB3fXZIt/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat Juara 1 <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 4: Cisco Networking Basics -->
+          <article class="certificate-card" id="cert-cisco">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Cisco Networking Academy · 2026</p>
+              <h3>Networking Basics</h3>
+              <p>Sertifikasi dasar arsitektur jaringan komputer, protokol TCP/IP, addressing IPv4, dan media transmisi kabel UTP.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1suiXIvnJobwFZ6ybv5xE-zPmpQoZJaT8/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat Cisco <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 5: DTS Kominfo -->
+          <article class="certificate-card" id="cert-dts-intermediate">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Digital Talent Scholarship (Kominfo) · 2026</p>
+              <h3>Intermediate Associate Network Administrator</h3>
+              <p>Pelatihan dan sertifikasi keahlian tingkat lanjut administrasi jaringan komputer, routing, dan switching nasional.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1L3lMlcTmu1S1dV1MEFR1hrTwj3ndk0tT/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat DTS <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 6: DTA Kominfo -->
+          <article class="certificate-card" id="cert-dta-fundamental">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Digital Talent Academy (Kominfo) · 2026</p>
+              <h3>Fundamental of Associate Network Administrator</h3>
+              <p>Sertifikasi kompetensi dasar pengelolaan dan administrasi perangkat infrastruktur jaringan.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1zlToYMG1-Lym8ukKXXu33RX6ZyK-Z8o9/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat DTA <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 7: Simplilearn SQL -->
+          <article class="certificate-card" id="cert-sql">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Simplilearn · 2026</p>
+              <h3>Introduction to SQL</h3>
+              <p>Kelulusan kursus dasar Structured Query Language untuk pengelolaan tabel, relasi, dan penyaringan data relasional.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1AOVL_Tqe1bjkKPgtmjVErJ2lt7RDu6lm/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat SQL <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 8: ID-Networkers Cisco -->
+          <article class="certificate-card" id="cert-cisco-dasar">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">ID-Networkers · 2026</p>
+              <h3>Cisco Dasar (Training &amp; Lab)</h3>
+              <p>Pelatihan konfigurasi router &amp; switch Cisco, VLAN, inter-VLAN routing, dan dasar switching.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/13rvYI_NfkpzZIU-_lWJe-Z-QfVQuLesS/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat IDN <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 9: Magang PLN -->
+          <article class="certificate-card" id="cert-pln">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">PT PLN Icon Plus · 2025</p>
+              <h3>Sertifikat Praktik Kerja Lapangan</h3>
+              <p>Sertifikat penyelesaian pekerjaan teknis instalasi jaringan kabel UTP, terminasi RJ45, dan perangkat CCTV lapangan.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1ZqJHS6F5j7fzcrD4o4Dylq2NxkQyCha-/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat Magang <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 10: English Score 610 -->
+          <article class="certificate-card" id="cert-english">
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Daily Bahasa Inggris · 2026</p>
+              <h3>English Proficiency Test — Score 610</h3>
+              <p>Sertifikat penilaian kemampuan bahasa Inggris profesional untuk kebutuhan komunikasi teknis dan dokumentasi.</p>
+              <div class="certificate-actions" style="margin-top:14px;">
+                <a class="button button-plum" href="https://drive.google.com/file/d/1-8ZU-fnCRZEfzgIOSOZp3qlwU2vT5jDc/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat EPT <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <!-- 05 / Contact Section -->
+    <section class="portfolio-contact" id="kontak" data-portfolio-section aria-labelledby="contact-title" tabindex="-1">
+      <div class="wrap contact-layout">
+        <div>
+          <span id="connect-heading" class="anchor-alias" aria-hidden="true"></span>
+          <span class="eyebrow">Kontak profesional</span>
+          <h2 id="contact-title">Mari terhubung.</h2>
+          <p>Terbuka untuk peluang kerja di bidang IT Infrastructure, Network Administrator, Technical Support, Hardware Specialist, maupun Web Developer.</p>
+          <a class="contact-email" href="mailto:pratama.ranggaayi@gmail.com">
+            pratama.ranggaayi@gmail.com <span aria-hidden="true">↗</span>
+          </a>
+          <div class="contact-actions">
+            <a class="button button-plum" href="mailto:pratama.ranggaayi@gmail.com">Email Rangga <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://drive.google.com/file/d/1IIZkL3zpGqxjT2IWeCBRteo_yanAcnW3/view?usp=sharing" target="_blank" rel="noopener noreferrer">Unduh CV (PDF) <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="contact-accounts">
+          <div class="contact-illustration" aria-hidden="true">
+            <picture>
+              <source type="image/avif" srcset="assets/profile/Rangga.avif">
+              <img src="assets/profile/Rangga.jpg" width="941" height="1255" alt="Foto Rangga Ayi Pratama" loading="eager" decoding="async" data-essential style="border-radius:24px;border:1px solid rgba(255,255,255,0.15);width:100%;max-width:280px;height:auto;margin:0 auto 20px;">
+            </picture>
+          </div>
+          <p class="contact-caption">Profil dan repositori kode</p>
+          <div class="social-grid">
+            <a class="social-link" data-social="linkedin" href="https://www.linkedin.com/in/rangga-ayi-pratama" target="_blank" rel="noopener noreferrer">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <text x="3" y="19" font-size="20" font-family="Arial,sans-serif" font-weight="700" fill="currentColor" stroke="none">in</text>
+              </svg>
+              <span>
+                <b>LinkedIn</b>
+                <small>linkedin.com/in/rangga-ayi-pratama</small>
+              </span>
+              <span class="social-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="social-link" data-social="github" href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.7c3.4-.4 7-1.7 7-7.3a5.6 5.6 0 0 0-1.5-3.9A5.2 5.2 0 0 0 19.3.3S18 .0 15 2a13.3 13.3 0 0 0-7 0C5 .0 3.7.3 3.7.3a5.2 5.2 0 0 0-.2 3.8A5.6 5.6 0 0 0 2 8c0 5.6 3.6 6.9 7 7.3A3.5 3.5 0 0 0 8 18v4"/>
+              </svg>
+              <span>
+                <b>GitHub</b>
+                <small>github.com/rangga-ayi</small>
+              </span>
+              <span class="social-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="social-link" data-social="phone" href="https://wa.me/6285788694152" target="_blank" rel="noopener noreferrer">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>
+                <b>WhatsApp / HP</b>
+                <small>0857-8869-4152</small>
+              </span>
+              <span class="social-arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo">MyPorto</div>
+  <!-- Photo Dialog Lightbox Modal -->
+  <dialog class="photo-dialog" id="photo-dialog" aria-label="Pratinjau dokumentasi">
+    <button type="button">Tutup ×</button>
+    <img src="" alt="Pratinjau dokumentasi" width="1280" height="960">
+    <p></p>
+    <a class="dialog-original" data-original-image href="" target="_blank" rel="noopener noreferrer">Buka gambar penuh ↗</a>
+  </dialog>
 
-        <p class="footer-copy">
-          © 2026 Rangga Ayi Pratama — D3 Teknik Komputer Polsri
-        </p>
-
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/rangga-ayi-pratama/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-          </a>
-          <a href="mailto:pratama.ranggaayi@gmail.com" class="social-btn" aria-label="Email">
-            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
-          </a>
-        </div>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <a class="wordmark" href="/">rangga<span>.</span></a>
+      <p>Rangga Ayi Pratama<br>D3 Teknik Komputer · Politeknik Negeri Sriwijaya. Seluruh foto proyek dan kegiatan adalah dokumentasi asli.</p>
+      <div class="footer-contact-links">
+        <a href="mailto:pratama.ranggaayi@gmail.com">Email Rangga ↗</a>
+        <a href="#proyek">Lihat proyek ↗</a>
+        <a href="https://github.com/rangga-ayi" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="#main">Kembali ke atas ↑</a>
       </div>
     </div>
   </footer>
-
-  <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="lightbox-content">
-      <div class="lightbox-header">
-        <span id="lightbox-title">Pratinjau Skematik &amp; Dokumentasi</span>
-        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Tutup pratinjau">
-          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
-        </button>
-      </div>
-      <div class="lightbox-img-wrap">
-        <img src="" alt="Pratinjau Detail" class="lightbox-img" id="lightbox-img">
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      /* Theme toggle logic */
-      const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = document.getElementById('theme-icon');
-
-      const updateThemeIcon = (theme) => {
-        if (!themeIcon) return;
-        if (theme === 'dark') {
-          themeIcon.setAttribute('data-lucide', 'sun');
-        } else {
-          themeIcon.setAttribute('data-lucide', 'moon');
-        }
-        lucide.createIcons();
-      };
-
-      const getCurrentTheme = () => document.documentElement.getAttribute('data-theme') || 'light';
-
-      updateThemeIcon(getCurrentTheme());
-
-      if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-          document.documentElement.classList.add('theme-transition');
-          const current = getCurrentTheme();
-          const next = current === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
-          updateThemeIcon(next);
-          setTimeout(() => {
-            document.documentElement.classList.remove('theme-transition');
-          }, 300);
-        });
-      }
-
-      // Listen for OS theme changes if user hasn't set manual preference
-      if (window.matchMedia) {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-          if (!localStorage.getItem('theme')) {
-            const next = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', next);
-            updateThemeIcon(next);
-          }
-        });
-      }
-
-      lucide.createIcons();
-
-      /* Mobile nav toggle */
-      const toggle = document.getElementById('nav-toggle');
-      const navLinks = document.getElementById('nav-links');
-      if (toggle && navLinks) {
-        const closeNav = () => {
-          navLinks.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.setAttribute('aria-label', 'Buka menu');
-        };
-
-        toggle.addEventListener('click', () => {
-          const open = navLinks.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(open));
-          toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
-        });
-
-        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-            closeNav();
-            toggle.focus();
-          }
-        });
-      }
-
-      /* Active scrollspy */
-      const sections = document.querySelectorAll('section[id], header, .hero-wrapper');
-      const navItems = document.querySelectorAll('.nav-link');
-      if ('IntersectionObserver' in window && sections.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const id = entry.target.getAttribute('id');
-              if (id) {
-                navItems.forEach(link => {
-                  if (link.getAttribute('href') === `#${id}`) {
-                    link.classList.add('active');
-                    link.setAttribute('aria-current', 'true');
-                  } else {
-                    link.classList.remove('active');
-                    link.removeAttribute('aria-current');
-                  }
-                });
-              }
-            }
-          });
-        }, { rootMargin: '-25% 0px -55% 0px' });
-        sections.forEach(s => observer.observe(s));
-      }
-
-      /* Lightbox modal for static images */
-      const modal = document.getElementById('lightbox-modal');
-      const modalImg = document.getElementById('lightbox-img');
-      const modalTitle = document.getElementById('lightbox-title');
-      const closeBtn = document.getElementById('lightbox-close');
-
-      const openLightbox = (src, caption) => {
-        if (!modal || !modalImg) return;
-        modalImg.src = src;
-        if (modalTitle) modalTitle.textContent = caption || 'Pratinjau Skematik & Dokumentasi';
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        if (closeBtn) closeBtn.focus();
-        lucide.createIcons();
-      };
-
-      const closeLightbox = () => {
-        if (!modal) return;
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      };
-
-      document.querySelectorAll('.project-banner.clickable').forEach(banner => {
-        banner.addEventListener('click', () => {
-          const src = banner.getAttribute('data-lightbox') || banner.querySelector('img')?.src;
-          const caption = banner.getAttribute('data-caption') || 'Skematik Rangkaian';
-          if (src) openLightbox(src, caption);
-        });
-      });
-
-      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-      if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) closeLightbox();
-        });
-      }
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-          closeLightbox();
-        }
-      });
-
-      /* Form submit */
-      const form = document.querySelector('form[action*="formspree"]');
-      const btn  = document.getElementById('submit-btn');
-      const msg  = document.getElementById('form-message');
-      if (form && btn && msg) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          if (form.getAttribute('action').includes('YOUR_ENDPOINT')) {
-            msg.textContent = 'Endpoint Formspree belum diisi. Ganti YOUR_ENDPOINT di index.html.';
-            msg.className   = 'form-message error';
-            msg.style.display = 'block';
-            return;
-          }
-          btn.disabled  = true;
-          btn.innerHTML = '<span class="spinner"></span> Mengirim...';
-          try {
-            const res = await fetch(form.action, {
-              method: 'POST',
-              body:    new FormData(form),
-              headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
-              form.reset();
-              msg.textContent = 'Pesan terkirim! Terima kasih, saya akan segera merespons.';
-              msg.className   = 'form-message success';
-            } else {
-              throw new Error();
-            }
-          } catch {
-            msg.textContent = 'Koneksi gagal. Silakan coba lagi atau hubungi via email langsung.';
-            msg.className   = 'form-message error';
-          } finally {
-            btn.disabled  = false;
-            btn.innerHTML = '<span>Kirim Pesan</span><i data-lucide="send" style="width:16px;height:16px;"></i>';
-            lucide.createIcons();
-            msg.style.display = 'block';
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>
