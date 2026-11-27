@@ -19,7 +19,7 @@ export function initializeStudio(){
   const art=heading.querySelector('.scene-heading-art');if(art)heading.insertBefore(art,heading.querySelector('h2'));
   const serial=decorative('span','chapter-serial');serial.textContent=heading.dataset.chapter;heading.prepend(serial);
  });
- const kinds=['network','device','data','database','ledger','device','papers'];
+ const kinds=['network','data','database','ledger','device','device','papers'];
  document.querySelectorAll('.capability').forEach((card,index)=>{
   const art=decorative('div','capability-object');art.append(createStudioObject(kinds[index]||'data'));
   const number=decorative('span','object-index');number.textContent=String(index+1).padStart(2,'0');art.append(number);card.prepend(art);card.classList.add('has-studio-object');
