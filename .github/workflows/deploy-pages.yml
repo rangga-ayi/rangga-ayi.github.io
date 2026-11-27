@@ -52,7 +52,12 @@ jobs:
           for src in sources:
               text = src.read_text(encoding="utf-8", errors="ignore")
               refs = []
-              refs.extend(re.findall(r"""(?:href|src|srcset)=["']([^"']+)["']""", text))
+              refs.extend(re.findall(r"""\b(?:href|src)=["']([^"']+)["']""", text))
+              for srcset_val in re.findall(r"""\b(?:srcset|imagesrcset)=["']([^"']+)["']""", text):
+                  for item in srcset_val.split(","):
+                      part = item.strip().split()
+                      if part:
+                          refs.append(part[0])
               refs.extend(re.findall(r"""url\(['"]?([^'")]+)['"]?\)""", text))
               refs.extend(f"assets/js/{m[2:]}" for m in re.findall(r"""from\s+['"](\./[^'"]+)['"]""", text))
 

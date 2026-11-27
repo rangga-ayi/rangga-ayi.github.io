@@ -53,6 +53,7 @@ next-env.d.ts
 CLAUDE.md
 .playwright-mcp
 .vscode/
+.codegraph/
 
 # Export sumber referensi lokal (jangan di-deploy publik)
 Portfolio_Rangga.html
