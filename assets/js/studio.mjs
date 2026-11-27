@@ -30,8 +30,6 @@ export function initializeStudio(){
   const corners=decorative('span','photo-corners');corners.innerHTML='<i></i><i></i><i></i><i></i>';plane.append(corners);
   const link=plane.querySelector('a[data-lightbox]');const cue=decorative('span','photo-view-cue');cue.textContent='Perbesar foto ↗';link?.append(cue);
  });
- const footer=document.querySelector('.portfolio-page .site-footer');
- if(footer){const signature=decorative('div','footer-signature');signature.innerHTML='<span>rangga<span>_</span></span><i></i>';footer.append(signature);}
  document.querySelectorAll('.button>span[aria-hidden],.portfolio-header-actions>a>span,.hero-project-link>span').forEach(icon=>icon.classList.add('action-icon'));
  const surfaces=[...document.querySelectorAll('.capability,.certificate-card,.proof-pick,.media-plane,.social-link,.chapter-panel')];
  const watched=[...surfaces,stage].filter(Boolean);

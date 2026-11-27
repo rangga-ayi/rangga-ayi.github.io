@@ -828,12 +828,8 @@ html:not(.js) .room-main{padding-top:35px}
 .contact-illustration{width:160px;height:160px;border:8px solid #e7ecf3;box-shadow:0 0 0 1px #6eaece,0 18px 30px #1f4a6520;margin-bottom:30px}
 .portfolio-page .social-link{position:relative;overflow:clip;border-radius:20px;background:#f8f9fb;border-color:#6faecd;box-shadow:inset 0 1px #fff;min-height:92px}
 .social-icon{background:#e7ecf3;border-radius:12px;padding:6px;width:40px;height:40px}.social-arrow{border:1px solid #9fc7db;border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
-.portfolio-page .site-footer{padding:35px 0 0;background:#101b2b;color:#bdcddf;border-color:#788ca8;overflow:clip}
+.portfolio-page .site-footer{padding:42px 0 46px;background:#101b2b;color:#bdcddf;border-color:#788ca8;overflow:clip}
 .portfolio-page .footer-row .wordmark{color:#edf1f7}.portfolio-page .footer-row p{color:#b9cadc;font-size:11px}.portfolio-page .footer-contact-links a{color:#cde2ec}
-.footer-signature{position:relative;width:min(1160px,90%);margin:25px auto 0;border-top:1px solid #8093ad42;line-height:.82;padding-top:30px;overflow:hidden}
-.footer-signature>span{display:block;font-size:clamp(100px,22vw,300px);letter-spacing:-.085em;font-weight:600;color:#acd5e9;transform:translateY(6%)}
-.footer-signature>span>span{color:#3dbef5}.footer-signature>i{position:absolute;right:4%;top:33%;width:clamp(50px,9vw,130px);aspect-ratio:1;border:1px solid #6cafd0;border-radius:50%;box-shadow:inset 0 0 0 14px #101b2b,inset 0 0 0 15px #69b0d366;transform:rotate(-25deg)}
-.footer-signature>i:after{content:'';position:absolute;left:-20%;right:-20%;height:1px;top:50%;background:#3dbef5;transform:rotate(-35deg)}
 /* Light follows the pointer; document copy never tilts or fades. */
 :is(.capability,.certificate-card,.proof-pick,.social-link)[data-pointer-active=true]:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--pointer-x,50%) var(--pointer-y,50%),#b2def425,transparent 55%);pointer-events:none;z-index:2}
 [data-motion=on] .chapter-panel[data-pointer-active=true] .scene-heading-art{translate:calc((var(--pointer-x,50%) - 50%) * .08) 0}
@@ -872,13 +868,13 @@ html:not(.js) .room-main{padding-top:35px}
  .portfolio-page .education-card{padding:24px 24px 24px 44px}.education-grade{width:97px;height:97px;text-align:center}.education-card:before{left:15px}.education-card:after{left:20.5px}
  .portfolio-page .certificate-card figure{display:block;padding:24px 25px 20px}.portfolio-page .certificate-preview{height:172px}.portfolio-page .certificate-copy{padding:23px}.portfolio-page .certificate-copy h3{font-size:25px}.portfolio-page .certificate-card figcaption{font-size:12px}
  .portfolio-contact{padding-block:48px}.portfolio-contact h2{font-size:54px}.contact-illustration{width:132px;height:132px;border-width:6px;margin-top:15px;margin-bottom:22px}.portfolio-contact .contact-email{font-size:19px}.portfolio-page .social-link{min-height:87px;gap:10px;padding:13px}.social-icon{width:34px;height:34px;padding:6px}.social-arrow{display:none}
- .portfolio-page .footer-row{gap:23px}.portfolio-page .footer-row p{font-size:11px;max-width:100%}.footer-signature{margin-top:23px;padding-top:25px}.footer-signature>span{font-size:32vw}
+ .portfolio-page .footer-row{gap:23px}.portfolio-page .footer-row p{font-size:11px;max-width:100%}
 }
 @media(max-width:360px){.section-navigation a{padding-inline:8px}.portfolio-metrics b{font-size:24px}.portfolio-metrics>div{padding-left:7px}.portfolio-page .hero-project-link{gap:7px}.hero-actions{gap:10px}.portfolio-contact h2{font-size:47px}.portfolio-contact .contact-email{font-size:17px}.portfolio-page .numbers-row b{font-size:29px}}
 [data-motion=off] :is(.action-icon,.certificate-preview,.capability-object>.studio-object,.proof-pick>img,.section-navigation a,.photo-view-cue){transition:none!important}
 [data-motion=off] .portfolio-page :is(.button,.portfolio-header-actions>a,.hero-project-link):hover:before{display:none}
 @media(prefers-reduced-motion:reduce){.portfolio-page :is(.button,.portfolio-header-actions>a,.hero-project-link,.section-navigation a,.photo-view-cue){transition:none}}
-@media print{.studio-aperture,.capability-object,.chapter-serial,.footer-signature,.photo-corners,.photo-view-cue{display:none!important}.portfolio-page .chapter-panel>h2{max-width:none;margin-top:14px}.portfolio-page .chapter-panel>p{max-width:none}.portfolio-page .capability,.portfolio-page .certificate-card,.portfolio-page .work-step,.portfolio-page .education-card{background:white;box-shadow:none}.portfolio-page .site-footer{background:white;color:#212d40}.portfolio-page .site-footer p,.portfolio-page .footer-contact-links a,.portfolio-page .footer-row .wordmark{color:#212d40!important}}
+@media print{.studio-aperture,.capability-object,.chapter-serial,.photo-corners,.photo-view-cue{display:none!important}.portfolio-page .chapter-panel>h2{max-width:none;margin-top:14px}.portfolio-page .chapter-panel>p{max-width:none}.portfolio-page .capability,.portfolio-page .certificate-card,.portfolio-page .work-step,.portfolio-page .education-card{background:white;box-shadow:none}.portfolio-page .site-footer{background:white;color:#212d40}.portfolio-page .site-footer p,.portfolio-page .footer-contact-links a,.portfolio-page .footer-row .wordmark{color:#212d40!important}}
 
 [data-motion=off] .portfolio-page :is(.button,.portfolio-header-actions>a,.hero-project-link,.social-link,.capability,.certificate-card){transition:none}
 [data-motion=off] .portfolio-page .button:active,[data-motion=off] .portfolio-page .button:hover>span,[data-motion=off] .portfolio-page .social-link:hover{transform:none}
@@ -1368,8 +1364,6 @@ html:not(.js) .room-main{padding-top:35px}
 .portfolio-page :is(.eyebrow,.study-status,.entry-kind,.object-index,.journal-meta span,.tag-list span,.work-step>b,.cert-count){font-family:'JetBrains Mono',ui-monospace,monospace}
 .portfolio-page .tag-list span{font-size:12px}
 .portfolio-page .certificate-gallery>.certificate-card[data-order]:not(:has(figure))::after{font-family:'JetBrains Mono',ui-monospace,monospace}
-.footer-signature{font-family:'JetBrains Mono',ui-monospace,monospace}
-.footer-signature>span>span{color:#38bdf8}
 .portfolio-page .pin-spacer,.portfolio-page .pin-spacer>.hero-scene{max-width:100%!important}
 @media(min-width:701px) and (max-height:860px){
  .portfolio-page .descent-hero{--hero-cam-w:min(100%,252px,38svh)}
