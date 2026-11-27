@@ -215,7 +215,7 @@ Mendapatkan pengalaman dalam mengintegrasikan beberapa komponen hardware menjadi
 
 Dokumentasi prototype Smart Locker dan hasil pengembangan perangkat.
 
-> **Note:** Smart Locker merupakan prototype/purwa rupa dan belum diimplementasikan secara komersial.
+> **Note:** Smart Locker merupakan prototype/purwarupa dan belum diimplementasikan secara komersial.
 
 ## 07 — ADDITIONAL TECHNICAL EXPOSURE
 
