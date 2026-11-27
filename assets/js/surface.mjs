@@ -16,18 +16,21 @@ function measure(item){
 
 function render(item){
  const {width,height,progress,amplitude,phase}=item;if(!width||!height)return;
+ const steps=width<=700?18:24;
  const level=(item.rise?riseLevel:surfaceLevel)(progress,{rest:item.rest,height});item.level=level;
  const a=amplitude(width);
- item.back.style.clipPath=surfacePolygon({width,height,level:level-a*1.25,time:time*.8,amplitude:a*.85,phase:phase+1.9});
- item.front.style.clipPath=surfacePolygon({width,height,level,time,amplitude:a,phase});
+ item.back.style.clipPath=surfacePolygon({width,height,level:level-a*1.25,time:time*.8,amplitude:a*.85,phase:phase+1.9,steps});
+ item.front.style.clipPath=surfacePolygon({width,height,level,time,amplitude:a,phase,steps});
  item.line.setAttribute('viewBox',`0 0 ${width} ${height}`);
- item.line.firstElementChild.setAttribute('d',surfacePath({width,level,time,amplitude:a,phase}));
- for(const {el,box} of item.clones)el.style.clipPath=surfacePolygon({width,height,level,time,amplitude:a,phase,box});
+ item.line.firstElementChild.setAttribute('d',surfacePath({width,level,time,amplitude:a,phase,steps}));
+ for(const {el,box} of item.clones)el.style.clipPath=surfacePolygon({width,height,level,time,amplitude:a,phase,steps,box});
  item.stage.dataset.surfaceCovered=String(level<=0);
 }
 
 function loop(now){
- frame=0;const dt=Math.min(.05,(now-(last||now))/1000);last=now;time+=dt;
+ frame=0;
+ if(last&&now-last<44){if(ripple&&!document.hidden)frame=requestAnimationFrame(loop);return;}
+ const dt=Math.min(.05,(now-(last||now))/1000);last=now;time+=dt;
  let active=false;
  for(const item of surfaces.values())if(item.visible){render(item);active=true;}
  if(ripple&&active&&!document.hidden)frame=requestAnimationFrame(loop);else last=0;
@@ -42,16 +45,21 @@ export function registerSurface(name,stage,{restFrom,amplitude=w=>Math.max(8,Mat
  const item={name,stage,restFrom,amplitude,phase,rise,progress:rise?1:0,visible:true,back:layer.children[0],front:layer.children[1],line:layer.children[2]};
  surfaces.set(name,item);
  const update=()=>{measure(item);render(item);};
- new ResizeObserver(update).observe(stage);
+ const scheduleUpdate=()=>requestAnimationFrame(update);
+ new ResizeObserver(scheduleUpdate).observe(stage);
  new IntersectionObserver(([entry])=>{item.visible=entry.isIntersecting;if(item.visible)wake();}).observe(stage);
- document.fonts?.ready.then(update);
- update();stage.classList.add('surface-ready');
+ document.fonts?.ready.then(scheduleUpdate);
+ requestAnimationFrame(()=>{update();stage.classList.add('surface-ready');});
 }
 
 export const surfaceControl={
  setProgress(name,progress){const item=surfaces.get(name);if(!item)return;item.progress=progress;if(!frame)render(item);},
  setRipple(on){ripple=Boolean(on);if(ripple)wake();else if(frame){cancelAnimationFrame(frame);frame=0;last=0;}},
- refresh(){for(const item of surfaces.values()){measure(item);render(item);}},
+ refresh(){
+  const list=[...surfaces.values()];
+  for(const item of list)measure(item);
+  for(const item of list)render(item);
+ },
  level(name){return surfaces.get(name)?.level;}
 };
 document.addEventListener('visibilitychange',wake);
