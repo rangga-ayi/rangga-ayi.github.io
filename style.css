@@ -1192,7 +1192,18 @@ html:not(.js) .room-main{padding-top:35px}
 .career-entry .documentary:not(.expand-photo) img{max-height:420px;object-fit:contain}
 .career-entry .photo-pair{margin-top:22px}
 .career-entry .photo-pair .documentary{margin:0;min-width:0}
+.career-entry .photo-pair .documentary img{aspect-ratio:auto;width:100%;height:auto;max-height:460px;object-fit:contain}
+#dokumentasi-lks .photo-pair img{aspect-ratio:3/2;object-fit:cover}
+#dokumentasi-petshop .photo-pair img{aspect-ratio:16/9;object-fit:contain;background:#fff}
+.career-entry .photo-trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.career-entry .photo-trio .documentary img{aspect-ratio:3/4;width:100%;height:auto;max-height:none;object-fit:cover;object-position:center 20%}
+.career-entry .photo-trio.is-mixed .media-window,.career-entry .photo-trio.is-mixed .documentary img{background:#f4f7fa}
+.career-entry .photo-trio.is-mixed .documentary img{object-fit:contain;object-position:center}
 .career-entry .documentary figcaption{font-size:14px;line-height:1.75;color:#404f65}
+@media(max-width:1000px) and (min-width:701px){
+ .career-entry .photo-trio{gap:16px}
+ .career-entry .photo-trio .photo-view-cue{right:10px;bottom:10px;padding:6px 11px;font-size:11px}
+}
 @media(max-width:700px){
  .career-list{padding-left:8px;gap:28px}
  .career-entry,.portfolio-page .career-entry.organization-intro{padding:22px 18px;border-radius:4px 17px 4px 17px}
@@ -1207,6 +1218,9 @@ html:not(.js) .room-main{padding-top:35px}
  .career-entry .numbers-row span{font-size:12px}
  .career-entry .work-step h4,.career-entry .work-step h5{font-size:20px;margin-top:10px}
  .career-entry .documentary:not(.expand-photo) img{max-height:280px}
+ .career-entry .photo-pair .documentary img{max-height:none}
+ .career-entry .photo-trio{grid-template-columns:1fr;gap:22px}
+ .career-entry .photo-trio .documentary img{aspect-ratio:3/4;max-height:none}
  .career-entry .entry-content{padding-top:22px;margin-top:24px}
  .career-entry .expand-photo figcaption{margin-inline:12px;font-size:13px}
 }
