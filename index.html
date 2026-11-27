@@ -745,10 +745,10 @@
 
         <section class="editorial-block" id="capabilities" aria-label="Bidang keahlian">
           <div class="skill-filters filter-bar" role="group" aria-label="Filter kategori keahlian" hidden>
-            <button type="button" data-skill-filter="all" aria-pressed="true">Semua (7)</button>
+            <button type="button" data-skill-filter="all" aria-pressed="true">Semua (6)</button>
             <button type="button" data-skill-filter="infra" aria-pressed="false">Jaringan &amp; Linux (3)</button>
             <button type="button" data-skill-filter="hardware" aria-pressed="false">Hardware &amp; IoT (2)</button>
-            <button type="button" data-skill-filter="apps" aria-pressed="false">Web, DB &amp; Keamanan (2)</button>
+            <button type="button" data-skill-filter="apps" aria-pressed="false">Web &amp; Database (1)</button>
           </div>
           <div class="capability-grid">
             <article class="capability" data-skill-category="infra" data-skill-key="mikrotik">
@@ -761,14 +761,14 @@
             <article class="capability" data-skill-category="infra" data-skill-key="cabling">
               <span>Dukungan Teknis / Lapangan</span>
               <h3>Kabel UTP, RJ-45 &amp; Instalasi CCTV</h3>
-              <p>Instalasi kabel UTP dan crimping konektor RJ-45, pengujian konektivitas titik pascainstalasi, dukungan instalasi &amp; maintenance CCTV (IP Camera), pendataan aset IT, serta dokumentasi teknis.</p>
+              <p>Instalasi kabel UTP dan crimping konektor RJ-45, pengujian konektivitas titik pascainstalasi, dukungan instalasi &amp; maintenance CCTV, pendataan aset IT, serta dokumentasi teknis.</p>
               <a href="#pln-icon-plus">Lihat kerja di PLN Icon Plus ↗</a>
             </article>
 
             <article class="capability" data-skill-category="apps" data-skill-key="backend">
               <span>Sistem &amp; Server / Basis Data</span>
               <h3>PHP, MySQL/MariaDB &amp; Integrasi Web</h3>
-              <p>Perancangan database relasional &amp; SQL query (MySQL/MariaDB), logika backend PHP (CRUD &amp; prepared statements), hak akses pengguna (RBAC), integrasi API Midtrans, debugging, serta Git.</p>
+              <p>Perancangan database relasional &amp; SQL query, logika backend CRUD, hak akses pengguna, integrasi API Midtrans, debugging, serta Git.</p>
               <a href="#alzi-petshop">Lihat proyek Alzi Petshop ↗</a>
             </article>
 
@@ -791,13 +791,6 @@
               <h3>ESP32, Sensor &amp; Mekanisme Kunci</h3>
               <p>Pengkabelan rangkaian elektronik, pemrograman ESP32, integrasi sensor RFID, relay kendali, dan solenoid electronic lock.</p>
               <a href="#smart-locker">Buka prototype Smart Locker ↗</a>
-            </article>
-
-            <article class="capability" data-skill-category="apps" data-skill-key="sec">
-              <span>Virtualisasi &amp; Keamanan (Akademik)</span>
-              <h3>VMware, Proxmox, pfSense &amp; SIEM</h3>
-              <p>Eksplorasi virtual environment server (VMware &amp; Proxmox), konfigurasi firewall pfSense, serta pengenalan monitoring keamanan dengan Wazuh &amp; Suricata.</p>
-              <a href="#pendidikan">Lihat latar pendidikan ↗</a>
             </article>
           </div>
         </section>
@@ -875,11 +868,21 @@
 
         <section class="certificate-gallery" id="cert-panel" role="tabpanel" aria-labelledby="cert-tab-all" aria-label="Galeri sertifikat dan pencapaian">
           <!-- Cert 1: BNSP Database Programmer -->
-          <article class="certificate-card" id="cert-bnsp" data-cert-category="data">
+          <article class="certificate-card certificate-card--featured" id="cert-bnsp" data-cert-category="data">
+            <figure class="certificate-duo" aria-label="Pratinjau 2 lembar Sertifikat BNSP Pemrogram Basis Data">
+              <a class="certificate-preview certificate-preview--portrait" href="assets/Sertifikat/cert-bnsp-1.avif" data-lightbox aria-label="Perbesar Sertifikat BNSP Pemrogram Basis Data — Lembar 1 (Halaman Depan).">
+                <picture><img src="assets/Sertifikat/cert-bnsp-1.avif" width="994" height="1400" alt="Sertifikat BNSP Pemrogram Basis Data — Halaman Depan." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Lembar 1 ↗</span>
+              </a>
+              <a class="certificate-preview certificate-preview--portrait" href="assets/Sertifikat/cert-bnsp-2.avif" data-lightbox aria-label="Perbesar Sertifikat BNSP Pemrogram Basis Data — Lembar 2 (Unit Kompetensi).">
+                <picture><img src="assets/Sertifikat/cert-bnsp-2.avif" width="987" height="1400" alt="Sertifikat BNSP Pemrogram Basis Data — Halaman Belakang (Daftar Unit Kompetensi)." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Lembar 2 ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Sertifikasi · Badan Nasional Sertifikasi Profesi (BNSP) · 2026</p>
               <h3>Pemrogram Basis Data (Database Programmer)</h3>
-              <p>Sertifikasi kompetensi nasional bidang perancangan, pengelolaan struktur tabel relasional, dan manipulasi basis data.</p>
+              <p>Sertifikasi kompetensi nasional bidang perancangan, pengelolaan struktur tabel relasional, dan manipulasi basis data (2 lembar: sertifikat &amp; daftar 13 unit kompetensi).</p>
               <div class="certificate-actions">
                 <a class="button button-plum" href="https://drive.google.com/file/d/1OaAaKfiCYzsgHEWTfGnDnmQ2ZeWKfSr1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Dokumen BNSP <span aria-hidden="true">↗</span></a>
               </div>
@@ -888,6 +891,12 @@
 
           <!-- Cert 2: CCEP -->
           <article class="certificate-card" id="cert-ccep" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-ccep.avif" data-lightbox aria-label="Perbesar sertifikat: Certified Cybersecurity Educator Professional (CCEP).">
+                <picture><img src="assets/Sertifikat/cert-ccep.avif" width="1400" height="1082" alt="Sertifikat Certified Cybersecurity Educator Professional (CCEP) dari Red Team Cyber." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Sertifikasi · Red Team Cyber · 2026</p>
               <h3>Certified Cybersecurity Educator Professional (CCEP)</h3>
@@ -900,6 +909,12 @@
 
           <!-- Cert 3: LKS -->
           <article class="certificate-card" id="cert-lks" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-lks.avif" data-lightbox aria-label="Perbesar piagam: Juara 1 LKS IT Network System Administration.">
+                <picture><img src="assets/Sertifikat/cert-lks.avif" width="1400" height="1017" alt="Piagam Penghargaan Juara 1 LKS SMK IT Network Systems Administration Kabupaten Muara Enim 2022." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Kompetisi · MKKS SMK Muara Enim / Diknas Sumsel · 2022</p>
               <h3>Juara 1 — LKS IT Network System Administration</h3>
@@ -912,6 +927,12 @@
 
           <!-- Cert 4: Cisco Networking Basics -->
           <article class="certificate-card" id="cert-cisco" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-cisco-basics.avif" data-lightbox aria-label="Perbesar sertifikat: Cisco Networking Basics.">
+                <picture><img src="assets/Sertifikat/cert-cisco-basics.avif" width="1400" height="1082" alt="Sertifikat Cisco Networking Academy: Networking Basics." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Cisco Networking Academy · 2026</p>
               <h3>Networking Basics</h3>
@@ -924,6 +945,12 @@
 
           <!-- Cert 5: DTS Kominfo -->
           <article class="certificate-card" id="cert-dts-intermediate" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-dts-intermediate.avif" data-lightbox aria-label="Perbesar sertifikat: Intermediate Associate Network Administrator.">
+                <picture><img src="assets/Sertifikat/cert-dts-intermediate.avif" width="1400" height="990" alt="Sertifikat Digital Talent Scholarship Kominfo: Intermediate Associate Network Administrator." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Digital Talent Scholarship (Kominfo) · 2026</p>
               <h3>Intermediate Associate Network Administrator</h3>
@@ -936,6 +963,12 @@
 
           <!-- Cert 6: DTA Kominfo -->
           <article class="certificate-card" id="cert-dta-fundamental" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-dta-fundamental.avif" data-lightbox aria-label="Perbesar sertifikat: Fundamental of Associate Network Administrator.">
+                <picture><img src="assets/Sertifikat/cert-dta-fundamental.avif" width="1400" height="990" alt="Sertifikat Digital Talent Academy Kominfo: Fundamental of Associate Network Administrator." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · Digital Talent Academy (Kominfo) · 2026</p>
               <h3>Fundamental of Associate Network Administrator</h3>
@@ -948,6 +981,12 @@
 
           <!-- Cert 7: Simplilearn SQL -->
           <article class="certificate-card" id="cert-sql" data-cert-category="data">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-sql.avif" data-lightbox aria-label="Perbesar sertifikat: Introduction to SQL dari Simplilearn.">
+                <picture><img src="assets/Sertifikat/cert-sql.avif" width="1400" height="990" alt="Sertifikat kelulusan kursus Introduction to SQL oleh Simplilearn." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Kursus · Simplilearn · 2026</p>
               <h3>Introduction to SQL</h3>
@@ -960,6 +999,12 @@
 
           <!-- Cert 8: ID-Networkers Cisco -->
           <article class="certificate-card" id="cert-cisco-dasar" data-cert-category="network">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-idn-cisco.avif" data-lightbox aria-label="Perbesar sertifikat: Cisco Dasar dari ID-Networkers.">
+                <picture><img src="assets/Sertifikat/cert-idn-cisco.avif" width="1400" height="989" alt="Sertifikat pelatihan Cisco Dasar dari ID-Networkers." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · ID-Networkers · 2026</p>
               <h3>Cisco Dasar (Training &amp; Lab)</h3>
@@ -972,6 +1017,12 @@
 
           <!-- Cert 9: Magang PLN -->
           <article class="certificate-card" id="cert-pln" data-cert-category="field">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-pln.avif" data-lightbox aria-label="Perbesar sertifikat: Praktik Kerja Lapangan PT PLN Icon Plus.">
+                <picture><img src="assets/Sertifikat/cert-pln.avif" width="1400" height="974" alt="Certificate of Completion Magang PT PLN Icon Plus SBU Sumbagsel 2025." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Magang Industri · PT PLN Icon Plus · 2025</p>
               <h3>Sertifikat Praktik Kerja Lapangan</h3>
@@ -984,6 +1035,12 @@
 
           <!-- Cert 10: English Score 610 -->
           <article class="certificate-card" id="cert-english" data-cert-category="field">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-ept.avif" data-lightbox aria-label="Perbesar sertifikat: English Proficiency Test Score 610.">
+                <picture><img src="assets/Sertifikat/cert-ept.avif" width="1400" height="989" alt="Sertifikat English Proficiency Test dengan skor 610 dari Daily Bahasa Inggris." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Kemampuan Bahasa · Daily Bahasa Inggris · 2026</p>
               <h3>English Proficiency Test — Score 610</h3>
@@ -1004,7 +1061,7 @@
           <span id="connect-heading" class="anchor-alias" aria-hidden="true"></span>
           <span class="eyebrow">Kontak profesional</span>
           <h2 id="contact-title">Mari terhubung.</h2>
-          <p>Terbuka untuk peluang kerja maupun magang di bidang IT Support, Jaringan &amp; Infrastruktur (LAN/CCTV), Administrasi Linux Server, serta Web Developer (PHP &amp; MySQL).</p>
+          <p>Terbuka untuk peluang kerja maupun magang di bidang IT Support, Jaringan &amp; Infrastruktur, Administrasi Linux Server, serta Web Developer.</p>
           <a class="contact-email" href="mailto:pratama.ranggaayi@gmail.com">
             pratama.ranggaayi@gmail.com <span aria-hidden="true">↗</span>
           </a>

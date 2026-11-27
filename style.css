@@ -1117,23 +1117,7 @@ html:not(.js) .room-main{padding-top:35px}
 .has-skill-stage .capability .capability-object{transition:filter .4s}
 [data-motion=off] .has-skill-stage .capability,[data-motion=off] .has-skill-stage .capability-object,[data-motion=off] .skill-stage-dots i{transition:none}
 
-/* ---------- Certificates: a featured sheet beside an index of documents ---------- */
-@media(min-width:1001px){
- .portfolio-page .certificate-gallery{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);grid-template-rows:repeat(3,auto);gap:22px}
- .portfolio-page .certificate-gallery>.certificate-card:first-child{grid-row:1/4}
- .portfolio-page .certificate-gallery>.certificate-card:first-child .certificate-preview{height:340px;width:min(100%,500px)}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child){display:grid;grid-template-columns:200px minmax(0,1fr);align-items:stretch}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) figure{padding:18px 16px 14px;display:flex;flex-direction:column;justify-content:center}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) .certificate-preview{height:118px;width:100%}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) figcaption{display:none}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) .certificate-copy{padding:20px 22px}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) .certificate-copy h3{font-size:21px}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) .certificate-copy p{font-size:14px;line-height:1.65}
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child) .certificate-actions{padding-top:14px}
-}
-.portfolio-page .certificate-card figure{background:radial-gradient(ellipse at 50% 30%,#184c6d,#111b2c 80%)}
-.portfolio-page .certificate-card figcaption{color:#cee5f0}
-.portfolio-page .certificate-preview{box-shadow:6px 6px 0 #b9d7e6,12px 12px 0 #73acc955,0 30px 40px #070d1866}
+/* ---------- Certificates: layout rules unified in responsive gallery block below ---------- */
 
 /* ---------- Education: two credential plates in the studio palette ---------- */
 @media(min-width:701px){.portfolio-page #pendidikan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}.portfolio-page #pendidikan>:not(.education-card){grid-column:1/-1}}
@@ -1440,25 +1424,40 @@ html:not(.js) .room-main{padding-top:35px}
 .cert-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:0 0 22px}
 .cert-controls>.filter-bar{margin:0;flex:1 1 auto}
 .cert-count{margin:0;font-size:12px;color:#475569;font-weight:500}
-.portfolio-page .certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:20px}
+.portfolio-page .certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;gap:22px}
+.portfolio-page .certificate-gallery>.certificate-card{position:relative;display:flex;flex-direction:column;grid-template-columns:none;padding:0;align-items:stretch}
 .portfolio-page .certificate-gallery>.certificate-card:first-child{grid-row:auto}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)),
-.portfolio-page .certificate-gallery>.certificate-card:not(:first-child):not(:has(figure)){display:flex;flex-direction:column;grid-template-columns:none;padding:0;align-items:stretch}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-copy,
-.portfolio-page .certificate-gallery>.certificate-card:not(:first-child):not(:has(figure)) .certificate-copy{position:relative;padding:24px 26px}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-copy h3,
-.portfolio-page .certificate-gallery>.certificate-card:not(:first-child):not(:has(figure)) .certificate-copy h3{font-size:21px}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-copy p,
-.portfolio-page .certificate-gallery>.certificate-card:not(:first-child):not(:has(figure)) .certificate-copy p{font-size:14px;line-height:1.65}
-.portfolio-page .certificate-gallery>.certificate-card[data-order]:not(:has(figure))::after{content:attr(data-order);position:absolute;top:22px;right:22px;padding:3px 10px;border:1px solid #bfd3e4;border-radius:99px;background:#eef4fa;color:#0c4a6e;font-size:11px;font-weight:600;letter-spacing:.06em;pointer-events:none}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-issuer{padding-right:54px}
-.portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-actions{padding-top:18px;margin-top:auto}
+.portfolio-page .certificate-gallery>.certificate-card figure{margin:0;padding:18px 20px;background:linear-gradient(145deg,#0f1c31,#182a45);border-bottom:1px solid #38bdf82e}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-preview{width:100%;max-width:none;height:auto;aspect-ratio:1.414/1;padding:6px;background:#fff;border:1px solid #8cb8d0;border-radius:6px;box-shadow:0 12px 26px #070d184d;transform:none!important;transition:transform .3s ease,box-shadow .3s ease}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-preview:hover,
+.portfolio-page .certificate-gallery>.certificate-card .certificate-preview:focus-visible{transform:translateY(-3px)!important;box-shadow:0 16px 32px #070d1866}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-preview img{background:#fff;object-fit:contain}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-zoom{right:10px;bottom:10px;padding:6px 11px;font-size:11px;border-radius:99px;background:#0c1729e8;border:1px solid #38bdf87a;color:#f8fafc}
+.portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);align-items:stretch}
+.portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured figure.certificate-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:22px;border-bottom:0;border-right:1px solid #38bdf82e;align-items:center}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-preview--portrait{aspect-ratio:994/1400}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-copy{position:relative;padding:24px 26px;display:flex;flex-direction:column;flex:1}
+.portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured .certificate-copy{padding:28px 30px}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-copy h3{font-size:21px;line-height:1.25;margin-top:5px}
+.portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured .certificate-copy h3{font-size:24px}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-copy p{font-size:14px;line-height:1.65}
+.portfolio-page .certificate-gallery>.certificate-card[data-order]::after{content:attr(data-order);position:absolute;top:14px;left:14px;z-index:2;padding:3px 10px;border:1px solid #38bdf866;border-radius:99px;background:#0c1729eb;color:#7dd3fc;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.06em;pointer-events:none}
+.portfolio-page .certificate-gallery>.certificate-card .certificate-actions{padding-top:18px;margin-top:auto}
 .portfolio-page .certificate-actions .button{white-space:nowrap}
+@media(max-width:960px){
+ .portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured{grid-template-columns:minmax(0,1fr)}
+ .portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured figure.certificate-duo{border-right:0;border-bottom:1px solid #38bdf82e}
+}
 @media(max-width:760px){
  .portfolio-page .certificate-gallery{grid-template-columns:minmax(0,1fr)}
- .portfolio-page .certificate-gallery>.certificate-card:not(:has(figure)) .certificate-copy,
- .portfolio-page .certificate-gallery>.certificate-card:not(:first-child):not(:has(figure)) .certificate-copy{padding:22px 20px}
- .portfolio-page .certificate-gallery>.certificate-card[data-order]:not(:has(figure))::after{top:18px;right:18px}
+ .portfolio-page .certificate-gallery>.certificate-card figure{padding:16px}
+ .portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured figure.certificate-duo{padding:16px;gap:12px}
+ .portfolio-page .certificate-gallery>.certificate-card .certificate-copy,
+ .portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured .certificate-copy{padding:20px}
+ .portfolio-page .certificate-gallery>.certificate-card[data-order]::after{top:10px;left:10px}
+}
+@media(max-width:420px){
+ .portfolio-page .certificate-gallery>.certificate-card.certificate-card--featured figure.certificate-duo{grid-template-columns:minmax(0,1fr)}
 }
 .portfolio-page .contact-illustration{position:relative;z-index:3;order:3;width:clamp(155px,14vw,210px);height:auto;aspect-ratio:2/3;margin:12px 5% -155px auto;padding-top:16px;box-sizing:content-box;border:0;border-radius:0;box-shadow:none;background:radial-gradient(ellipse at 50% 56%,#38bdf82e,transparent 65%);overflow:visible;filter:drop-shadow(0 20px 26px #040914b3) drop-shadow(0 -2px 16px #38bdf833)}
 .portfolio-page .contact-illustration picture{position:absolute;inset:0;width:100%;height:100%}
