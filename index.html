@@ -245,7 +245,7 @@
 
         <nav class="experience-sections" aria-label="Pilih pengalaman">
           <a href="#pln-icon-plus">01 · PLN Icon Plus (Magang)</a>
-          <a href="#zhanet-komputer">02 · Zhanet Komputer (Prakerin)</a>
+          <a href="#zhanet-komputer">02 · Zhanet Komputer (Magang)</a>
           <a href="#lks-network">03 · LKS Network (Kompetisi)</a>
         </nav>
 
@@ -346,7 +346,7 @@
           <!-- Entry 2: Zhanet Komputer -->
           <article class="career-entry" id="zhanet-komputer" aria-labelledby="zhanet-title" data-proof-label="Zhanet Komputer" data-proof-note="Hardware &amp; PC Support">
             <header class="entry-heading">
-              <span class="entry-kind">02 · Praktik Kerja Industri</span>
+              <span class="entry-kind">02 · Praktik Kerja Industri (Magang)</span>
               <h3 id="zhanet-title">Zhanet Komputer</h3>
               <div class="journal-meta">
                 <div>
@@ -359,7 +359,7 @@
                 </div>
                 <div>
                   <span>Pengerjaan</span>
-                  <p>Perakitan, Instalasi dan Troubleshooting OS &amp; Driver</p>
+                  <p>Perakitan, Instalasi, Troubleshooting OS &amp; Driver</p>
                 </div>
               </div>
             </header>
@@ -401,7 +401,7 @@
                 </article>
                 <article class="work-step">
                   <b>03</b>
-                  <h5>Uji Kestabilan (QC)</h5>
+                  <h5>Uji Kestabilan</h5>
                   <p>Menjalankan stress test beban kerja dan pemantauan suhu untuk menjamin kestabilan PC.</p>
                 </article>
               </div>
@@ -427,7 +427,7 @@
               <div class="journal-meta">
                 <div>
                   <span>Pencapaian</span>
-                  <p>Juara 1 Kab. Muara Enim &amp; Peserta Provinsi</p>
+                  <p>Juara 1 Tingkat Kabupaten &amp; <br> Peserta tingkat Provinsi</p>
                 </div>
                 <div>
                   <span>Periode &amp; Lokasi</span>
@@ -439,7 +439,7 @@
                 </div>
               </div>
             </header>
-            <p class="entry-focus">Administrasi Linux Server (Debian), routing MikroTik, pemasangan web server WordPress, dan troubleshooting jaringan.</p>
+            <p class="entry-focus">Administrasi Linux Debian Server, routing MikroTik, pemasangan web server WordPress, dan troubleshooting jaringan.</p>
             <p class="body-copy">Mengikuti kompetisi LKS dengan pengerjaan crimping kabel UTP, konfigurasi IP, subnetting, DHCP, VLAN, dan routing pada MikroTik, instalasi Linux Server Debian, pemasangan web server Apache, PHP, MySQL, serta deployment WordPress berikut troubleshooting kendala jaringan dan modul layanan.</p>
             <div class="note-box">
               <strong>Studi Troubleshooting Lomba:</strong> Saat proses deployment WordPress di Debian Server, ditemukan kendala dependensi modul PHP yang belum terpasang. Pengecekan log layanan dan kebutuhan paket dilakukan secara sistematis hingga layanan web aktif dan dapat diakses.
@@ -525,7 +525,7 @@
             </header>
 
             <p class="entry-focus">Aplikasi web e-commerce berbasis PHP &amp; MySQL dengan pembagian hak akses pengguna dan integrasi pembayaran Midtrans Snap.</p>
-            <p class="body-copy">Mengelola bagian backend dan database MySQL/MariaDB menggunakan PHP Native (110 dari 158 commit Git): pengolahan data produk &amp; transaksi (CRUD), keamanan query dengan prepared statements, pembagian hak akses (Admin, Penjual, Pembeli), integrasi pembayaran Midtrans Snap beserta notifikasi webhook SHA-512, peta alamat OpenStreetMap, dan cetak invoice PDF lewat Dompdf.</p>
+            <p class="body-copy">Mengelola bagian backend dan database MySQL/MariaDB menggunakan PHP Native (110 dari 158 commit Git): pengolahan data produk &amp; transaksi (CRUD), keamanan query dengan prepared statements, pembagian hak akses (Admin, Penjual, Pembeli), integrasi pembayaran Midtrans Snap beserta notifikasi webhook, peta alamat OpenStreetMap, dan cetak invoice PDF lewat Dompdf.</p>
 
             <nav class="summary-jumps" aria-label="Bagian proyek Alzi Petshop">
               <a href="#alur-petshop">Alur kerja sistem ↓</a>
@@ -576,7 +576,7 @@
                     <i aria-hidden="true">→</i>
                     <span>Status Lunas di DB</span>
                   </div>
-                  <p>Pembeli memilih metode pembayaran pada pop-up Midtrans Snap. Setelah transaksi selesai, Midtrans mengirim notifikasi otomatis (webhook) dengan kunci verifikasi SHA-512 ke PHP agar status pesanan di MySQL berubah lunas tanpa bisa dimanipulasi dari browser.</p>
+                  <p>Pembeli memilih metode pembayaran pada pop-up Midtrans Snap. Setelah transaksi selesai, Midtrans mengirim notifikasi otomatis / webhook dengan kunci verifikasi SHA-512 ke PHP agar status pesanan di MySQL berubah lunas tanpa bisa dimanipulasi dari browser.</p>
                 </div>
 
                 <div data-path-panel="rbac" hidden>
@@ -616,7 +616,7 @@
                 <article class="work-step">
                   <b>01</b>
                   <h5>Validasi Pembayaran di Server</h5>
-                  <p>Status pembayaran tidak ditentukan oleh halaman redirect browser, melainkan dari notifikasi webhook Midtrans yang sudah dicek signature SHA-512-nya di PHP.</p>
+                  <p>Status pembayaran tidak ditentukan oleh halaman redirect browser, melainkan dari notifikasi webhook Midtrans.</p>
                 </article>
                 <article class="work-step">
                   <b>02</b>
@@ -720,7 +720,7 @@
                 </figure>
               </div>
               <div class="note-box">
-                <strong>Catatan Proyek:</strong> Smart Locker merupakan prototype rekayasa perangkat keras (perlu kalibrasi sensor jarak VL53L0X dengan galat ukur 2–17,7%) dan belum diimplementasikan secara komersial.
+                <strong>Catatan Proyek:</strong> Smart Locker merupakan prototype rekayasa perangkat keras (perlu kalibrasi sensor jarak VL53L0X dengan error 2–17,7%) dan belum diimplementasikan secara komersial.
               </div>
             </section>
           </article>
@@ -858,12 +858,12 @@
 
         <div class="cert-controls" hidden>
           <div class="cert-tabs filter-bar" role="tablist" aria-label="Filter kategori sertifikat">
-            <button type="button" id="cert-tab-all" role="tab" aria-selected="true" tabindex="0" data-cert-filter="all">Semua (10)</button>
+            <button type="button" id="cert-tab-all" role="tab" aria-selected="true" tabindex="0" data-cert-filter="all">Semua (11)</button>
             <button type="button" id="cert-tab-network" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="network">Jaringan &amp; Siber (6)</button>
-            <button type="button" id="cert-tab-data" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="data">Basis Data (2)</button>
+            <button type="button" id="cert-tab-data" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="data">Basis Data &amp; Pemrograman (3)</button>
             <button type="button" id="cert-tab-field" role="tab" aria-selected="false" tabindex="-1" data-cert-filter="field">Industri &amp; Bahasa (2)</button>
           </div>
-          <p class="cert-count" id="cert-filter-status" aria-live="polite">Menampilkan 10 dari 10 dokumen terverifikasi</p>
+          <p class="cert-count" id="cert-filter-status" aria-live="polite">Menampilkan 11 dari 11 dokumen terverifikasi</p>
         </div>
 
         <section class="certificate-gallery" id="cert-panel" role="tabpanel" aria-labelledby="cert-tab-all" aria-label="Galeri sertifikat dan pencapaian">
@@ -997,7 +997,25 @@
             </div>
           </article>
 
-          <!-- Cert 8: ID-Networkers Cisco -->
+          <!-- Cert 8: Dicoding Belajar Dasar Pemrograman JavaScript -->
+          <article class="certificate-card" id="cert-dicoding-js" data-cert-category="data">
+            <figure>
+              <a class="certificate-preview" href="assets/Sertifikat/cert-dicoding-js.avif" data-lightbox aria-label="Perbesar sertifikat: Belajar Dasar Pemrograman JavaScript dari Dicoding Indonesia.">
+                <picture><img src="assets/Sertifikat/cert-dicoding-js.avif" width="1400" height="990" alt="Sertifikat Kelulusan Dicoding Indonesia: Belajar Dasar Pemrograman JavaScript (ID N9ZOYVQE8PG5)." loading="lazy" decoding="async"></picture>
+                <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
+              </a>
+            </figure>
+            <div class="certificate-copy">
+              <p class="certificate-issuer">Pelatihan · Dicoding Indonesia · Des 2024 (Berlaku s.d. 2027)</p>
+              <h3>Belajar Dasar Pemrograman JavaScript</h3>
+              <p>Kelulusan kelas tervalidasi standar AWS (46 jam belajar, ujian akhir &amp; submission) mencakup sintaks JS, struktur data, OOP, modularisasi ES Module, serta proses asynchronous (Promise &amp; async-await) untuk pengembangan web/Node.js.</p>
+              <div class="certificate-actions">
+                <a class="button button-plum" href="https://www.dicoding.com/certificates/N9ZOYVQE8PG5" target="_blank" rel="noopener noreferrer">Verifikasi Dicoding <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 9: ID-Networkers Cisco -->
           <article class="certificate-card" id="cert-cisco-dasar" data-cert-category="network">
             <figure>
               <a class="certificate-preview" href="assets/Sertifikat/cert-idn-cisco.avif" data-lightbox aria-label="Perbesar sertifikat: Cisco Dasar dari ID-Networkers.">
@@ -1007,7 +1025,7 @@
             </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Pelatihan · ID-Networkers · 2026</p>
-              <h3>Cisco Dasar (Training &amp; Lab)</h3>
+              <h3>Cisco Dasar</h3>
               <p>Pelatihan konfigurasi router &amp; switch Cisco, VLAN, inter-VLAN routing, dan dasar switching.</p>
               <div class="certificate-actions">
                 <a class="button button-plum" href="https://drive.google.com/file/d/13rvYI_NfkpzZIU-_lWJe-Z-QfVQuLesS/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat IDN <span aria-hidden="true">↗</span></a>
@@ -1015,7 +1033,7 @@
             </div>
           </article>
 
-          <!-- Cert 9: Magang PLN -->
+          <!-- Cert 10: Magang PLN -->
           <article class="certificate-card" id="cert-pln" data-cert-category="field">
             <figure>
               <a class="certificate-preview" href="assets/Sertifikat/cert-pln.avif" data-lightbox aria-label="Perbesar sertifikat: Praktik Kerja Lapangan PT PLN Icon Plus.">
@@ -1033,17 +1051,17 @@
             </div>
           </article>
 
-          <!-- Cert 10: English Score 610 -->
+          <!-- Cert 11: English Score 610 -->
           <article class="certificate-card" id="cert-english" data-cert-category="field">
             <figure>
-              <a class="certificate-preview" href="assets/Sertifikat/cert-ept.avif" data-lightbox aria-label="Perbesar sertifikat: English Proficiency Test Score 610.">
+              <a class="certificate-preview" href="assets/Sertifikat/cert-ept.avif" data-lightbox aria-label="Perbesar sertifikat: English Proficiency Test.">
                 <picture><img src="assets/Sertifikat/cert-ept.avif" width="1400" height="989" alt="Sertifikat English Proficiency Test dengan skor 610 dari Daily Bahasa Inggris." loading="lazy" decoding="async"></picture>
                 <span class="certificate-zoom" aria-hidden="true">Perbesar ↗</span>
               </a>
             </figure>
             <div class="certificate-copy">
               <p class="certificate-issuer">Kemampuan Bahasa · Daily Bahasa Inggris · 2026</p>
-              <h3>English Proficiency Test — Score 610</h3>
+              <h3>English Proficiency Test</h3>
               <p>Sertifikat penilaian kemampuan bahasa Inggris profesional untuk kebutuhan komunikasi teknis dan dokumentasi.</p>
               <div class="certificate-actions">
                 <a class="button button-plum" href="https://drive.google.com/file/d/1-8ZU-fnCRZEfzgIOSOZp3qlwU2vT5jDc/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Sertifikat EPT <span aria-hidden="true">↗</span></a>
