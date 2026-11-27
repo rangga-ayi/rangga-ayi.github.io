@@ -1,4 +1,4 @@
-import {createStudioObject} from './studio-objects.mjs';
+import {createSkillBlueprint,getSkillSpec} from './studio-objects.mjs';
 
 /* 10.0 scenes. Content is complete without this module: it adds the skill stage, the
    pipeline's travelling signal, and scroll-driven framing. Selection works with motion off. */
@@ -24,7 +24,7 @@ export function initializeDescent(gsap){
  let stage=null,active=-1,hoverTimer=0,stageTween=null,held=0;
  if(section&&cards.length){
   stage=decorative('div','skill-stage');
-  stage.innerHTML='<span class="skill-stage-index"></span><div class="skill-stage-object"></div><span class="skill-stage-kind"></span><b class="skill-stage-title"></b><span class="skill-stage-dots"></span>';
+  stage.innerHTML='<span class="skill-stage-index"></span><div class="skill-stage-object"></div><div class="skill-stage-spec"></div><span class="skill-stage-kind"></span><b class="skill-stage-title"></b><span class="skill-stage-dots"></span>';
   stage.querySelector('.skill-stage-dots').append(...cards.map(()=>document.createElement('i')));
   section.prepend(stage);section.classList.add('has-skill-stage');
   cards.forEach((card,index)=>{
@@ -57,11 +57,14 @@ export function initializeDescent(gsap){
   stage.querySelector('.skill-stage-kind').textContent=card.querySelector(':scope>span')?.textContent||'';
   stage.querySelector('.skill-stage-title').textContent=card.querySelector('h2,h3')?.textContent||'';
   stage.querySelectorAll('.skill-stage-dots i').forEach((dot,i)=>dot.dataset.on=String(i===index));
-  const holder=stage.querySelector('.skill-stage-object'),source=card.querySelector('.capability-object .studio-object');
-  // Recreate instead of cloning: each SVG must own its paint-server IDs.
-  const object=createStudioObject(source?.getAttribute('data-object-kind')||'data');
+  const holder=stage.querySelector('.skill-stage-object');
+  const key=card.dataset.skillKey||'mikrotik';
+  const spec=getSkillSpec(key);
+  const object=createSkillBlueprint(key);
+  const specEl=stage.querySelector('.skill-stage-spec');
+  if(specEl){specEl.innerHTML=spec.lines.map(l=>`<code>${l}</code>`).join('');}
   stageTween?.kill();holder.replaceChildren(object);
-  if(enabled()&&getComputedStyle(stage).display!=='none')stageTween=gsap.fromTo(object,{scale:.92,rotation:-3,opacity:0,y:14},{scale:1,rotation:0,opacity:1,y:0,duration:.48,ease:'power2.out'});
+  if(enabled()&&getComputedStyle(stage).display!=='none')stageTween=gsap.fromTo(object,{scale:.96,opacity:0,y:8},{scale:1,opacity:1,y:0,duration:.36,ease:'power2.out'});
  }
 
  return {

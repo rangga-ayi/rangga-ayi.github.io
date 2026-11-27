@@ -79,3 +79,151 @@ export function createStudioObject(kind='data'){
  <g class="scene-object">${motifs[selected]}</g>`;
  return svg;
 }
+
+const SKILL_SPECS={
+ mikrotik:{
+  tag:'TCP/IP · VLAN · ROUTER',
+  lines:['/interface vlan add name=vlan-lan vlan-id=10','/ip dhcp-server setup · subnet /24 [OK]'],
+  draw:(c,m,t)=>`
+   <rect x="20" y="16" width="84" height="32" rx="6" fill="#102038" stroke="${c}" stroke-width="1.5"/>
+   <text x="62" y="36" text-anchor="middle" fill="#e2e8f0" font-size="10" font-family="${t}">ISP / WAN</text>
+   <line x1="104" y1="32" x2="146" y2="32" stroke="${c}" stroke-width="1.6"/>
+   <rect x="146" y="10" width="96" height="44" rx="7" fill="#132946" stroke="#7dd3fc" stroke-width="1.8"/>
+   <text x="194" y="29" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="600" font-family="${t}">MikroTik</text>
+   <text x="194" y="43" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">NAT · Firewall</text>
+   <path d="M194 54 V70 M90 70 H298 M90 70 V82 M194 70 V82 M298 70 V82" fill="none" stroke="${m}" stroke-width="1.4" stroke-dasharray="3 2"/>
+   <rect x="44" y="82" width="92" height="24" rx="5" fill="#0d1b30" stroke="${c}" stroke-width="1.3"/>
+   <text x="90" y="98" text-anchor="middle" fill="#bae6fd" font-size="9" font-family="${t}">VLAN 10 · Office</text>
+   <rect x="148" y="82" width="92" height="24" rx="5" fill="#0d1b30" stroke="${c}" stroke-width="1.3"/>
+   <text x="194" y="98" text-anchor="middle" fill="#bae6fd" font-size="9" font-family="${t}">VLAN 20 · CCTV</text>
+   <rect x="252" y="82" width="92" height="24" rx="5" fill="#0d1b30" stroke="${m}" stroke-width="1.3"/>
+   <text x="298" y="98" text-anchor="middle" fill="#93c5fd" font-size="9" font-family="${t}">DHCP .0/24</text>`
+ },
+ cabling:{
+  tag:'UTP · T568B · CCTV',
+  lines:['EIA/TIA-568B · PIN 1-2-3-6 LINK UP','PATCH CABLE UTP -> RJ-45 -> CCTV [OK]'],
+  draw:(c,m,t)=>`
+   <rect x="24" y="16" width="134" height="82" rx="7" fill="#0d1b30" stroke="${c}" stroke-width="1.5"/>
+   <rect x="42" y="10" width="98" height="10" rx="2" fill="#132946" stroke="#7dd3fc" stroke-width="1.2"/>
+   ${['#fde68a','#f97316','#bbf7d0','#38bdf8','#bae6fd','#22c55e','#d6c4b0','#9a6b49'].map((col,i)=>`
+    <rect x="${34+i*14}" y="22" width="10" height="44" rx="2" fill="${col}" fill-opacity=".85"/>
+    <text x="${39+i*14}" y="82" text-anchor="middle" fill="#cbd5e1" font-size="8.5" font-family="${t}">${i+1}</text>`).join('')}
+   <text x="91" y="93" text-anchor="middle" fill="${c}" font-size="8" font-family="${t}">RJ-45 T568B</text>
+   <path d="M158 57 H212" fill="none" stroke="${c}" stroke-width="2" stroke-dasharray="4 3"/>
+   <circle cx="185" cy="57" r="4" fill="#38bdf8"/>
+   <rect x="212" y="18" width="126" height="32" rx="6" fill="#132946" stroke="#7dd3fc" stroke-width="1.5"/>
+   <text x="275" y="38" text-anchor="middle" fill="#ffffff" font-size="10" font-family="${t}">LAN Tester · 1..8 OK</text>
+   <rect x="212" y="64" width="126" height="32" rx="6" fill="#0d1b30" stroke="${m}" stroke-width="1.4"/>
+   <text x="275" y="84" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="${t}">CCTV &amp; Rak Switch</text>`
+ },
+ backend:{
+  tag:'PHP · MYSQL · API',
+  lines:['$stmt = $pdo->prepare("SELECT ... WHERE id=?");','RBAC SESSION + MIDTRANS WEBHOOK SHA-512'],
+  draw:(c,m,t)=>`
+   <rect x="22" y="16" width="90" height="80" rx="6" fill="#0d1b30" stroke="${c}" stroke-width="1.4"/>
+   <rect x="22" y="16" width="90" height="22" rx="6" fill="#132946"/>
+   <text x="67" y="30" text-anchor="middle" fill="#ffffff" font-size="9.5" font-family="${t}">users (RBAC)</text>
+   <text x="32" y="52" fill="${c}" font-size="8.5" font-family="${t}">PK id_user</text>
+   <text x="32" y="67" fill="#cbd5e1" font-size="8.5" font-family="${t}">role enum</text>
+   <text x="32" y="82" fill="#94a3b8" font-size="8.5" font-family="${t}">hash pass</text>
+   <line x1="112" y1="56" x2="140" y2="56" stroke="${c}" stroke-width="1.6"/>
+   <rect x="140" y="16" width="96" height="80" rx="6" fill="#0d1b30" stroke="#7dd3fc" stroke-width="1.6"/>
+   <rect x="140" y="16" width="96" height="22" rx="6" fill="#153256"/>
+   <text x="188" y="30" text-anchor="middle" fill="#ffffff" font-size="9.5" font-family="${t}">orders (CRUD)</text>
+   <text x="150" y="52" fill="${c}" font-size="8.5" font-family="${t}">PK id_order</text>
+   <text x="150" y="67" fill="#cbd5e1" font-size="8.5" font-family="${t}">FK id_user</text>
+   <text x="150" y="82" fill="#94a3b8" font-size="8.5" font-family="${t}">status_bayar</text>
+   <line x1="236" y1="56" x2="262" y2="56" stroke="${c}" stroke-width="1.6"/>
+   <rect x="262" y="24" width="80" height="64" rx="6" fill="#102038" stroke="${m}" stroke-width="1.4"/>
+   <text x="302" y="47" text-anchor="middle" fill="#ffffff" font-size="9.5" font-family="${t}">Midtrans</text>
+   <text x="302" y="63" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">Webhook</text>
+   <text x="302" y="77" text-anchor="middle" fill="#bae6fd" font-size="8.5" font-family="${t}">SHA-512</text>`
+ },
+ linux:{
+  tag:'DEBIAN · LAMP · CLI',
+  lines:['systemctl status apache2 mariadb · [active]','PORTS 80 / 443 / 3306 · DNS & LOG CHECK'],
+  draw:(c,m,t)=>`
+   <rect x="26" y="12" width="308" height="88" rx="8" fill="#081120" stroke="${c}" stroke-width="1.5"/>
+   <path d="M26 30 H334" stroke="#1e3a5f" stroke-width="1"/>
+   <circle cx="40" cy="21" r="3" fill="#38bdf8"/><circle cx="51" cy="21" r="3" fill="#64748b"/><circle cx="62" cy="21" r="3" fill="#475569"/>
+   <text x="180" y="24" text-anchor="middle" fill="#93c5fd" font-size="8.5" font-family="${t}">debian-server:~#</text>
+   <text x="40" y="48" fill="${c}" font-size="9.5" font-family="${t}">$ systemctl status apache2 mariadb</text>
+   <rect x="40" y="58" width="84" height="28" rx="4" fill="#0f233f" stroke="#38bdf8" stroke-width="1.2"/>
+   <text x="82" y="76" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="${t}">apache2 :80</text>
+   <rect x="136" y="58" width="88" height="28" rx="4" fill="#0f233f" stroke="#7dd3fc" stroke-width="1.2"/>
+   <text x="180" y="76" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="${t}">php-fpm</text>
+   <rect x="236" y="58" width="84" height="28" rx="4" fill="#0f233f" stroke="${m}" stroke-width="1.2"/>
+   <text x="278" y="76" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="${t}">mysql :3306</text>`
+ },
+ pc:{
+  tag:'ATX · POST · WINDOWS',
+  lines:['DIAGNOSIS: BOOT · RAM · STORAGE · PSU','PC BUILD + WINDOWS OS & DRIVER CHECK'],
+  draw:(c,m,t)=>`
+   <rect x="28" y="14" width="144" height="86" rx="7" fill="#0d1b30" stroke="${c}" stroke-width="1.5"/>
+   <rect x="42" y="26" width="54" height="46" rx="4" fill="#132946" stroke="#7dd3fc" stroke-width="1.5"/>
+   <text x="69" y="53" text-anchor="middle" fill="#ffffff" font-size="10" font-family="${t}">CPU</text>
+   <rect x="108" y="26" width="16" height="46" rx="2" fill="#102038" stroke="${c}" stroke-width="1.2"/>
+   <rect x="130" y="26" width="16" height="46" rx="2" fill="#102038" stroke="${c}" stroke-width="1.2"/>
+   <text x="127" y="88" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">DIMM + NVMe</text>
+   <path d="M172 38 H214 M172 72 H214" fill="none" stroke="${m}" stroke-width="1.5"/>
+   <rect x="214" y="20" width="118" height="30" rx="5" fill="#102038" stroke="#7dd3fc" stroke-width="1.4"/>
+   <text x="273" y="39" text-anchor="middle" fill="#e2e8f0" font-size="9.5" font-family="${t}">PSU &amp; POST [OK]</text>
+   <rect x="214" y="60" width="118" height="30" rx="5" fill="#0d1b30" stroke="${c}" stroke-width="1.4"/>
+   <text x="273" y="79" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="${t}">OS &amp; Driver</text>`
+ },
+ iot:{
+  tag:'ESP32 · RFID · RELAY',
+  lines:['SPI RC522 -> ESP32 -> RELAY -> SOLENOID 12V','VL53L0X + TELEGRAM OTP VERIFIED'],
+  draw:(c,m,t)=>`
+   <rect x="24" y="22" width="76" height="68" rx="6" fill="#0d1b30" stroke="${m}" stroke-width="1.4"/>
+   <text x="62" y="50" text-anchor="middle" fill="#ffffff" font-size="9.5" font-family="${t}">RFID</text>
+   <text x="62" y="66" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">RC522 · SPI</text>
+   <line x1="100" y1="56" x2="132" y2="56" stroke="${c}" stroke-width="1.6"/>
+   <rect x="132" y="14" width="96" height="84" rx="7" fill="#132946" stroke="#7dd3fc" stroke-width="1.8"/>
+   <text x="180" y="42" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="600" font-family="${t}">ESP32</text>
+   <text x="180" y="59" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">Wi-Fi + OTP</text>
+   <text x="180" y="75" text-anchor="middle" fill="#cbd5e1" font-size="8.5" font-family="${t}">GPIO · I2C</text>
+   <line x1="228" y1="56" x2="258" y2="56" stroke="${c}" stroke-width="1.6"/>
+   <rect x="258" y="22" width="80" height="30" rx="5" fill="#0d1b30" stroke="${c}" stroke-width="1.4"/>
+   <text x="298" y="41" text-anchor="middle" fill="#bae6fd" font-size="9" font-family="${t}">Relay 5V</text>
+   <rect x="258" y="60" width="80" height="30" rx="5" fill="#0d1b30" stroke="${m}" stroke-width="1.4"/>
+   <text x="298" y="79" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="${t}">Lock 12V</text>`
+ },
+ sec:{
+  tag:'VM · PFSENSE · LAB',
+  lines:['[AKADEMIK] PROXMOX / VMWARE GUEST LAB','PFSENSE FIREWALL + WAZUH / SURICATA'],
+  draw:(c,m,t)=>`
+   <rect x="24" y="16" width="88" height="78" rx="6" fill="#102038" stroke="#7dd3fc" stroke-width="1.5"/>
+   <text x="68" y="47" text-anchor="middle" fill="#ffffff" font-size="10" font-family="${t}">pfSense</text>
+   <text x="68" y="64" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">Firewall</text>
+   <text x="68" y="78" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="${t}">WAN -> LAN</text>
+   <line x1="112" y1="55" x2="140" y2="55" stroke="${c}" stroke-width="1.6"/>
+   <rect x="140" y="14" width="110" height="82" rx="6" fill="#0d1b30" stroke="${c}" stroke-width="1.5"/>
+   <text x="195" y="32" text-anchor="middle" fill="#ffffff" font-size="9.5" font-family="${t}">VMware / Proxmox</text>
+   <rect x="152" y="42" width="40" height="42" rx="4" fill="#132946" stroke="${m}" stroke-width="1.2"/>
+   <text x="172" y="66" text-anchor="middle" fill="#bae6fd" font-size="8.5" font-family="${t}">VM 1</text>
+   <rect x="198" y="42" width="40" height="42" rx="4" fill="#132946" stroke="${m}" stroke-width="1.2"/>
+   <text x="218" y="66" text-anchor="middle" fill="#bae6fd" font-size="8.5" font-family="${t}">VM 2</text>
+   <line x1="250" y1="55" x2="274" y2="55" stroke="${m}" stroke-width="1.5" stroke-dasharray="3 2"/>
+   <rect x="274" y="24" width="64" height="62" rx="6" fill="#081120" stroke="${c}" stroke-width="1.3"/>
+   <text x="306" y="49" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="${t}">Wazuh</text>
+   <text x="306" y="64" text-anchor="middle" fill="${c}" font-size="8.5" font-family="${t}">Suricata</text>`
+ }
+};
+
+export function getSkillSpec(key='mikrotik'){
+ return SKILL_SPECS[key]||SKILL_SPECS.mikrotik;
+}
+
+export function createSkillBlueprint(key='mikrotik'){
+ const spec=getSkillSpec(key);
+ const svg=document.createElementNS(NS,'svg');
+ svg.setAttribute('viewBox','0 0 360 112');
+ svg.setAttribute('fill','none');
+ svg.setAttribute('aria-hidden','true');
+ svg.setAttribute('focusable','false');
+ svg.setAttribute('data-skill-key',key in SKILL_SPECS?key:'mikrotik');
+ svg.classList.add('blueprint-svg');
+ svg.innerHTML=spec.draw('#38bdf8','#60a5fa',"'JetBrains Mono', ui-monospace, monospace");
+ return svg;
+}

@@ -795,10 +795,11 @@ html:not(.js) .room-main{padding-top:35px}
 .portfolio-page .capability-grid{gap:23px}
 .portfolio-page .capability{position:relative;isolation:isolate;overflow:clip;display:flex;flex-direction:column;border:1px solid #b9d6e5;border-radius:22px;padding:25px;background:linear-gradient(155deg,#fcfdfe,#f1f4f8);box-shadow:0 8px 28px #204a6508}
 .portfolio-page .capability.has-studio-object{padding-top:0}
-.capability-object{position:relative;height:164px;margin:0 -25px 24px;background:radial-gradient(ellipse at 48% 38%,#48587060,transparent 68%),linear-gradient(140deg,#202d41,#151e2c);border-bottom:1px solid #6cafd066;perspective:700px}
-.capability-object:after{content:'';position:absolute;left:15%;right:15%;bottom:17px;height:1px;background:linear-gradient(90deg,transparent,#b3dbef77,transparent)}
-.capability-object>.studio-object{position:absolute;width:177px;height:177px;left:calc(50% - 88.5px);top:-3px;transform:rotateX(var(--object-rx,0deg)) rotateY(var(--object-ry,0deg));transition:transform .45s ease}
-.object-index{position:absolute;left:18px;top:15px;font-size:11px;letter-spacing:.1em;color:#3dbef5;border:1px solid #3dbef54a;border-radius:20px;padding:3px 9px;background:#151d2b50}
+.capability-object{position:relative;height:auto;margin:0 -25px 22px;padding:12px 16px 14px;background:radial-gradient(#38bdf817 .85px,transparent .9px) 0 0/18px 18px,linear-gradient(155deg,#0f1c31,#14233b);border-bottom:1px solid #38bdf83d;display:flex;flex-direction:column;gap:10px}
+.blueprint-bar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.object-index{position:static;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:#38bdf8;border:1px solid #38bdf84d;border-radius:99px;padding:2px 9px;background:#0a1425}
+.object-tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:#93c5fd}
+.capability-object>.blueprint-svg{width:100%;height:auto;display:block;max-height:112px}
 .portfolio-page .capability>span{font-size:10px;line-height:1.7;color:#305b75;letter-spacing:.07em;display:block;max-width:25ch}
 .portfolio-page .capability h3{font-size:24px;line-height:1.2;letter-spacing:-.035em;margin-block:13px 16px}
 .portfolio-page .capability p{font-size:15px;line-height:1.85;color:#3e4c61}
@@ -864,7 +865,7 @@ html:not(.js) .room-main{padding-top:35px}
  .portfolio-page .numbers-row>div{padding:20px 16px!important}.portfolio-page .numbers-row b{font-size:31px}.portfolio-page .numbers-row span{font-size:12px}
  .media-plane{padding:7px;border-radius:17px;box-shadow:4px 7px 0 #cbe0eb7d,0 15px 25px #212d4010}.media-window{border-radius:10px}.photo-view-cue{bottom:10px;right:10px;font-size:11px;padding:8px 12px}.media-scene figcaption{font-size:12px;margin-top:18px}
  .portfolio-page .path-demo{padding:24px;border-radius:20px}.portfolio-page .path-flow>span{padding:15px;font-size:13px}.portfolio-page .path-flow{gap:12px}
- .capability-object{height:158px}.capability-object>.studio-object{height:173px;width:173px;left:calc(50% - 86.5px);top:-7px}.portfolio-page .capability h3{font-size:25px}
+ .capability-object{height:auto;padding:12px 14px}.portfolio-page .capability h3{font-size:25px}
  .portfolio-page .education-card{padding:24px 24px 24px 44px}.education-grade{width:97px;height:97px;text-align:center}.education-card:before{left:15px}.education-card:after{left:20.5px}
  .portfolio-page .certificate-card figure{display:block;padding:24px 25px 20px}.portfolio-page .certificate-preview{height:172px}.portfolio-page .certificate-copy{padding:23px}.portfolio-page .certificate-copy h3{font-size:25px}.portfolio-page .certificate-card figcaption{font-size:12px}
  .portfolio-contact{padding-block:48px}.portfolio-contact h2{font-size:54px}.contact-illustration{width:132px;height:132px;border-width:6px;margin-top:15px;margin-bottom:22px}.portfolio-contact .contact-email{font-size:19px}.portfolio-page .social-link{min-height:87px;gap:10px;padding:13px}.social-icon{width:34px;height:34px;padding:6px}.social-arrow{display:none}
@@ -1097,13 +1098,15 @@ html:not(.js) .room-main{padding-top:35px}
 .skill-stage{display:none}
 @media(min-width:1001px){
  .portfolio-page #capabilities.has-skill-stage{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:40px;align-items:start}
- .has-skill-stage .skill-stage{display:grid;position:sticky;top:calc(var(--header-height,74px) + 24px);height:min(600px,calc(100svh - var(--header-height,74px) - 48px));align-content:end;padding:34px;border-radius:28px;overflow:hidden;color:#fff;background:radial-gradient(#b2dcf114 .8px,transparent .9px) 0 0/22px 22px,radial-gradient(ellipse at 50% 38%,#266288,transparent 60%),linear-gradient(160deg,#0d1828,#1b2b46 60%,#111b2c);box-shadow:0 30px 60px #14203433}
- .skill-stage-object{position:absolute;left:50%;top:44%;width:min(82%,380px);aspect-ratio:1;transform:translate(-50%,-50%)}
- .skill-stage-object>.studio-object{width:100%;height:100%;filter:drop-shadow(0 40px 40px #070d18)}
- .skill-stage-index{position:absolute;top:22px;left:30px;font-size:clamp(70px,7vw,110px);font-weight:600;letter-spacing:-.06em;color:#e7edf422;line-height:1}
- .skill-stage-kind{position:relative;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#3dbef5}
- .skill-stage-title{position:relative;font-size:clamp(26px,2.4vw,34px);line-height:1.15;letter-spacing:-.035em;margin-top:10px;max-width:16ch}
- .skill-stage-dots{position:relative;display:flex;gap:8px;margin-top:20px}.skill-stage-dots i{width:22px;height:3px;border-radius:2px;background:#ffffff33;transition:background .3s,width .3s}.skill-stage-dots i[data-on=true]{width:44px;background:#3dbef5}
+ .has-skill-stage .skill-stage{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;position:sticky;top:calc(var(--header-height,74px) + 24px);height:auto;min-height:480px;max-height:calc(100svh - var(--header-height,74px) - 48px);padding:26px 28px 28px;border-radius:24px;overflow:hidden;color:#fff;background:radial-gradient(#38bdf81c .9px,transparent 1px) 0 0/20px 20px,linear-gradient(160deg,#0b1526,#15233a 65%,#0e192c);border:1px solid #38bdf833;box-shadow:0 24px 50px #14203429}
+ .skill-stage-object{position:relative;width:100%;margin-top:26px;padding:12px;border:1px solid #38bdf830;border-radius:14px;background:#081120cc}
+ .skill-stage-object>.blueprint-svg{width:100%;height:auto;display:block}
+ .skill-stage-spec{display:grid;gap:4px;padding:10px 13px;border-radius:10px;background:#070f1c;border:1px solid #1e3a5f;font-family:'JetBrains Mono',ui-monospace,monospace}
+ .skill-stage-spec code{font-family:inherit;font-size:11px;line-height:1.5;color:#7dd3fc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+ .skill-stage-index{position:absolute;top:18px;left:26px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:clamp(54px,5vw,76px);font-weight:700;letter-spacing:-.05em;color:#38bdf81a;line-height:1;pointer-events:none}
+ .skill-stage-kind{position:relative;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#38bdf8;margin-top:4px}
+ .skill-stage-title{position:relative;font-size:clamp(24px,2.2vw,31px);line-height:1.18;letter-spacing:-.035em;margin-top:0;max-width:18ch}
+ .skill-stage-dots{position:relative;display:flex;gap:8px;margin-top:4px}.skill-stage-dots i{width:22px;height:3px;border-radius:2px;background:#ffffff33;transition:background .3s,width .3s}.skill-stage-dots i[data-on=true]{width:44px;background:#38bdf8}
  .has-skill-stage .capability-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-bottom:110px}
  .has-skill-stage .capability:nth-child(even){transform:translateY(110px)}
 }

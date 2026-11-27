@@ -1,4 +1,4 @@
-import {createStudioObject} from './studio-objects.mjs';
+import {createStudioObject,createSkillBlueprint,getSkillSpec} from './studio-objects.mjs';
 
 /* Enhancement only: reading, links, and document evidence are already in HTML. */
 export function initializeStudio(){
@@ -19,10 +19,17 @@ export function initializeStudio(){
   const art=heading.querySelector('.scene-heading-art');if(art)heading.insertBefore(art,heading.querySelector('h2'));
   const serial=decorative('span','chapter-serial');serial.textContent=heading.dataset.chapter;heading.prepend(serial);
  });
- const kinds=['network','data','database','ledger','device','device','papers'];
+ const fallbackKeys=['mikrotik','cabling','backend','linux','pc','iot','sec'];
  document.querySelectorAll('.capability').forEach((card,index)=>{
-  const art=decorative('div','capability-object');art.append(createStudioObject(kinds[index]||'data'));
-  const number=decorative('span','object-index');number.textContent=String(index+1).padStart(2,'0');art.append(number);card.prepend(art);card.classList.add('has-studio-object');
+  const key=card.dataset.skillKey||fallbackKeys[index]||'mikrotik';
+  const spec=getSkillSpec(key);
+  const art=decorative('div','capability-object is-blueprint');
+  const bar=decorative('div','blueprint-bar');
+  const number=decorative('span','object-index');number.textContent=String(index+1).padStart(2,'0');
+  const tag=decorative('span','object-tag');tag.textContent=spec.tag;
+  bar.append(number,tag);
+  art.append(bar,createSkillBlueprint(key));
+  card.prepend(art);card.classList.add('has-studio-object');
  });
  document.querySelectorAll('.proof-pick').forEach((card,index)=>card.dataset.order=String(index+1).padStart(2,'0'));
  document.querySelectorAll('.certificate-card').forEach((card,index)=>card.dataset.order=String(index+1).padStart(2,'0'));
