@@ -1,0 +1,102 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Validate & Build Static Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JS modules & asset references
+        run: |
+          set -euo pipefail
+          for f in assets/js/*.mjs; do
+            node --check "$f"
+          done
+
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          root = Path(".")
+          required = [root / "index.html", root / "style.css", root / "CNAME"]
+          missing_req = [str(p) for p in required if not p.is_file()]
+          assert not missing_req, f"Missing required files: {missing_req}"
+          assert (root / "CNAME").read_text(encoding="utf-8").strip(), "CNAME must not be empty"
+
+          disk_files = {
+              str(p).replace("\\", "/")
+              for p in root.rglob("*")
+              if p.is_file() and ".git" not in p.parts
+          }
+
+          errors = []
+          sources = [root / "index.html", root / "style.css", *(root / "assets" / "js").glob("*.mjs")]
+          for src in sources:
+              text = src.read_text(encoding="utf-8", errors="ignore")
+              refs = []
+              refs.extend(re.findall(r"""(?:href|src|srcset)=["']([^"']+)["']""", text))
+              refs.extend(re.findall(r"""url\(['"]?([^'")]+)['"]?\)""", text))
+              refs.extend(f"assets/js/{m[2:]}" for m in re.findall(r"""from\s+['"](\./[^'"]+)['"]""", text))
+
+              for ref in refs:
+                  if ref.startswith(("http://", "https://", "mailto:", "#", "data:")):
+                      continue
+                  if ref.startswith("/"):
+                      errors.append(f"{src}: leading-slash path breaks subpath compatibility -> {ref}")
+                  norm = ref.lstrip("/")
+                  if norm not in disk_files:
+                      errors.append(f"{src}: missing or case-mismatched asset -> {ref}")
+
+          assert not errors, "Asset validation failed:\n" + "\n".join(errors)
+          print(f"Validated {len(sources)} source files and {len(disk_files)} workspace files cleanly.")
+          PY
+
+      - name: Assemble clean static bundle (_site)
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          cp index.html style.css CNAME _site/
+          cp -r assets _site/assets
+          touch _site/.nojekyll
+
+      - name: Setup Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

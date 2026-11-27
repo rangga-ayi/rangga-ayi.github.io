@@ -55,3 +55,6 @@ CLAUDE.md
 
 # Export sumber referensi lokal (jangan di-deploy publik)
 Portfolio_Rangga.html
+
+# CI/CD static build output
+/_site
