@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+Job-lamar.txt
 
 # debug
 npm-debug.log*
